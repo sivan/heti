@@ -1,0 +1,30 @@
+/**
+ * Author: Sivan [sun.sivan@gmail.com]
+ * Description: 表格样式
+ */
+@import "variables";
+
+@mixin hetiTable {
+  table {
+    box-sizing: border-box;
+    table-layout: fixed;
+    border-collapse: collapse;
+    border: 1px solid #ccc;
+    margin-block-start: $std-block-unit / 2;
+    margin-block-end: $std-block-unit;
+    margin-inline-start: auto;
+    margin-inline-end: auto;
+  }
+
+  th,
+  td {
+    border: 1px solid #ccc;
+    padding: 8px 16px;
+  }
+
+  caption {
+    caption-side: bottom;
+    font-size: $font-size-small;
+    line-height: $line-height-size-small;
+  }
+}

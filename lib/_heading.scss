@@ -1,0 +1,65 @@
+/**
+ * Author: Sivan [sun.sivan@gmail.com]
+ * Description: heading styles.
+ */
+@import "variables";
+
+@mixin hetiHeading {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    position: relative;
+
+    // 顶边距默认为一行间距，且不因边距重叠原因减半
+    // 底边距考虑到亲密性，默认为半行间距
+    margin-block-start: $std-block-unit;
+    margin-block-end: $std-block-unit / 2;
+    font-weight: $font-weight-bold;
+  }
+
+  h1 {
+    margin-block-end: $std-block-unit;
+    font-size: $font-size-h1;
+    line-height: $line-height-size-h1;
+    letter-spacing: $font-size-h1 * 0.05;
+  }
+
+  h2 {
+    font-size: $font-size-h2;
+    line-height: $line-height-size-h2;
+    letter-spacing: $font-size-h2 * 0.05;
+  }
+
+  h3 {
+    font-size: $font-size-h3;
+    line-height: $line-height-size-h3;
+    letter-spacing: $font-size-h3 * 0.05;
+  }
+
+  h4 {
+    font-size: $font-size-h4;
+    line-height: $line-height-size-h4;
+  }
+
+  h5 {
+    font-size: $font-size-h5;
+    line-height: $line-height-size-h5;
+  }
+
+  h6 {
+    font-size: $font-size-h6;
+    line-height: $line-height-size-h6;
+  }
+
+  // 压缩两个标题之间的间距
+  h1 + h2,
+  h2 + h3,
+  h3 + h4,
+  h4 + h5,
+  h5 + h6 {
+    margin-block-start: $std-block-unit / 2;
+  }
+}

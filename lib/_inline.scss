@@ -1,0 +1,173 @@
+/**
+ * Author: Sivan [sun.sivan@gmail.com]
+ * Description: inline element styles.
+ */
+@import "variables";
+
+@mixin hetiInline {
+  a {
+    text-decoration: none;
+
+    &:hover {
+      padding-block-end: 1px;
+      border-block-end: 1px solid currentColor;
+      text-decoration: none;
+    }
+  }
+
+  abbr[title] {
+    padding-block-end: 1px;
+    border-block-end: 1px dotted;
+    text-decoration: none;
+    cursor: help;
+  }
+
+  b,
+  strong {
+    font-weight: $font-weight-bold;
+  }
+
+  code {
+    font-family: $font-family-mono;
+    font-size: $font-size-small;
+  }
+
+  dfn {
+    font-weight: $font-weight-bold;
+
+    // 非中文时显示斜体
+    @include non-cjk-block {
+      font-weight: $font-weight-normal;
+    }
+  }
+
+  em {
+    font-weight: $font-weight-bold;
+  }
+
+  // 标题单行时居中，多行时居左
+  figcaption {
+    display: inline-block;
+    vertical-align: top;
+    font-size: $font-size-small;
+    text-align: start;
+  }
+
+  // 显式斜体标签予以保留
+  i {
+    font-style: italic;
+  }
+
+  ins,
+  u {
+    padding-block-end: 1px;
+    border-block-end: 1px solid;
+    text-decoration: none;
+  }
+
+  mark {
+    padding-block-start: 2px;
+    padding-block-end: 2px;
+    padding-inline-start: 1px;
+    padding-inline-end: 1px;
+    margin-inline-start: 1px;
+    margin-inline-end: 1px;
+    background-color: rgba(255, 247, 0, 0.88);
+  }
+
+  // 设置引用文本为中文引号
+  q {
+    quotes: "「" "」" "『" "』";
+
+    @include non-cjk-block {
+      quotes: initial;
+      quotes: auto;
+    }
+  }
+
+  rt {
+    font-size: 0.875em;
+    color: rgba(0, 0, 0, 0.88);
+  }
+
+  // 完美 <small> 字号 by Sivan
+  /// 12px * 0.875 => 11px
+  /// 14px * 0.875 => 12px
+  /// 16px * 0.875 => 14px
+  /// 18px * 0.875 => 16px
+  /// 20px * 0.875 => 18px
+  small {
+    font-size: 0.875em;
+  }
+
+  strong {
+    font-weight: $font-weight-bold;
+  }
+
+  sub,
+  sup {
+    position: relative;
+    margin-inline-start: 0.25em;
+    margin-inline-end: 0.25em;
+    font-size: 0.75em;
+    line-height: 1;
+    vertical-align: baseline;
+  }
+
+  sub {
+    bottom: -0.25em;
+  }
+
+  sup {
+    top: -0.5em;
+  }
+
+  summary {
+    padding-left: 1em;
+    outline: 0;
+    cursor: pointer;
+  }
+
+  summary::-webkit-details-marker {
+    width: 0.6em;
+    margin-inline-end: 0.4em;
+  }
+
+  u[title] {
+    cursor: help;
+    border-block-end-color: rgba(0, 0, 0, 0.54);
+    border-block-end-width: 3px;
+    border-block-end-style: double;
+  }
+
+  // 默认禁用中文斜体 https://www.zhihu.com/question/20120243
+  address,
+  cite,
+  dfn,
+  dt,
+  em {
+    font-style: normal;
+
+    // 非中文时显示斜体
+    @include non-cjk-block {
+      font-style: italic;
+    }
+  }
+
+  //b,
+  //cite,
+  //dfn,
+  //em,
+  //strong {
+  //  margin-inline-start: 1px;
+  //  margin-inline-end: 1px;
+  //}
+
+  // 带边框的元素，两个相连时添加间距，以防止视觉上混为一个元素
+  // @todo: 此处有一个问题：如果结构是 <u>倚天</u>和<u>屠龙</u>，「屠龙」前面仍然会有边距。此处跟预期不一致，应该只在两个同名元素紧邻时增加边距，即：<u>倚天剑</u><u>屠龙刀</u>
+  //@each $tag in (abbr, del, ins, s, u) {
+  //  #{$tag} + #{$tag} {
+  //    margin-inline-start: 0.125em;
+  //  }
+  //}
+}

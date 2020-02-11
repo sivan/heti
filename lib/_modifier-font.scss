@@ -1,0 +1,78 @@
+/*
+ * Author: Sivan [sun.sivan@gmail.com]
+ * Description: define font stack classes.
+ */
+@import "variables";
+
+@mixin hetiFontModifier {
+  // 定义无衬线字体为黑体
+  &-sans {
+    font-family: $font-family-hei;
+  }
+
+  // 定义衬线字体为宋体
+  &-serif {
+    font-family: $font-family-song;
+  }
+
+  // 定义传统字体
+  &-classic {
+    font-family: $font-family-song;
+
+    // 标题使用 800 字重
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      font-weight: $font-weight-bolder;
+    }
+
+    // 标题、引用使用楷体
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    blockquote,
+    cite,
+    q {
+      font-family: $font-family-kai;
+    }
+
+    // 说明文字、角标、表头使用黑体
+    figcaption,
+    caption,
+    sup,
+    sub,
+    th {
+      font-family: $font-family-hei;
+    }
+  }
+
+  // 定义超大号字
+  &-x-large {
+    font-size: $font-size-x-large;
+    line-height: $line-height-size-x-large;
+  }
+
+  // 定义大号字
+  &-large {
+    font-size: $font-size-large;
+    line-height: $line-height-size-large;
+  }
+
+  // 定义小号字
+  &-small {
+    font-size: $font-size-small;
+    line-height: $line-height-size-small;
+  }
+
+  // 定义超小号字
+  &-x-small {
+    font-size: $font-size-x-small;
+    line-height: $line-height-size-x-small;
+  }
+}

@@ -1,0 +1,55 @@
+/**
+ * Author: Sivan [sun.sivan@gmail.com]
+ * Description: list styles.
+ */
+@import "variables";
+
+@mixin hetiList {
+  // 标准化间距
+  ul,
+  ol,
+  dl {
+    margin-block-start: $line-height-size-normal / 2;
+    margin-block-end: $line-height-size-normal;
+  }
+
+  ul,
+  ol {
+    padding-inline-start: $text-indent-length;
+
+    ul,
+    ol {
+      margin-block-start: 0;
+      margin-block-end: 0;
+    }
+  }
+
+  // 重置部分 CSS Reset 中 ul, ol { list-style: none; } 造成的样式污染
+  // 如果搭配 normalize.css 使用，则不存在这些样式污染
+  @if $_css-reset-scheme == "reset" {
+    ul {
+      list-style-type: disc;
+    }
+
+    ol {
+      list-style-type: decimal;
+    }
+
+    ul ul,
+    ol ul {
+      list-style-type: circle;
+    }
+
+    ul ul ul,
+    ul ol ul,
+    ol ul ul,
+    ol ol ul {
+      list-style-type: square;
+    }
+
+    // 重置不知道哪里散播出来的垃圾代码 ul, li { list-style: none; }
+    li {
+      list-style-type: unset;
+    }
+  }
+}

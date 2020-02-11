@@ -1,0 +1,108 @@
+/**
+ * Author: Sivan [sun.sivan@gmail.com]
+ * Description: define variables, alias etc.
+ */
+
+// 定义赫蹏根 class 名
+$root-selector: '.heti' !default;
+
+// 字体 Fonts
+/// 字体栈 Font Stacks
+$_font-stack-hei: "Pingfang SC", "Pingfang TC", "Heiti SC", "Heiti TC", "Microsoft YaHei", "Source Han Sans SC", "Noto Sans CJK SC", "WenQuanYi Micro Hei" !default;
+$_font-stack-song: 'Noto Serif','Noto Serif CJK SC', 'Noto Serif CJK', 'Source Han Serif SC', ‘Source Han Serif’, source-han-serif-sc, "Songti SC", "Songti TC", STSong, SimSun !default;
+$_font-stack-kai: "Kaiti SC", STKaiti !default;
+$_font-stack-sans: "Helvetica Neue", Helvetica, Arial !default;
+$_font-stack-serif: "Times New Roman", Times !default;
+$_font-stack-mono: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier !default;
+$_font-stack-symbol: "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
+
+/// 字体族 Font Families
+$font-family-hei: $_font-stack-sans, $_font-stack-hei, sans-serif, $_font-stack-symbol !default;
+$font-family-song: $_font-stack-serif, $_font-stack-song, serif, $_font-stack-symbol !default;
+$font-family-kai: $_font-stack-serif, $_font-stack-kai, serif, $_font-stack-symbol !default;
+$font-family-mono: $_font-stack-mono, monospace, $_font-stack-symbol !default;
+
+/// 字重 Font Weights
+$font-weight-bolder: 800 !default;
+$font-weight-bold: 600 !default;
+$font-weight-normal: 400 !default;
+$font-weight-lighter: 200 !default;
+
+/// 字号 Font Sizes
+$font-size-normal: 16px !default;
+$font-size-x-large: 20px !default;
+$font-size-large: 18px !default;
+$font-size-small: 14px !default;
+$font-size-x-small: 12px !default;
+
+$font-size-h1: 32px !default;
+$font-size-h2: 24px !default;
+$font-size-h3: 20px !default;
+$font-size-h4: 18px !default;
+$font-size-h5: 16px !default;
+$font-size-h6: 14px !default;
+
+// 行宽
+$line-length: 42em !default;
+
+// 行高 Line Heights
+$line-height-normal: 1.5 !default;
+//$line-height-expanded: 1.875 !default;
+$line-height-expanded-ultra: 2.25 !default;
+//$line-height-condensed: 1.25 !default;
+//$line-height-condensed-ultra: 1 !default;
+
+$line-height-size-normal: $font-size-normal * $line-height-normal !default;
+$line-height-size-large: $line-height-size-normal !default;
+$line-height-size-x-large: $font-size-x-large * $line-height-normal !default;
+$line-height-size-small: $line-height-size-normal !default;
+$line-height-size-x-small: 18px !default;
+$line-height-size-h1: 48px !default;
+$line-height-size-h2: 36px !default;
+$line-height-size-h3: 36px !default;
+$line-height-size-h4: 24px !default;
+$line-height-size-h5: 24px !default;
+$line-height-size-h6: 24px !default;
+
+// 标准网格单位变量 Standard Length
+// 垂直方向标准单位 = 标准行高
+// 水平方向标准单位 = 标准字号
+$std-block-unit: $line-height-size-normal !default;
+$std-inline-unit: $font-size-normal !default;
+
+// 示例：缩进单位 = 二倍文字宽度
+$text-indent-length: 2em !default;
+
+// 开发用配置项 Develop Configs
+
+/// 预设重置方案 "reset" | "normalize"
+/// reset：假定 Eric Meyer 的 CSS Reset 或其它流行的 Reset
+/// normalize：指定为 normalize.css
+$_css-reset-scheme: "reset";
+
+// Mix-in: Clear float
+@mixin clear-float {
+  &::before,
+  &::after {
+    content: "";
+    display: table;
+  }
+
+  &::after {
+    clear: both;
+  }
+}
+
+// Mix-in: Include Non-cjk styles
+@mixin non-cjk-block {
+  &:not(:lang(zh)):not(:lang(ja)):not(:lang(kr)),
+  &:not(:lang(zh)) {
+    @content;
+  }
+}
+
+// Mix-in: Hang Punctuation Mark
+@mixin hang {
+  position: absolute;
+  line-height: inherit;
+}

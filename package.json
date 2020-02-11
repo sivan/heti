@@ -1,0 +1,36 @@
+{
+  "name": "heti",
+  "version": "0.1.0",
+  "description": "赫蹏",
+  "main": "index.scss",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "start": "node-sass -w --output-style=compressed index.scss dist/heti.css",
+    "build": "node-sass index.scss dist/heti.css --output-style=compressed",
+    "deploy": "gh-pages -d dist",
+    "test": "npx stylelint --config .stylelintrc 'lib/**/*.scss'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sivan/heti.git"
+  },
+  "keywords": [
+    "typography"
+  ],
+  "author": "Sivan <sun.sivan@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sivan/heti/issues"
+  },
+  "homepage": "https://github.com/sivan/heti#readme",
+  "devDependencies": {
+    "gh-pages": "^2.2.0",
+    "node-sass": "^4.13.1",
+    "stylelint": "^13.0.0",
+    "stylelint-config-recommended-scss": "^4.1.0",
+    "stylelint-config-standard": "^19.0.0",
+    "stylelint-scss": "^3.13.0"
+  }
+}
