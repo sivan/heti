@@ -1,0 +1,35 @@
+/*
+ * Author: Sivan [sun.sivan@gmail.com]
+ * Description: define column styles.
+ */
+@import "../variables";
+
+@mixin hetiColumnModifier {
+  // 定义多栏排版
+  $selector-list: batch-fix-list(join($column-count-list, $column-width-list), '&--columns-');
+
+  #{join($selector-list, comma)} {
+    // 多行时不再设总宽度限制
+    max-width: none;
+    column-gap: 2em;
+
+    // 多栏排版时减半段间距
+    p {
+      margin-block-start: $std-block-unit / 2 / 2;
+      margin-block-end: $std-block-unit / 2;
+      text-indent: $text-indent-length;
+    }
+  }
+
+  @each $columns in $column-count-list {
+    &--columns-#{$columns} {
+      column-count: #{$columns};
+    }
+  }
+
+  @each $column-width in $column-width-list {
+    &--columns-#{$column-width} {
+      column-width: #{$column-width};
+    }
+  }
+}

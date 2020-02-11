@@ -35,7 +35,7 @@
   dfn {
     font-weight: $font-weight-bold;
 
-    // 非中文时显示斜体
+    // 非中文时不加粗
     @include non-cjk-block {
       font-weight: $font-weight-normal;
     }
@@ -110,6 +110,7 @@
     margin-inline-start: 0.25em;
     margin-inline-end: 0.25em;
     font-size: 0.75em;
+    font-family: $font-family-hei;
     line-height: 1;
     vertical-align: baseline;
   }

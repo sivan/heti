@@ -24,6 +24,7 @@
     }
   }
 
+  /* 兼容性处理 */
   // 重置部分 CSS Reset 中 ul, ol { list-style: none; } 造成的样式污染
   // 如果搭配 normalize.css 使用，则不存在这些样式污染
   @if $_css-reset-scheme == "reset" {

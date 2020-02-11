@@ -1,0 +1,24 @@
+/*
+ * Author: Sivan [sun.sivan@gmail.com]
+ * Description: define writing mode styles.
+ */
+@import "../variables";
+
+@mixin hetiWritingModeModifier {
+  // 定义垂直布局
+  &--vertical {
+    max-width: none;
+    max-height: $line-length;
+    writing-mode: vertical-rl;
+    letter-spacing: 0.125em;
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      text-align: start;
+    }
+  }
+}

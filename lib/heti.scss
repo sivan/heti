@@ -7,10 +7,13 @@
 @import "list";
 @import "table";
 @import "inline";
-@import "modifier-layout";
-@import "modifier-font";
-@import "helper-block";
-@import "helper-inline";
+@import "modifiers/font-stack";
+@import "modifiers/writing-mode";
+@import "modifiers/column";
+@import "modifiers/ancient";
+@import "modifiers/annotation";
+@import "helpers/block";
+@import "helpers/inline";
 
 #{$root-selector} {
   // 中文每行展示文字（CPL）建议在 30~50 之间，默认 42
@@ -24,18 +27,26 @@
   // 自动在中西文间加 1/4 空格（暂无浏览器支持）
   //text-spacing: ideograph-alpha;
 
-  // 引入各模块
+  // 模块引用顺序
+
+  // 1. 引入各模块
+  // .heti h1, .heti p, .heti ul
   @include hetiBase();
   @include hetiHeading();
   @include hetiList();
   @include hetiTable();
   @include hetiInline();
 
-  // 定义所有状态样式（与 .heti 并列使用）
-  @include hetiLayoutModifier();
+  // 2. 定义所有修饰器（需与 .heti 组合使用）
+  // .heti--sans h1, .heti--vertical h1 etc.
   @include hetiFontModifier();
+  @include hetiColumnModifier();
+  @include hetiWritingModeModifier();
+  @include hetiAncientModifier();
+  @include hetiAnnotationModifier();
 
-  // 定义所有内嵌样式（仅在 .heti 内使用有效）
+  // 3. 定义工具类样式（仅在 .heti 内部使用）
+  // .heti .heti-verse, .heti .heti-hang
   @include hetiBlockHelperClasses();
   @include hetiInlineHelperClasses();
 }

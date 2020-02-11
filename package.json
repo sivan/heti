@@ -7,7 +7,7 @@
     "lib": "lib"
   },
   "scripts": {
-    "start": "node-sass -w --output-style=compressed index.scss dist/heti.css",
+    "start": "node-sass -w --output-style=nested index.scss dist/heti.css",
     "build": "node-sass index.scss dist/heti.css --output-style=compressed",
     "deploy": "gh-pages -d dist",
     "test": "npx stylelint --config .stylelintrc 'lib/**/*.scss'"

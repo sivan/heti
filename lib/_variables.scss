@@ -6,29 +6,29 @@
 // 定义赫蹏根 class 名
 $root-selector: '.heti' !default;
 
-// 字体 Fonts
-/// 字体栈 Font Stacks
-$_font-stack-hei: "Pingfang SC", "Pingfang TC", "Heiti SC", "Heiti TC", "Microsoft YaHei", "Source Han Sans SC", "Noto Sans CJK SC", "WenQuanYi Micro Hei" !default;
-$_font-stack-song: 'Noto Serif','Noto Serif CJK SC', 'Noto Serif CJK', 'Source Han Serif SC', ‘Source Han Serif’, source-han-serif-sc, "Songti SC", "Songti TC", STSong, SimSun !default;
+/* 字体 Fonts */
+// 字体栈 Font Stacks
+$_font-stack-hei: "Pingfang SC", "Heiti SC", "Microsoft YaHei", "Source Han Sans SC", "Noto Sans CJK SC", "WenQuanYi Micro Hei" !default;
+$_font-stack-song: "Songti SC", STSong, SimSun !default;
 $_font-stack-kai: "Kaiti SC", STKaiti !default;
 $_font-stack-sans: "Helvetica Neue", Helvetica, Arial !default;
 $_font-stack-serif: "Times New Roman", Times !default;
 $_font-stack-mono: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier !default;
 $_font-stack-symbol: "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
 
-/// 字体族 Font Families
+// 字体族 Font Families
 $font-family-hei: $_font-stack-sans, $_font-stack-hei, sans-serif, $_font-stack-symbol !default;
 $font-family-song: $_font-stack-serif, $_font-stack-song, serif, $_font-stack-symbol !default;
 $font-family-kai: $_font-stack-serif, $_font-stack-kai, serif, $_font-stack-symbol !default;
 $font-family-mono: $_font-stack-mono, monospace, $_font-stack-symbol !default;
 
-/// 字重 Font Weights
+// 字重 Font Weights
 $font-weight-bolder: 800 !default;
 $font-weight-bold: 600 !default;
 $font-weight-normal: 400 !default;
 $font-weight-lighter: 200 !default;
 
-/// 字号 Font Sizes
+// 字号 Font Sizes
 $font-size-normal: 16px !default;
 $font-size-x-large: 20px !default;
 $font-size-large: 18px !default;
@@ -42,6 +42,7 @@ $font-size-h4: 18px !default;
 $font-size-h5: 16px !default;
 $font-size-h6: 14px !default;
 
+/* 行 Lines */
 // 行宽
 $line-length: 42em !default;
 
@@ -64,6 +65,7 @@ $line-height-size-h4: 24px !default;
 $line-height-size-h5: 24px !default;
 $line-height-size-h6: 24px !default;
 
+/* 段落 Paragraphs */
 // 标准网格单位变量 Standard Length
 // 垂直方向标准单位 = 标准行高
 // 水平方向标准单位 = 标准字号
@@ -73,13 +75,18 @@ $std-inline-unit: $font-size-normal !default;
 // 示例：缩进单位 = 二倍文字宽度
 $text-indent-length: 2em !default;
 
-// 开发用配置项 Develop Configs
+/* 栏 Columns */
+// 分栏
+$column-count-list: (1, 2, 3, 4) !default;
+$column-width-list: (16em, 20em, 24em, 28em, 32em, 36em, 40em, 44em, 48em) !default;
 
-/// 预设重置方案 "reset" | "normalize"
-/// reset：假定 Eric Meyer 的 CSS Reset 或其它流行的 Reset
-/// normalize：指定为 normalize.css
+/* 开发用配置项 Develop Configs */
+// 预设重置方案
+// `reset`：假定 Eric Meyer 的 CSS Reset 或其它流行的 Reset
+// `normalize`：指定为 normalize.css
 $_css-reset-scheme: "reset";
 
+/* 混合 Mix-ins */
 // Mix-in: Clear float
 @mixin clear-float {
   &::before,
@@ -105,4 +112,18 @@ $_css-reset-scheme: "reset";
 @mixin hang {
   position: absolute;
   line-height: inherit;
+  text-indent: 0;
+}
+
+/* 函数 Functions */
+// Function: batch prefix/suffix list-item
+// batch-fix-list((2, 3), '#{$root-selector}--columns-') => (.heti--columns-2, .heti--columns-3)
+@function batch-fix-list($list, $prefix: '', $suffix: '') {
+  $_list: () !default;
+
+  @each $item in $list {
+    $_list: append($_list, #{$prefix}#{$item}#{$suffix}, comma);
+  }
+
+  @return $_list;
 }

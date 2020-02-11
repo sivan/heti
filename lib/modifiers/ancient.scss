@@ -1,0 +1,60 @@
+/*
+ * Author: Sivan [sun.sivan@gmail.com]
+ * Description: define ancient styles.
+ */
+@import "../variables";
+
+@mixin hetiAncientModifier {
+  // 定义古文、古诗样式
+  &--ancient,
+  &--poetry {
+    // 古文、古诗用宋体（覆盖全局字体）
+    font-family: $font-family-song;
+
+    // 古文标题用楷体（覆盖全局字体）
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      font-family: $font-family-kai;
+      font-weight: $font-weight-bolder;
+      text-align: center;
+
+      // 标题内元信息仅在桌面端采取悬挂处理，且不占据空间影响文字居中
+      #{$root-selector}-meta {
+        font-weight: 400;
+
+        @media screen and (min-width: 640px) {
+          @include hang();
+
+          display: inline;
+          margin-block-start: 4px;
+          margin-inline-start: 8px;
+        }
+      }
+    }
+
+    #{$root-selector}-meta {
+      line-height: $line-height-size-normal;
+      text-align: center;
+      text-indent: 0;
+    }
+  }
+
+  &--ancient {
+    // 古文（文言文、词）首行缩进
+    p {
+      text-indent: $text-indent-length;
+    }
+  }
+
+  &--poetry {
+    // 诗节无缩进，居中显示
+    p {
+      text-align: center;
+      text-indent: 0;
+    }
+  }
+}

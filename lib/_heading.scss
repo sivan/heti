@@ -15,6 +15,7 @@
 
     // 顶边距默认为一行间距，且不因边距重叠原因减半
     // 底边距考虑到亲密性，默认为半行间距
+    margin: 0;
     margin-block-start: $std-block-unit;
     margin-block-end: $std-block-unit / 2;
     font-weight: $font-weight-bold;

@@ -1,0 +1,22 @@
+/*
+ * Author: Sivan [sun.sivan@gmail.com]
+ * Description: define inline helper classes.
+ */
+@import "../variables";
+
+@mixin hetiInlineHelperClasses {
+  // @todo: 用于标点悬挂用的样式
+  #{$root-selector}-hang {
+    @include hang();
+  }
+
+  // 显示强烈的着重号
+  #{$root-selector}-em {
+    -webkit-text-emphasis: filled circle;
+    -webkit-text-emphasis-position: under;
+
+    @include non-cjk-block {
+      -webkit-text-emphasis: none;
+    }
+  }
+}

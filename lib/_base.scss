@@ -63,12 +63,8 @@
     text-align: justify;
 
     @include non-cjk-block {
-      text-align: left;
+      text-align: start;
     }
-
-    //+ pre {
-    //  margin-block-start: -$std-block-unit / 2;
-    //}
   }
 
   pre {
@@ -81,6 +77,7 @@
     padding-inline-start: $std-inline-unit;
     padding-inline-end: $std-inline-unit;
     overflow: auto;
+    font-family: $font-family-mono;
     white-space: pre;
     word-wrap: normal;
     background-color: rgba(0, 0, 0, 0.054);
