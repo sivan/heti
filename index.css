@@ -1,0 +1,251 @@
+/**
+ * Author: Sivan [sun.sivan@gmail.com]
+ * Date: 2020-01-22 00:00
+ */
+
+/** 测试用代码段 开始 **/
+
+/* 简单模拟 css reset */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+/* 模拟不知道哪里流传出来的垃圾代码 */
+ul,
+li {
+  list-style: none;
+}
+
+/** 测试用代码段 结束 **/
+
+/** 基础样式 **/
+body {
+  background-color: #fff;
+}
+
+a {
+  color: #4285f4;
+  text-decoration: none;
+}
+
+.container {
+  box-sizing: border-box;
+  padding-block-start: 12px;
+  padding-block-end: 12px;
+  padding-inline-start: 12px;
+  padding-inline-end: 12px;
+}
+
+/** 首页样式 **/
+.article {
+  margin-inline-start: auto;
+  margin-inline-end: auto;
+  outline: 1px solid transparent;
+}
+
+.article[data-bg-grid="page-grid-24"] {
+  background-size: 100% 24px;
+  background-image:
+    linear-gradient(to right, rgba(255, 255, 255, 0) 31px, #f8f8f8 1px, rgba(255, 255, 255, 0) 33px),
+    linear-gradient(rgba(255, 255, 255, 0) 23px, #f8f8f8 1px);
+  outline-color: #eee;
+}
+
+.article[data-bg-grid="page-grid-24"],
+.article[data-bg-grid="page-grid-24"]:hover {
+  background-image:
+    linear-gradient(to right, rgba(255, 255, 255, 0) 31px, #eee 1px, rgba(255, 255, 255, 0) 33px),
+    linear-gradient(rgba(255, 255, 255, 0) 23px, #eee 1px);
+}
+
+.article[data-bg-grid="page-grid-24"] .heti-vertical {
+  background-size: 24px 100%;
+  background-image: linear-gradient(to left, rgba(255, 255, 255, 0) 23px, #f8f8f8 1px);
+  outline: 1px solid #eee;
+}
+
+.article[data-bg-grid="page-grid-24"] .heti-vertical,
+.article[data-bg-grid="page-grid-24"]:hover .heti-vertical {
+  background-image: linear-gradient(to left, rgba(255, 255, 255, 0) 23px, #eee 1px);
+}
+
+.article[data-bg-grid="page-grid-12"] {
+  background-size: 100% 12px;
+  background-image:
+    linear-gradient(to right, rgba(255, 255, 255, 0) 31px, #f8f8f8 1px, rgba(255, 255, 255, 0) 33px),
+    linear-gradient(rgba(255, 255, 255, 0) 11px, #f8f8f8 12px);
+  outline-color: #eee;
+}
+
+.article[data-bg-grid="page-grid-12"],
+.article[data-bg-grid="page-grid-12"]:hover {
+  background-image:
+    linear-gradient(to right, rgba(255, 255, 255, 0) 31px, #eee 1px, rgba(255, 255, 255, 0) 33px),
+    linear-gradient(rgba(255, 255, 255, 0) 11px, #eee 12px);
+}
+
+.article[data-bg-grid="page-grid-12"] .heti-vertical {
+  background-size: 12px 100%;
+  background-image: linear-gradient(to left, rgba(255, 255, 255, 0) 11px, #f8f8f8 1px);
+  outline: 1px solid #eee;
+}
+
+.article[data-bg-grid="page-grid-12"] .heti-vertical,
+.article[data-bg-grid="page-grid-12"]:hover .heti-vertical {
+  background-image: linear-gradient(to left, transparent 11px, #eee 1px);
+}
+
+/** 导航样式 **/
+.article__toc details ol {
+  margin-block-start: 24px;
+  margin-block-end: 24px;
+}
+
+/** 页脚样式 **/
+.fn {
+  max-width: 42em;
+  margin-block-start: 12px;
+  margin-block-end: 12px;
+  margin-inline-start: auto;
+  margin-inline-end: auto;
+  padding-block-start: 4px;
+  border-block-start: 1px solid #ccc;
+}
+
+.fn__list {
+  margin-block-start: 0;
+  margin-block-end: 0;
+  padding-inline-start: 2em;
+  list-style-type: decimal;
+  font-size: 14px;
+  line-height: 24px;
+}
+
+.fn__list li {
+  list-style-type: unset;
+}
+
+/** 控制栏样式 **/
+.panel {
+  position: fixed;
+  z-index: 2;
+  right: 10px;
+  top: 10px;
+  text-align: right;
+}
+
+/** 演示区块 **/
+.demo__main {
+  margin-block-start: 24px;
+  margin-block-end: 24px;
+}
+
+/** 演示卡片 **/
+.card {
+  box-sizing: border-box;
+  position: relative;
+  width: 100%;
+  margin-block-start: 24px;
+  margin-block-end: 72px;
+  padding-block-start: 24px;
+  padding-block-end: 24px;
+  padding-inline-start: 16px;
+  padding-inline-end: 16px;
+  border-radius: 2px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.16);
+  background-color: #fff;
+}
+
+.card__vertical-container {
+  box-sizing: border-box;
+  width: 100%;
+  height: 30em;
+  border: 1px solid #eee;
+  overflow: auto;
+  writing-mode: vertical-rl;
+}
+
+.article .card {
+  text-align: left;
+}
+
+.article .card > figcaption {
+  display: inline-block;
+  margin-block-start: 16px;
+  padding-block-start: 4px;
+  padding-block-end: 3px;
+  padding-inline-start: 0;
+  padding-inline-end: 72px;
+  line-height: 24px;
+  border-block-start: 1px solid #ccc;
+}
+
+/*
+heti-jiya {
+  display: inline;
+  width: 0;
+  margin-inline-start: -0.5em;
+}
+*/
+
+@media screen and (min-width: 640px) {
+  body {
+    min-width: 900px;
+    background-color: #eee;
+  }
+
+  .container {
+    box-sizing: border-box;
+    width: 75%;
+    min-width: 720px;
+    max-width: 880px;
+    margin-block-start: 48px;
+    margin-block-end: 48px;
+    margin-inline-start: auto;
+    margin-inline-end: auto;
+    padding-block-start: 48px;
+    padding-block-end: 48px;
+    padding-inline-start: 48px;
+    padding-inline-end: 48px;
+    border-radius: 2px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.32);
+    background-color: #fff;
+  }
+
+  .card {
+    left: -20%;
+    width: 140%;
+    padding-inline-start: 32px;
+    padding-inline-end: 32px;
+  }
+}
+
+@media screen and (min-width: 1080px) {
+  .article__toc {
+    position: relative;
+    z-index: 1;
+    float: right;
+    width: 192px;
+    margin-block-start: 0;
+    margin-block-end: 12px;
+    margin-inline-start: 32px;
+    margin-inline-end: -48px;
+    padding-block-start: 12px;
+    padding-block-end: 12px;
+    padding-inline-start: 8px;
+    padding-inline-end: 8px;
+    border: 1px solid #eee;
+    border-radius: 2px;
+    background-color: #fff;
+  }
+
+  .article__toc details ol {
+    margin-block-end: 0;
+  }
+}
