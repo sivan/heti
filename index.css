@@ -49,7 +49,7 @@ a {
   outline: 1px solid transparent;
 }
 
-.article[data-bg-grid="page-grid-24"] {
+.article[data-bg-grid="grid-24"] {
   background-size: 100% 24px;
   background-image:
     linear-gradient(to right, rgba(255, 255, 255, 0) 31px, #f8f8f8 1px, rgba(255, 255, 255, 0) 33px),
@@ -57,25 +57,25 @@ a {
   outline-color: #eee;
 }
 
-.article[data-bg-grid="page-grid-24"],
-.article[data-bg-grid="page-grid-24"]:hover {
+.article[data-debug-mode][data-bg-grid="grid-24"],
+.article[data-bg-grid="grid-24"]:hover {
   background-image:
     linear-gradient(to right, rgba(255, 255, 255, 0) 31px, #eee 1px, rgba(255, 255, 255, 0) 33px),
     linear-gradient(rgba(255, 255, 255, 0) 23px, #eee 1px);
 }
 
-.article[data-bg-grid="page-grid-24"] .heti-vertical {
+.article[data-bg-grid="grid-24"] .heti--vertical {
   background-size: 24px 100%;
   background-image: linear-gradient(to left, rgba(255, 255, 255, 0) 23px, #f8f8f8 1px);
   outline: 1px solid #eee;
 }
 
-.article[data-bg-grid="page-grid-24"] .heti-vertical,
-.article[data-bg-grid="page-grid-24"]:hover .heti-vertical {
+.article[data-debug-mode][data-bg-grid="grid-24"] .heti--vertical,
+.article[data-bg-grid="grid-24"]:hover .heti--vertical {
   background-image: linear-gradient(to left, rgba(255, 255, 255, 0) 23px, #eee 1px);
 }
 
-.article[data-bg-grid="page-grid-12"] {
+.article[data-bg-grid="grid-12"] {
   background-size: 100% 12px;
   background-image:
     linear-gradient(to right, rgba(255, 255, 255, 0) 31px, #f8f8f8 1px, rgba(255, 255, 255, 0) 33px),
@@ -83,21 +83,21 @@ a {
   outline-color: #eee;
 }
 
-.article[data-bg-grid="page-grid-12"],
-.article[data-bg-grid="page-grid-12"]:hover {
+.article[data-debug-mode][data-bg-grid="grid-12"],
+.article[data-bg-grid="grid-12"]:hover {
   background-image:
     linear-gradient(to right, rgba(255, 255, 255, 0) 31px, #eee 1px, rgba(255, 255, 255, 0) 33px),
     linear-gradient(rgba(255, 255, 255, 0) 11px, #eee 12px);
 }
 
-.article[data-bg-grid="page-grid-12"] .heti-vertical {
+.article[data-bg-grid="grid-12"] .heti--vertical {
   background-size: 12px 100%;
   background-image: linear-gradient(to left, rgba(255, 255, 255, 0) 11px, #f8f8f8 1px);
   outline: 1px solid #eee;
 }
 
-.article[data-bg-grid="page-grid-12"] .heti-vertical,
-.article[data-bg-grid="page-grid-12"]:hover .heti-vertical {
+.article[data-debug-mode][data-bg-grid="grid-12"] .heti--vertical,
+.article[data-bg-grid="grid-12"]:hover .heti--vertical {
   background-image: linear-gradient(to left, transparent 11px, #eee 1px);
 }
 
@@ -110,8 +110,7 @@ a {
 /** 页脚样式 **/
 .fn {
   max-width: 42em;
-  margin-block-start: 12px;
-  margin-block-end: 12px;
+  margin-block-start: 24px;
   margin-inline-start: auto;
   margin-inline-end: auto;
   padding-block-start: 4px;
@@ -216,6 +215,41 @@ heti-jiya {
     border-radius: 2px;
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.32);
     background-color: #fff;
+  }
+
+  .article h1,
+  .article h2,
+  .article h3,
+  .article h4,
+  .article h5,
+  .article h6 {
+    position: relative;
+  }
+
+  .article h1:hover .anchor,
+  .article h2:hover .anchor,
+  .article h3:hover .anchor,
+  .article h4:hover .anchor,
+  .article h5:hover .anchor,
+  .article h6:hover .anchor {
+    opacity: 1;
+  }
+
+  .article .anchor {
+    position: absolute;
+    left: -1em;
+    width: 1em;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 400;
+    line-height: inherit;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.2s linear;
+  }
+
+  .article .anchor:hover {
+    text-decoration: none;
+    border: 0;
   }
 
   .card {
