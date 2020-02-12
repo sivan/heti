@@ -11,7 +11,7 @@
 </head>
 <body>
   <main class="container">
-    <article class="article heti heti--classic" data-bg-grid="grid-24">
+    <article class="article heti heti--classic">
       <h1>赫蹏</h1>
       <blockquote>古代称用以书写的小幅绢帛。后亦以借指纸。《汉书·外戚传下·孝成赵皇后》：<q>武（籍武 ）发篋中，有裹药二枚，赫蹏书。</q><u>颜师古</u>注：<q><u>邓展</u>曰：<q>赫音兄弟鬩墙之鬩。</q><u>应劭</u>曰：<q>赫蹏，薄小纸也。</q></q><u>宋</u> <u>赵彦卫</u> 《云麓漫钞》卷七：<q>《赵后传》所谓『赫蹏』者，注云<q>薄小纸</q>，然其寔亦縑帛。</q></blockquote>
 
@@ -479,28 +479,34 @@
   </main>
 
   <div class="panel">
-    <select id="J_switchFont">
-      <option value="heti--classic" selected>传统</option>
-      <option value="heti--sans">黑体</option>
-      <option value="heti--serif">宋体</option>
-    </select>
-    <select id="J_showGrid">
-      <option value="grid-24" selected>显示网格（24px）</option>
-      <option value="grid-12">显示网格（12px）</option>
-      <option value="">不显示网格</option>
-    </select>
+    <ul class="switch-list">
+      <li><input type="radio" class="J_fontStack" value="heti--classic" name="font" id="font-classic" checked><label for="font-classic">传统</label></li>
+      <li><input type="radio" class="J_fontStack" value="heti--sans" name="font" id="font-sans"><label for="font-sans">黑体</label></li>
+      <li><input type="radio" class="J_fontStack" value="heti--serif" name="font" id="font-serif"><label for="font-serif">宋体</label></li>
+    </ul>
+    <ul class="switch-list">
+      <li><input type="radio" class="J_radioGrid" value="" name="grid" id="grid-disable" checked><label for="grid-disable">网格：关</label></li>
+      <li><input type="radio" class="J_radioGrid" value="grid-24" name="grid" id="grid-24"><label for="grid-24">大</label></li>
+      <li><input type="radio" class="J_radioGrid" value="grid-12" name="grid" id="grid-12"><label for="grid-12">小</label></li>
+    </ul>
   </div>
 
   <script>
     const $$root = document.getElementsByTagName('article')[0]
 
-    document.getElementById('J_switchFont').onchange = function (e) {
-      $$root.className = ['article', 'heti', e.target.value].join(' ')
+    function addEventListeners(nodeList, event, fn) {
+      [].forEach.call(nodeList, function(elm) {
+        elm.addEventListener(event, fn, false)
+      }, false)
     }
 
-    document.getElementById('J_showGrid').onchange = function (e) {
+    addEventListeners(document.getElementsByClassName('J_fontStack'), 'change', function (e) {
+      $$root.className = ['article', 'heti', e.target.value].join(' ')
+    })
+
+    addEventListeners(document.getElementsByClassName('J_radioGrid'), 'change', function (e) {
       $$root.setAttribute('data-bg-grid', e.target.value)
-    }
+    })
   </script>
 </body>
 </html>
