@@ -3,7 +3,7 @@
     g {
       fill: black;
       stroke: black;
-      stroke-width: 2px;
+      stroke-width: 6px;
     }
     @media (prefers-color-scheme: dark) {
       g {

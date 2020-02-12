@@ -1,6 +1,5 @@
 /**
  * Author: Sivan [sun.sivan@gmail.com]
- * Date: 2020-01-22 00:00
  */
 
 /** 测试用代码段 开始 **/
@@ -46,6 +45,7 @@ a {
 .article {
   margin-inline-start: auto;
   margin-inline-end: auto;
+  padding-block-end: 24px;
   outline: 1px solid transparent;
 }
 
@@ -109,8 +109,8 @@ a {
 
 /** 页脚样式 **/
 .fn {
+  position: relative;
   max-width: 42em;
-  margin-block-start: 24px;
   margin-inline-start: auto;
   margin-inline-end: auto;
   padding-block-start: 4px;
@@ -134,8 +134,8 @@ a {
 .panel {
   position: fixed;
   z-index: 2;
-  right: 10px;
-  top: 10px;
+  right: 12px;
+  top: 12px;
   display: flex;
   text-align: right;
 }
@@ -144,7 +144,7 @@ a {
   display: inline-flex;
   margin: 0;
   padding: 0;
-  margin-inline-start: 10px;
+  margin-inline-start: 12px;
   list-style-type: none;
 }
 
@@ -272,7 +272,7 @@ heti-jiya {
     min-width: 720px;
     max-width: 880px;
     margin-block-start: 48px;
-    margin-block-end: 48px;
+    margin-block-end: 72px;
     margin-inline-start: auto;
     margin-inline-end: auto;
     padding-block-start: 48px;
