@@ -136,6 +136,7 @@ a {
   z-index: 2;
   right: 10px;
   top: 10px;
+  display: flex;
   text-align: right;
 }
 
@@ -143,6 +144,7 @@ a {
   display: inline-flex;
   margin: 0;
   padding: 0;
+  margin-inline-start: 10px;
   list-style-type: none;
 }
 
