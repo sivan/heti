@@ -82,5 +82,15 @@
     word-wrap: normal;
     background-color: rgba(0, 0, 0, 0.054);
     border-radius: 4px;
+
+    code {
+      margin-inline-start: inherit;
+      margin-inline-end: inherit;
+      padding: 0;
+      border: 0;
+      border-radius: 0;
+      background-color: transparent;
+      color: inherit;
+    }
   }
 }
