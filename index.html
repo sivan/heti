@@ -5,7 +5,7 @@
   <title>赫蹏 - 一个简约又简单的网页中文排版增强</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="./normalize.css">
-  <link rel="stylesheet" href="./index.css">
+  <link rel="stylesheet" href="./index.css?1">
   <link rel="stylesheet" href="./heti.css">
   <link rel="icon" href="./favicon.svg">
 </head>
@@ -87,9 +87,9 @@
 
       <h2 id="examples">效果示例<a class="anchor" href="#examples">#</a></h2>
       <p>本站已<em>全页</em>应用了赫蹏样式，下面是赫蹏在特殊排版下的效果演示。</p>
-      <details class="demo" open>
+      <details open>
         <summary id="example-1">示例1：古文</summary>
-        <section class="demo__main">
+        <section class="demo">
           <div class="heti heti--ancient">
             <h1>出师表</h1>
             <p class="heti-meta heti-small">作者：<abbr title="字孔明">諸葛亮</abbr>（181年～234年10月8日）</p>
@@ -106,9 +106,9 @@
         </section>
       </details>
 
-      <details class="demo" open>
+      <details open>
         <summary id="example-2">示例2：诗词</summary>
-        <section class="demo__main">
+        <section class="demo">
           <div class="heti heti--ancient">
             <h2>一剪梅·红藕香残玉簟秋<span class="heti-meta heti-small">[宋]<abbr title="号易安居士">李清照</abbr></span></h2>
             <p class="heti-verse heti-x-large">
@@ -131,9 +131,9 @@
         </section>
       </details>
 
-      <details class="demo" open>
+      <details open>
         <summary id="example-3">示例3：行间注</summary>
-        <section class="demo__main">
+        <section class="demo">
           <div class="heti heti--ancient heti--annotation">
             <h2>庖丁解牛</h2>
             <p class="heti-meta heti-small">作者：<abbr title="庄子">庄周</abbr>（公元前369～公元前286年）</p>
@@ -146,14 +146,16 @@
         </section>
       </details>
 
-      <details class="demo">
+      <details>
         <summary id="example-4">示例4：英文演示</summary>
-        <section class="demo__main" lang="en-US">
-          <h1>Lorem Ipsum</h1>
-          <p><q>There is no one who loves pain itself, who seeks after it and wants to have it, simply because it is pain...</q></p>
-          <p><dfn>Lorem Ipsum</dfn> is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like <em>Aldus PageMaker</em> including versions of Lorem Ipsum.</p>
-          <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, <i>"Lorem ipsum dolor sit amet.."</i>, comes from a line in section 1.10.32.</p>
-          <p>The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from <cite>"de Finibus Bonorum et Malorum"</cite> by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.</p>
+        <section class="demo">
+          <div class="heti" lang="en-US">
+            <h1>Lorem Ipsum</h1>
+            <p><q>There is no one who loves pain itself, who seeks after it and wants to have it, simply because it is pain...</q></p>
+            <p><dfn>Lorem Ipsum</dfn> is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like <em>Aldus PageMaker</em> including versions of Lorem Ipsum.</p>
+            <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, <i>"Lorem ipsum dolor sit amet.."</i>, comes from a line in section 1.10.32.</p>
+            <p>The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from <cite>"de Finibus Bonorum et Malorum"</cite> by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.</p>
+          </div>
         </section>
       </details>
 
@@ -240,121 +242,123 @@
       <p>参考《中文排版需求<sup><a href="#fn-03">[3]</a></sup>》中描述的四种常见书籍排版字体：宋体、楷体、黑体、仿宋。赫蹏提供黑体、宋体和<u title="以正文宋体、标题楷体构成的搭配">传统</u>三种字体风格，前两者分别对应无衬线、衬线字体族。</p>
       <details>
         <summary>查看对照表</summary>
-        <table class="card">
-          <caption>各字体族下不同标签对应的字体</caption>
-          <thead>
-          <tr>
-            <td style="width: 80px;"></td>
-            <th style="width: 80px;">黑体</th>
-            <th style="width: 80px;">宋体</th>
-            <th style="width: 80px;">传统</th>
-            <th>备注</th>
-          </tr>
-          </thead>
-          <tbody>
-          <tr>
-            <th>标题</th>
-            <td>黑体</td>
-            <td>宋体（粗）</td>
-            <td>楷体</td>
-            <td>
-              <section>
-                <h1>记忆中的站台</h1>
-              </section>
-            </td>
-          </tr>
-          <tr>
-            <th>正文</th>
-            <td>黑体</td>
-            <td>宋体</td>
-            <td>宋体</td>
-            <td>
-              <section>
-                <p>那是一个风雨交加的夜晚。</p>
-              </section>
-            </td>
-          </tr>
-          <tr>
-            <th>引用</th>
-            <td>黑体</td>
-            <td>宋体</td>
-            <td>楷体</td>
-            <td>
-              <section>
-                <blockquote>锣鼓喧天，鞭炮齐鸣，红旗招展，人山人海。</blockquote>
-              </section>
-            </td>
-          </tr>
-          <tr>
-            <th>强调</th>
-            <td>黑体</td>
-            <td>宋体</td>
-            <td>宋体</td>
-            <td>
-              <section>
-                <p>父亲<em>特意</em>嘱咐了我两句。</p>
-              </section>
-            </td>
-          </tr>
-          <tr>
-            <th>对话</th>
-            <td>黑体</td>
-            <td>宋体</td>
-            <td>楷体</td>
-            <td>
-              <section>
-                <p>他说：<q>我买几个橘子去。你就在此地，不要走动。</q></p>
-              </section>
-            </td>
-          </tr>
-          <tr>
-            <th>图例</th>
-            <td>黑体</td>
-            <td>宋体</td>
-            <td>黑体</td>
-            <td>
-              <section>
-                <figure>
-                  <img src="./orange.jpg" alt="" style="width: 200px;">
-                  <figcaption>橘子</figcaption>
-                </figure>
-              </section>
-            </td>
-          </tr>
-          <tr>
-            <th>表头</th>
-            <td>黑体</td>
-            <td>宋体</td>
-            <td>黑体</td>
-            <td>
-              <section>
-                <table>
-                  <caption>当时的情形</caption>
-                  <tr>
-                    <th>角色</th>
-                    <th>物品</th>
-                  </tr>
-                  <tr>
-                    <td>父亲</td>
-                    <td>橘子</td>
-                  </tr>
-                  <tr>
-                    <td>我</td>
-                    <td>车票</td>
-                  </tr>
-                </table>
-              </section>
-            </td>
-          </tr>
-          <tr>
-            <th>角标</th>
-            <td>黑体</td>
-            <td>黑体</td>
-            <td>黑体</td>
-            <td>鲁迅<sup>[1]</sup>曾经没有说过</td>
-          </tr>
-          </tbody>
-        </table>
+        <section class="section">
+          <table>
+            <caption>各字体族下不同标签对应的字体</caption>
+            <thead>
+            <tr>
+              <td style="width: 60px;"></td>
+              <th style="width: 60px;">黑体</th>
+              <th style="width: 60px;">宋体</th>
+              <th style="width: 60px;">传统</th>
+              <th style="width: 380px;">备注</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+              <th>标题</th>
+              <td>黑体</td>
+              <td>宋体（粗）</td>
+              <td>楷体</td>
+              <td>
+                <section>
+                  <h1>记忆中的站台</h1>
+                </section>
+              </td>
+            </tr>
+            <tr>
+              <th>正文</th>
+              <td>黑体</td>
+              <td>宋体</td>
+              <td>宋体</td>
+              <td>
+                <section>
+                  <p>那是一个风雨交加的夜晚。</p>
+                </section>
+              </td>
+            </tr>
+            <tr>
+              <th>引用</th>
+              <td>黑体</td>
+              <td>宋体</td>
+              <td>楷体</td>
+              <td>
+                <section>
+                  <blockquote>锣鼓喧天，鞭炮齐鸣，红旗招展，人山人海。</blockquote>
+                </section>
+              </td>
+            </tr>
+            <tr>
+              <th>强调</th>
+              <td>黑体</td>
+              <td>宋体</td>
+              <td>宋体</td>
+              <td>
+                <section>
+                  <p>父亲<em>特意</em>嘱咐了我两句。</p>
+                </section>
+              </td>
+            </tr>
+            <tr>
+              <th>对话</th>
+              <td>黑体</td>
+              <td>宋体</td>
+              <td>楷体</td>
+              <td>
+                <section>
+                  <p>他说：<q>我买几个橘子去。你就在此地，不要走动。</q></p>
+                </section>
+              </td>
+            </tr>
+            <tr>
+              <th>图例</th>
+              <td>黑体</td>
+              <td>宋体</td>
+              <td>黑体</td>
+              <td>
+                <section>
+                  <figure>
+                    <img src="./orange.jpg" alt="" style="width: 200px;">
+                    <figcaption>橘子</figcaption>
+                  </figure>
+                </section>
+              </td>
+            </tr>
+            <tr>
+              <th>表头</th>
+              <td>黑体</td>
+              <td>宋体</td>
+              <td>黑体</td>
+              <td>
+                <section>
+                  <table>
+                    <caption>当时的情形</caption>
+                    <tr>
+                      <th>角色</th>
+                      <th>物品</th>
+                    </tr>
+                    <tr>
+                      <td>父亲</td>
+                      <td>橘子</td>
+                    </tr>
+                    <tr>
+                      <td>我</td>
+                      <td>车票</td>
+                    </tr>
+                  </table>
+                </section>
+              </td>
+            </tr>
+            <tr>
+              <th>角标</th>
+              <td>黑体</td>
+              <td>黑体</td>
+              <td>黑体</td>
+              <td>鲁迅<sup>[1]</sup>曾经没有说过</td>
+            </tr>
+            </tbody>
+          </table>
+        </section>
       </details>
       <h3>标点</h3>
       <p>参考《中文排版需求》制定符号样式。唯一差异在于简体中文一律采用直角引号（「」）替代圆角引号（“”），这样可以保持字符等宽。</p>
@@ -368,93 +372,97 @@
       <p>赫蹏在间距、边框、位置属性上采用了Logical properties，在所有现代浏览器上表现良好。</p>
       <details>
         <summary>查看兼容性列表</summary>
-        <table>
-          <caption>兼容性列表（未经充分测试）</caption>
-          <tr>
-            <td></td>
-            <th>Chrome</th>
-            <th>Safari</th>
-            <th>Firefox</th>
-            <th>IE</th>
-            <th>Edge</th>
-          </tr>
-          <tr>
-            <th>兼容性</th>
-            <td>4</td>
-            <td>3.1</td>
-            <td>3</td>
-            <td>暂未支持</td>
-            <td>79</td>
-          </tr>
-        </table>
+        <section class="section">
+          <table>
+            <caption>兼容性列表（未经充分测试）</caption>
+            <tr>
+              <td></td>
+              <th>Chrome</th>
+              <th>Safari</th>
+              <th>Firefox</th>
+              <th>IE</th>
+              <th>Edge</th>
+            </tr>
+            <tr>
+              <th>兼容性</th>
+              <td>4</td>
+              <td>3.1</td>
+              <td>3</td>
+              <td>暂未支持</td>
+              <td>79</td>
+            </tr>
+          </table>
+        </section>
       </details>
 
       <h3 id="tags">标签示例表<a class="anchor" href="#tags">#</a></h3>
       <details open>
         <summary>查看标签示例表</summary>
-        <table class="card">
-          <caption>常用标签样式示例表</caption>
-          <tr>
-            <th style="width: 40px;">类型</th>
-            <th style="width: 240px;">标签</th>
-            <th style="width: 240px;">效果</th>
-          </tr>
-          <tr>
-            <td>链接</td>
-            <td><code>&lt;a href=&quot;https://github.com/sivan/heti&quot; title=&quot;赫蹏&quot; target=&quot;_blank&quot;&gt;heti.css&lt;/a&gt;</code></td>
-            <td><a href="https://github.com/sivan/heti" title="赫蹏" target="_blank">heti.css</a></td>
-          </tr>
-          <tr>
-            <td>缩写</td>
-            <td><code>&lt;abbr title=&quot;Cascading Style Sheets&quot;&gt;CSS&lt;/abbr&gt;</code></td>
-            <td><abbr title="Cascading Style Sheets">CSS</abbr></td>
-          </tr>
-          <tr>
-            <td>代码</td>
-            <td><code>&lt;code&gt;.heti { star: 5; }&lt;/code&gt;</code></td>
-            <td><code>.heti { star: 5; }</code></td>
-          </tr>
-          <tr>
-            <td>专名号</td>
-            <td><code>此时来自&lt;u title=&quot;位于山东省聊城市阳谷县城东&quot;&gt;景阳冈&lt;/u&gt;的&lt;u&gt;武松&lt;/u&gt;大喝一声：&lt;q&gt;纳命来！&lt;/q&gt;</code></td>
-            <td>此时来自<u title="位于山东省聊城市阳谷县城东">景阳冈</u>的<u>武松</u>大喝一声：<q>纳命来！</q></td>
-          </tr>
-          <tr>
-            <td>文本变动</td>
-            <td><code>这次考试，我考了&lt;del datetime=&quot;17:00:00&quot;&gt;97&lt;/del&gt;&lt;ins datetime=&quot;18:15:00&quot;&gt;100&lt;/ins&gt;分呢！</code></td>
-            <td>这次考试，我考了<del datetime="17:00:00">97</del><ins datetime="18:15:00">100</ins>分呢！</td>
-          </tr>
-          <tr>
-            <td>文本更新</td>
-            <td><code>最后我们决定把「蹏」字念为&lt;s&gt;d&iacute;&lt;/s&gt; t&iacute;。</code></td>
-            <td>最后我们决定把「蹏」字念为<s>dí</s>tí。</td>
-          </tr>
-          <tr>
-            <td>引号</td>
-            <td><code>窃&middot;格瓦拉曾经说过：&lt;q&gt;打工是不可能打工的。&lt;/q&gt;</code></td>
-            <td>窃·格瓦拉曾经说过：<q>打工是不可能打工的。</q></td>
-          </tr>
-          <tr>
-            <td>术语</td>
-            <td><code>&lt;dfn&gt;窃&middot;格瓦拉&lt;/dfn&gt;，中国大陆网络红人、罪犯。被奉为百度「戒赌吧」400万会员的「精神领袖」。</code></td>
-            <td><dfn>窃·格瓦拉</dfn>，中国大陆网络红人、罪犯。被奉为百度「戒赌吧」400万会员的「精神领袖」。</td>
-          </tr>
-          <tr>
-            <td>强调</td>
-            <td><code>稳住，&lt;em&gt;我们能赢&lt;/em&gt;！</code></td>
-            <td>稳住，<em>我们能赢</em>！</td>
-          </tr>
-          <tr>
-            <td>着重号</td>
-            <td><code>我们&lt;span class=&quot;heti-em&quot;&gt;必将&lt;/span&gt;取得胜利战胜这场疫情。</code></td>
-            <td>我们<span class="heti-em">必将</span>取得胜利战胜这场疫情。</td>
-          </tr>
-          <tr>
-            <td>标记</td>
-            <td><code>这道题&lt;mark&gt;必考&lt;/mark&gt;，你们爱记不记。</code></td>
-            <td>这道题<mark>必考</mark>，你们爱记不记。</td>
-          </tr>
-        </table>
+        <section class="section">
+          <table>
+            <caption>常用标签样式示例表</caption>
+            <tr>
+              <th style="width: 40px;">类型</th>
+              <th style="width: 240px;">标签</th>
+              <th style="width: 240px;">效果</th>
+            </tr>
+            <tr>
+              <td>链接</td>
+              <td><code>&lt;a href=&quot;https://github.com/sivan/heti&quot; title=&quot;赫蹏&quot; target=&quot;_blank&quot;&gt;heti.css&lt;/a&gt;</code></td>
+              <td><a href="https://github.com/sivan/heti" title="赫蹏" target="_blank">heti.css</a></td>
+            </tr>
+            <tr>
+              <td>缩写</td>
+              <td><code>&lt;abbr title=&quot;Cascading Style Sheets&quot;&gt;CSS&lt;/abbr&gt;</code></td>
+              <td><abbr title="Cascading Style Sheets">CSS</abbr></td>
+            </tr>
+            <tr>
+              <td>代码</td>
+              <td><code>&lt;code&gt;.heti { star: 5; }&lt;/code&gt;</code></td>
+              <td><code>.heti { star: 5; }</code></td>
+            </tr>
+            <tr>
+              <td>专名号</td>
+              <td><code>此时来自&lt;u title=&quot;位于山东省聊城市阳谷县城东&quot;&gt;景阳冈&lt;/u&gt;的&lt;u&gt;武松&lt;/u&gt;大喝一声：&lt;q&gt;纳命来！&lt;/q&gt;</code></td>
+              <td>此时来自<u title="位于山东省聊城市阳谷县城东">景阳冈</u>的<u>武松</u>大喝一声：<q>纳命来！</q></td>
+            </tr>
+            <tr>
+              <td>文本变动</td>
+              <td><code>这次考试，我考了&lt;del datetime=&quot;17:00:00&quot;&gt;97&lt;/del&gt;&lt;ins datetime=&quot;18:15:00&quot;&gt;100&lt;/ins&gt;分呢！</code></td>
+              <td>这次考试，我考了<del datetime="17:00:00">97</del><ins datetime="18:15:00">100</ins>分呢！</td>
+            </tr>
+            <tr>
+              <td>文本更新</td>
+              <td><code>最后我们决定把「蹏」字念为&lt;s&gt;d&iacute;&lt;/s&gt; t&iacute;。</code></td>
+              <td>最后我们决定把「蹏」字念为<s>dí</s>tí。</td>
+            </tr>
+            <tr>
+              <td>引号</td>
+              <td><code>窃&middot;格瓦拉曾经说过：&lt;q&gt;打工是不可能打工的。&lt;/q&gt;</code></td>
+              <td>窃·格瓦拉曾经说过：<q>打工是不可能打工的。</q></td>
+            </tr>
+            <tr>
+              <td>术语</td>
+              <td><code>&lt;dfn&gt;窃&middot;格瓦拉&lt;/dfn&gt;，中国大陆网络红人、罪犯。被奉为百度「戒赌吧」400万会员的「精神领袖」。</code></td>
+              <td><dfn>窃·格瓦拉</dfn>，中国大陆网络红人、罪犯。被奉为百度「戒赌吧」400万会员的「精神领袖」。</td>
+            </tr>
+            <tr>
+              <td>强调</td>
+              <td><code>稳住，&lt;em&gt;我们能赢&lt;/em&gt;！</code></td>
+              <td>稳住，<em>我们能赢</em>！</td>
+            </tr>
+            <tr>
+              <td>着重号</td>
+              <td><code>我们&lt;span class=&quot;heti-em&quot;&gt;必将&lt;/span&gt;取得胜利战胜这场疫情。</code></td>
+              <td>我们<span class="heti-em">必将</span>取得胜利战胜这场疫情。</td>
+            </tr>
+            <tr>
+              <td>标记</td>
+              <td><code>这道题&lt;mark&gt;必考&lt;/mark&gt;，你们爱记不记。</code></td>
+              <td>这道题<mark>必考</mark>，你们爱记不记。</td>
+            </tr>
+          </table>
+        </section>
       </details>
 
       <h3 id="license">开源协议<a class="anchor" href="#tags">#</a></h3>
