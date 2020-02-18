@@ -2,56 +2,6 @@
  * Author: Sivan [sun.sivan@gmail.com]
  * Description: define font-face.
  */
-@import "variables";
-
-// 黑体
-@font-face {
-  font-family: "Heti-Hei";
-  src: local("PingFang SC Light"), local("Heiti SC Light"), local("STXihei");
-  font-weight: 200;
-}
-
-@font-face {
-  font-family: "Heti-Hei";
-  src: local("Pingfang SC Regular"), local("Heiti SC Medium"), local(STHeiti);
-  font-weight: 400;
-}
-
-@font-face {
-  font-family: "Heti-Hei";
-  src: local("PingFang SC Medium"), local("Heiti SC Light");
-  font-weight: 600;
-}
-
-@font-face {
-  font-family: "Heti-Hei";
-  src: local("Pingfang SC Semibold"), local("Heiti SC Light");
-  font-weight: 800;
-}
-
-// 宋体
-
-// 楷体
-@font-face {
-  font-family: "Heti-Kai";
-  src: local("Kaiti SC Regular"), local("Heiti SC Light");
-  font-weight: 200;
-}
-
-@font-face {
-  font-family: "Heti-Kai";
-  src: local("Kaiti SC Regular"), local(STKaiti);
-  font-weight: 400;
-}
-
-@font-face {
-  font-family: "Heti-Kai";
-  src: local("Kaiti SC Bold"), local(STKaiti);
-  font-weight: 600;
-}
-
-@font-face {
-  font-family: "Heti-Kai";
-  src: local("Kaiti SC Black"), local(STKaiti);
-  font-weight: 800;
-}
+@import "fonts/hei";
+@import "fonts/song";
+@import "fonts/kai";

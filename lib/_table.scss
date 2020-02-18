@@ -19,7 +19,10 @@
   th,
   td {
     border: 1px solid #ccc;
-    padding: 8px 16px;
+    padding-block-start: 8px;
+    padding-block-end: 8px;
+    padding-inline-start: 16px;
+    padding-inline-end: 16px;
   }
 
   caption {
