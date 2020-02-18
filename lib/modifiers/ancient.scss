@@ -18,13 +18,13 @@
     h4,
     h5,
     h6 {
-      font-family: $font-family-kai;
+      font-family: $font-family-kai-black;
       font-weight: $font-weight-bolder;
       text-align: center;
 
       // 标题内元信息仅在桌面端采取悬挂处理，且不占据空间影响文字居中
       #{$root-selector}-meta {
-        font-weight: 400;
+        font-weight: $font-weight-normal;
 
         @media screen and (min-width: 640px) {
           @include hang();
