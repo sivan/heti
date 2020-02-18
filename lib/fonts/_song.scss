@@ -1,0 +1,45 @@
+/**
+ * Author: Sivan [sun.sivan@gmail.com]
+ * Description: define font-face Heti Song.
+ */
+
+// 标准 Regular
+@font-face {
+  font-family: "Heti Song";
+  src:
+    local("Songti SC Regular"),
+    local("Songti TC Regular"),
+    local("SimSun");
+}
+
+// 细体 Light
+@font-face {
+  font-family: "Heti Song";
+  font-weight: 200;
+  src:
+    local("Songti SC Light"),
+    local("Songti TC Light"),
+    local(STSong),
+    local("SimSun");
+}
+
+// 粗体 Bold
+@font-face {
+  font-family: "Heti Song";
+  font-weight: 600;
+  src:
+    local("Songti SC Bold"),
+    local("Songti TC Bold"),
+    local("SimSun");
+}
+
+// 黑体 Black
+// 只支持简体
+@font-face {
+  font-family: "Heti Song Black";
+  font-weight: 800;
+  src:
+    local("Songti SC Black"),
+    // local("Songti TC Black"),
+    local("SimSun");
+}

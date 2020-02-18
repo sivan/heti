@@ -28,8 +28,10 @@
   }
 
   code {
+    margin-inline-start: 0.25em;
+    margin-inline-end: 0.25em;
     font-family: $font-family-mono;
-    font-size: $font-size-small;
+    font-size: 0.875em;
   }
 
   dfn {
@@ -124,7 +126,7 @@
   }
 
   summary {
-    padding-left: 1em;
+    padding-inline-start: 1em;
     outline: 0;
     cursor: pointer;
   }

@@ -22,23 +22,18 @@
     // 正文使用宋体
     font-family: $font-family-song;
 
-    // 标题使用 800 字重
+    // 标题使用楷体 800 字重
     h1,
     h2,
     h3,
     h4,
     h5,
     h6 {
+      font-family: $font-family-kai-black;
       font-weight: $font-weight-bolder;
     }
 
-    // 标题、引用使用楷体
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6,
+    // 引用使用楷体
     blockquote,
     cite,
     q {
@@ -51,5 +46,17 @@
     th {
       font-family: $font-family-hei;
     }
+  }
+
+  &--hei {
+    font-family: $font-family-hei;
+  }
+
+  &--song {
+    font-family: $font-family-song;
+  }
+
+  &--kai {
+    font-family: $font-family-kai;
   }
 }
