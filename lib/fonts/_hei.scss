@@ -1,0 +1,99 @@
+/**
+ * Author: Sivan [sun.sivan@gmail.com]
+ * Description: define font-face Heti Hei.
+ */
+
+// 标准 Regular
+@font-face {
+  font-family: "Heti Hei";
+  src:
+    local("PingFang SC Regular"),
+    local("PingFang TC Regular"),
+    local("Hiragino Sans GB W3"),
+    local("Heiti SC Regular"),
+    local("Heiti TC Regular"),
+    local("Microsoft YaHei"),
+    local("Microsoft Jhenghei"),
+    local("Source Han Sans CN Regular"),
+    local("Source Han Sans HK Regular"),
+    local("Source Han Sans TW Regular"),
+    local("Source Han Sans JP Regular"),
+    local("Source Han Sans KR Regular"),
+    local("Noto Sans CJK SC Regular"),
+    local("Noto Sans CJK TC Regular"),
+    local("Noto Sans CJK JP Regular"),
+    local("Noto Sans CJK KR Regular"),
+    local("WenQuanYi Micro Hei"),
+    local("Droid Sans Fallback");
+}
+
+// 细体 Light
+@font-face {
+  font-family: "Heti Hei";
+  font-weight: 200;
+  src:
+    local("PingFang SC Light"),
+    local("PingFang TC Light"),
+    local("Heiti SC Light"),
+    local("Heiti TC Light"),
+    local("Microsoft YaHei Light"),
+    local("Microsoft Jhenghei Light"),
+    local("Source Han Sans CN Light"),
+    local("Source Han Sans HK Light"),
+    local("Source Han Sans TW Light"),
+    local("Source Han Sans JP Light"),
+    local("Source Han Sans KR Light"),
+    local("Noto Sans CJK SC Light"),
+    local("Noto Sans CJK TC Light"),
+    local("Noto Sans CJK JP Light"),
+    local("Noto Sans CJK KR Light");
+}
+
+// 粗体 Bold
+@font-face {
+  font-family: "Heti Hei";
+  font-weight: 600;
+  src:
+    local("PingFang SC Medium"),
+    local("Hiragino Sans GB W6"),
+    local("PingFang TC Medium"),
+    local("Heiti SC Medium"),
+    local("Heiti TC Medium"),
+    local("Microsoft YaHei Bold"),
+    local("Microsoft Jhenghei Bold"),
+    local("Source Han Sans CN Bold"),
+    local("Source Han Sans HK Bold"),
+    local("Source Han Sans TW Bold"),
+    local("Source Han Sans JP Bold"),
+    local("Source Han Sans KR Bold"),
+    local("Noto Sans CJK SC Bold"),
+    local("Noto Sans CJK TC Bold"),
+    local("Noto Sans CJK JP Bold"),
+    local("Noto Sans CJK KR Bold");
+}
+
+// 黑体 Black
+@font-face {
+  font-family: "Heti Hei Black";
+  font-weight: 800;
+  src:
+    local("Lantinghei SC Heavy"),
+    local("Lantinghei TC Heavy"),
+    local("PingFang SC Semibold"),
+    local("PingFang TC Semibold"),
+    local("Hiragino Sans GB W6"),
+    local("Heiti SC Medium"),
+    local("Heiti TC Medium"),
+    local("Microsoft YaHei Bold"),
+    local("Microsoft Jhenghei Bold"),
+    local("Source Han Sans CN Heavy"),
+    local("Source Han Sans HK Heavy"),
+    local("Source Han Sans TW Heavy"),
+    local("Source Han Sans JP Heavy"),
+    local("Source Han Sans KR Heavy"),
+    local("Noto Sans CJK SC Heavy"),
+    local("Noto Sans CJK TC Heavy"),
+    local("Noto Sans CJK JP Heavy"),
+    local("Noto Sans CJK KR Heavy"),
+    local("Droid Sans Fallback");
+}

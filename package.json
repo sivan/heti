@@ -1,13 +1,13 @@
 {
   "name": "heti",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "赫蹏",
   "main": "index.scss",
   "directories": {
     "lib": "lib"
   },
   "scripts": {
-    "start": "node-sass -w --output-style=nested index.scss dist/heti.css",
+    "start": "node-sass -w --output-style=compressed index.scss dist/heti.css",
     "build": "node-sass index.scss dist/heti.css --output-style=compressed",
     "deploy": "gh-pages -d dist",
     "test": "npx stylelint --config .stylelintrc 'lib/**/*.scss'"

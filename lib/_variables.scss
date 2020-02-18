@@ -8,18 +8,18 @@ $root-selector: '.heti' !default;
 
 /* 字体 Fonts */
 // 字体栈 Font Stacks
-$_font-stack-hei: "Pingfang SC", "Heiti SC", "Microsoft YaHei", "Source Han Sans SC", "Noto Sans CJK SC", "WenQuanYi Micro Hei" !default;
-$_font-stack-song: "Songti SC", STSong, SimSun !default;
-$_font-stack-kai: "Kaiti SC", STKaiti !default;
 $_font-stack-sans: "Helvetica Neue", Helvetica, Arial !default;
 $_font-stack-serif: "Times New Roman", Times !default;
 $_font-stack-mono: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier !default;
 $_font-stack-symbol: "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
 
 // 字体族 Font Families
-$font-family-hei: $_font-stack-sans, $_font-stack-hei, sans-serif, $_font-stack-symbol !default;
-$font-family-song: $_font-stack-serif, $_font-stack-song, serif, $_font-stack-symbol !default;
-$font-family-kai: $_font-stack-serif, $_font-stack-kai, serif, $_font-stack-symbol !default;
+$font-family-hei: $_font-stack-sans, "Heti Hei", sans-serif, $_font-stack-symbol !default;
+$font-family-song: $_font-stack-serif, "Heti Song", serif, $_font-stack-symbol !default;
+$font-family-kai: $_font-stack-serif, "Heti Kai", serif, $_font-stack-symbol !default;
+$font-family-hei-black: $_font-stack-sans, "Heti Hei Black", sans-serif, $_font-stack-symbol !default;
+$font-family-song-black: $_font-stack-serif, "Heti Song Black", serif, $_font-stack-symbol !default;
+$font-family-kai-black: $_font-stack-serif, "Heti Kai Black", serif, $_font-stack-symbol !default;
 $font-family-mono: $_font-stack-mono, monospace, $_font-stack-symbol !default;
 
 // 字重 Font Weights
