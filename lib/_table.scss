@@ -14,15 +14,16 @@
     margin-block-end: $std-block-unit;
     margin-inline-start: auto;
     margin-inline-end: auto;
+    word-break: break-word;
   }
 
   th,
   td {
     border: 1px solid #ccc;
-    padding-block-start: 8px;
-    padding-block-end: 8px;
-    padding-inline-start: 16px;
-    padding-inline-end: 16px;
+    padding-block-start: $std-block-unit / 4;
+    padding-block-end: $std-block-unit / 4;
+    padding-inline-start: $std-inline-unit / 2;
+    padding-inline-end: $std-inline-unit / 2;
   }
 
   caption {
