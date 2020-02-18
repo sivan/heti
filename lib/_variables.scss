@@ -74,6 +74,7 @@ $std-inline-unit: $font-size-normal !default;
 
 // 示例：缩进单位 = 二倍文字宽度
 $text-indent-length: 2em !default;
+$text-indent-size: $font-size-normal * 2 !default;
 
 /* 栏 Columns */
 // 分栏

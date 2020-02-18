@@ -67,4 +67,18 @@
       }
     }
   }
+
+  /* 页脚 */
+  #{$root-selector}-fn {
+    margin-block-start: 59px;
+    border-block-start: 1px solid #ccc;
+    font-size: $font-size-small;
+    font-family: $font-family-hei;
+    line-height: $line-height-size-normal;
+
+    ol {
+      margin-block-start: $std-block-unit / 2;
+      margin-block-end: 0;
+    }
+  }
 }
