@@ -5,13 +5,13 @@
   <title>赫蹏 - 一个简约又简单的网页中文排版增强</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="./normalize.css">
-  <link rel="stylesheet" href="./index.css?1">
+  <link rel="stylesheet" href="./index.css">
   <link rel="stylesheet" href="./heti.css">
   <link rel="icon" href="./favicon.svg">
 </head>
 <body>
   <main class="container">
-    <article class="article heti heti--classic" data-debug-mode>
+    <article class="article heti heti--classic">
       <h1>赫蹏</h1>
       <blockquote>古代称用以书写的小幅绢帛。后亦以借指纸。《汉书·外戚传下·孝成赵皇后》：<q>武（籍武 ）发篋中，有裹药二枚，赫蹏书。</q><u>颜师古</u>注：<q><u>邓展</u>曰：<q>赫音兄弟鬩墙之鬩。</q><u>应劭</u>曰：<q>赫蹏，薄小纸也。</q></q><u>宋</u> <u>赵彦卫</u> 《云麓漫钞》卷七：<q>《赵后传》所谓『赫蹏』者，注云<q>薄小纸</q>，然其寔亦縑帛。</q></blockquote>
 
@@ -402,9 +402,9 @@
           <table>
             <caption>常用标签样式示例表</caption>
             <tr>
-              <th style="width: 40px;">类型</th>
-              <th style="width: 240px;">标签</th>
-              <th style="width: 240px;">效果</th>
+              <th style="width: 80px;">类型</th>
+              <th style="width: 300px;">标签</th>
+              <th style="width: 300px;">效果</th>
             </tr>
             <tr>
               <td>链接</td>
@@ -478,17 +478,18 @@
         <li>✅ 诗词版式</li>
         <li>✅ 行间注版式</li>
       </ul>
+
+      <footer class="heti-fn">
+        <ol>
+          <li id="fn-01">CSS Reset：指代类似Eric Meyer's Reset CSS的样式重置方案</li>
+          <li id="fn-02">BEM：由Yandex公司创造的命名方ttps://en.bem.info/</li>
+          <li id="fn-03">《中文排版需求》：https://w3c.github.io/clreq/</li>
+        </ol>
+      </footer>
     </article>
-    <footer class="fn">
-      <ol class="fn__list">
-        <li id="fn-01">CSS Reset：指代类似Eric Meyer's Reset CSS的样式重置方案</li>
-        <li id="fn-02">BEM：由Yandex公司创造的命名方ttps://en.bem.info/</li>
-        <li id="fn-03">《中文排版需求》：https://w3c.github.io/clreq/</li>
-      </ol>
-    </footer>
   </main>
 
-  <div class="panel">
+  <aside class="panel">
     <ul class="switch-list">
       <li><input type="radio" class="J_fontStack" value="heti--classic" name="font" id="font-classic" checked><label for="font-classic">传统</label></li>
       <li><input type="radio" class="J_fontStack" value="heti--sans" name="font" id="font-sans"><label for="font-sans">黑体</label></li>
@@ -499,7 +500,7 @@
       <li><input type="radio" class="J_radioGrid" value="grid-24" name="grid" id="grid-24"><label for="grid-24">大</label></li>
       <li><input type="radio" class="J_radioGrid" value="grid-12" name="grid" id="grid-12"><label for="grid-12">小</label></li>
     </ul>
-  </div>
+  </aside>
 
   <script>
     const $$root = document.getElementsByTagName('article')[0]

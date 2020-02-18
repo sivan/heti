@@ -45,60 +45,35 @@ a {
 .article {
   margin-inline-start: auto;
   margin-inline-end: auto;
-  padding-block-end: 24px;
   outline: 1px solid transparent;
 }
 
 .article[data-bg-grid="grid-24"] {
   background-size: 100% 24px;
   background-image:
-    linear-gradient(to right, rgba(255, 255, 255, 0) 31px, #f8f8f8 1px, rgba(255, 255, 255, 0) 33px),
-    linear-gradient(rgba(255, 255, 255, 0) 23px, #f8f8f8 1px);
-  outline-color: #eee;
-}
-
-.article[data-debug-mode][data-bg-grid="grid-24"],
-.article[data-bg-grid="grid-24"]:hover {
-  background-image:
     linear-gradient(to right, rgba(255, 255, 255, 0) 31px, #eee 1px, rgba(255, 255, 255, 0) 33px),
     linear-gradient(rgba(255, 255, 255, 0) 23px, #eee 1px);
+  outline-color: #eee;
 }
 
 .article[data-bg-grid="grid-24"] .heti--vertical {
   background-size: 24px 100%;
-  background-image: linear-gradient(to left, rgba(255, 255, 255, 0) 23px, #f8f8f8 1px);
-  outline: 1px solid #eee;
-}
-
-.article[data-debug-mode][data-bg-grid="grid-24"] .heti--vertical,
-.article[data-bg-grid="grid-24"]:hover .heti--vertical {
   background-image: linear-gradient(to left, rgba(255, 255, 255, 0) 23px, #eee 1px);
+  outline: 1px solid #eee;
 }
 
 .article[data-bg-grid="grid-12"] {
   background-size: 100% 12px;
   background-image:
-    linear-gradient(to right, rgba(255, 255, 255, 0) 31px, #f8f8f8 1px, rgba(255, 255, 255, 0) 33px),
-    linear-gradient(rgba(255, 255, 255, 0) 11px, #f8f8f8 12px);
-  outline-color: #eee;
-}
-
-.article[data-debug-mode][data-bg-grid="grid-12"],
-.article[data-bg-grid="grid-12"]:hover {
-  background-image:
     linear-gradient(to right, rgba(255, 255, 255, 0) 31px, #eee 1px, rgba(255, 255, 255, 0) 33px),
     linear-gradient(rgba(255, 255, 255, 0) 11px, #eee 12px);
+  outline-color: #eee;
 }
 
 .article[data-bg-grid="grid-12"] .heti--vertical {
   background-size: 12px 100%;
-  background-image: linear-gradient(to left, rgba(255, 255, 255, 0) 11px, #f8f8f8 1px);
-  outline: 1px solid #eee;
-}
-
-.article[data-debug-mode][data-bg-grid="grid-12"] .heti--vertical,
-.article[data-bg-grid="grid-12"]:hover .heti--vertical {
   background-image: linear-gradient(to left, transparent 11px, #eee 1px);
+  outline: 1px solid #eee;
 }
 
 .anchor {
@@ -109,29 +84,6 @@ a {
 .article .article__toc ol {
   margin-block-start: 24px;
   margin-block-end: 24px;
-}
-
-/** 页脚样式 **/
-.fn {
-  position: relative;
-  max-width: 42em;
-  margin-inline-start: auto;
-  margin-inline-end: auto;
-  padding-block-start: 4px;
-  border-block-start: 1px solid #ccc;
-}
-
-.fn__list {
-  margin-block-start: 0;
-  margin-block-end: 0;
-  padding-inline-start: 2em;
-  list-style-type: decimal;
-  font-size: 14px;
-  line-height: 24px;
-}
-
-.fn__list li {
-  list-style-type: unset;
 }
 
 /** 控制栏样式 **/
@@ -328,8 +280,6 @@ a {
     box-sizing: border-box;
     left: -20%;
     width: 140%;
-    margin-block-start: 24px;
-    margin-block-end: 72px;
     padding-block-start: 24px;
     padding-block-end: 24px;
     padding-inline-start: 32px;
@@ -337,7 +287,7 @@ a {
   }
 
   .section {
-    height: auto;
+    max-height: none;
     overflow: visible;
   }
 }
