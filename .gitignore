@@ -3,7 +3,6 @@
 .settings/
 
 # Dev dependencies and cache files
-dist/
 node_modules/
 npm-debug.log
 
