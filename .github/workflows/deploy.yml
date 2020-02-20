@@ -9,13 +9,26 @@ jobs:
     build-and-deploy:
         runs-on: ubuntu-latest
         steps:
-            - name: Checkout
-              uses: actions/checkout@master
-
-            - name: Deploy to GitHub Pages
-              uses: Cecilapp/GitHub-Pages-deploy@master
-              env:
-                  EMAIL: sun.sivan@gmail.com
-                  GH_TOKEN: ${{ secrets.ACCESS_TOKEN }}
-                  BASE_BRANCH: master
-                  BUILD_DIR: demo
+            -   name: Checkout
+                uses: actions/checkout@v2
+                with:
+                    persist-credentials: false
+            -   name: Setup Node.js
+                uses: actions/setup-node@v1
+                with:
+                    node-version: 10
+            -   name: NPM Install and Test
+                run: |
+                    npm install
+                    npm run test
+                    npm run build
+            -   name: Publish
+                uses: JS-DevTools/npm-publish@v1
+                with:
+                    token: ${{ secrets.NPM_TOKEN }}
+            -   name: Deploy to gh-pages
+                uses: JamesIves/github-pages-deploy-action@releases/v3
+                with:
+                    ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+                    BRANCH: gh-pages
+                    FOLDER: _site

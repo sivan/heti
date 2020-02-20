@@ -50,8 +50,9 @@ a {
 
 .article[data-bg-grid="grid-24"] {
   background-size: 100% 24px;
-  background-image: linear-gradient(to right, rgba(255, 255, 255, 0) 31px, #eee 1px, rgba(255, 255, 255, 0) 33px),
-  linear-gradient(rgba(255, 255, 255, 0) 23px, #eee 1px);
+  background-image:
+    linear-gradient(to right, rgba(255, 255, 255, 0) 31px, #eee 1px, rgba(255, 255, 255, 0) 33px),
+    linear-gradient(rgba(255, 255, 255, 0) 23px, #eee 1px);
   outline-color: #eee;
 }
 
@@ -63,8 +64,9 @@ a {
 
 .article[data-bg-grid="grid-12"] {
   background-size: 100% 12px;
-  background-image: linear-gradient(to right, rgba(255, 255, 255, 0) 31px, #eee 1px, rgba(255, 255, 255, 0) 33px),
-  linear-gradient(rgba(255, 255, 255, 0) 11px, #eee 12px);
+  background-image:
+    linear-gradient(to right, rgba(255, 255, 255, 0) 31px, #eee 1px, rgba(255, 255, 255, 0) 33px),
+    linear-gradient(rgba(255, 255, 255, 0) 11px, #eee 12px);
   outline-color: #eee;
 }
 
@@ -312,5 +314,8 @@ a {
   .article .article__toc ol {
     margin-block-start: 12px;
     margin-block-end: 0;
+  }
+  .article .article__toc ol ol {
+    margin-block-start: 0;
   }
 }
