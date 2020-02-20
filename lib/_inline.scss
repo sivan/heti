@@ -157,18 +157,19 @@
     }
   }
 
-  //b,
-  //cite,
-  //dfn,
-  //em,
-  //strong {
-  //  margin-inline-start: 1px;
-  //  margin-inline-end: 1px;
-  //}
+  // 为所有加划线的元素增加缝隙
+  abbr[title],
+  del,
+  ins,
+  s,
+  u {
+    margin-inline-start: 1px;
+    margin-inline-end: 1px;
+  }
 
   // 带边框的元素，两个相连时添加间距，以防止视觉上混为一个元素
   // @todo: 此处有一个问题：如果结构是 <u>倚天</u>和<u>屠龙</u>，「屠龙」前面仍然会有边距。此处跟预期不一致，应该只在两个同名元素紧邻时增加边距，即：<u>倚天剑</u><u>屠龙刀</u>
-  //@each $tag in (abbr, del, ins, s, u) {
+  //@each $tag in (abbr[title], del, ins, s, u) {
   //  #{$tag} + #{$tag} {
   //    margin-inline-start: 0.125em;
   //  }
