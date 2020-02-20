@@ -9,7 +9,7 @@
   "scripts": {
     "start": "node-sass -w --output-style=compressed lib/heti.scss demo/heti.min.css",
     "build": "node-sass lib/heti.scss dist/heti.min.css --output-style=compressed",
-    "deploy": "npm run build && gh-pages -d demo",
+    "deploy": "gh-pages -d demo",
     "test": "npx stylelint --config .stylelintrc 'lib/**/*.scss'"
   },
   "repository": {
