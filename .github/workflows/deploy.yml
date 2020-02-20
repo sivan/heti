@@ -1,0 +1,21 @@
+name: deploy
+
+on:
+    push:
+        branches:
+            - master
+
+jobs:
+    build-and-deploy:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout
+              uses: actions/checkout@master
+
+            - name: Deploy to GitHub Pages
+              uses: Cecilapp/GitHub-Pages-deploy@master
+              env:
+                  EMAIL: sun.sivan@gmail.com
+                  GH_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+                  BASE_BRANCH: master
+                  BUILD_DIR: demo
