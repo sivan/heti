@@ -1,12 +1,10 @@
-/**
- * Author: Sivan [sun.sivan@gmail.com]
- * Description: define variables, alias etc.
- */
+// Author: Sivan [sun.sivan@gmail.com]
+// Description: define variables, alias etc.
 
 // 定义赫蹏根 class 名
 $root-selector: '.heti' !default;
 
-/* 字体 Fonts */
+// 字体 Fonts
 // 字体栈 Font Stacks
 $_font-stack-sans: "Helvetica Neue", Helvetica, Arial !default;
 $_font-stack-serif: "Times New Roman", Times !default;
@@ -42,7 +40,7 @@ $font-size-h4: 18px !default;
 $font-size-h5: 16px !default;
 $font-size-h6: 14px !default;
 
-/* 行 Lines */
+// 行 Lines
 // 行宽
 $line-length: 42em !default;
 
@@ -65,7 +63,7 @@ $line-height-size-h4: 24px !default;
 $line-height-size-h5: 24px !default;
 $line-height-size-h6: 24px !default;
 
-/* 段落 Paragraphs */
+// 段落 Paragraphs
 // 标准网格单位变量 Standard Length
 // 垂直方向标准单位 = 标准行高
 // 水平方向标准单位 = 标准字号
@@ -76,18 +74,18 @@ $std-inline-unit: $font-size-normal !default;
 $text-indent-length: 2em !default;
 $text-indent-size: $font-size-normal * 2 !default;
 
-/* 栏 Columns */
+// 栏 Columns
 // 分栏
 $column-count-list: (1, 2, 3, 4) !default;
 $column-width-list: (16em, 20em, 24em, 28em, 32em, 36em, 40em, 44em, 48em) !default;
 
-/* 开发用配置项 Develop Configs */
-// 预设重置方案
-// `reset`：假定 Eric Meyer 的 CSS Reset 或其它流行的 Reset
-// `normalize`：指定为 normalize.css
+// 开发用配置项 Develop Configs
+/// 预设重置方案
+/// `reset`：假定 Eric Meyer 的 CSS Reset 或其它流行的 Reset
+/// `normalize`：指定为 normalize.css
 $_css-reset-scheme: "reset";
 
-/* 混合 Mix-ins */
+// 混合 Mix-ins
 // Mix-in: Clear float
 @mixin clear-float {
   &::before,
@@ -116,7 +114,7 @@ $_css-reset-scheme: "reset";
   text-indent: 0;
 }
 
-/* 函数 Functions */
+// 函数 Functions
 // Function: batch prefix/suffix list-item
 // batch-fix-list((2, 3), '#{$root-selector}--columns-') => (.heti--columns-2, .heti--columns-3)
 @function batch-fix-list($list, $prefix: '', $suffix: '') {
