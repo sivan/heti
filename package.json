@@ -43,12 +43,17 @@
     "stylelint-scss": "^3.13.0"
   },
   "stylelint": {
-    "extends": ["stylelint-config-standard", "stylelint-config-recommended-scss"],
+    "extends": [
+      "stylelint-config-standard",
+      "stylelint-config-recommended-scss"
+    ],
     "rules": {
       "no-descending-specificity": [
         true,
         {
-          "ignore": ["selectors-within-list"]
+          "ignore": [
+            "selectors-within-list"
+          ]
         }
       ]
     }
