@@ -23,6 +23,8 @@
     margin-block-end: $std-block-unit;
     font-size: $font-size-h1;
     line-height: $line-height-size-h1;
+
+    // 中文大标题增加微小文字间距
     letter-spacing: $font-size-h1 * 0.05;
   }
 
@@ -51,6 +53,15 @@
   h6 {
     font-size: $font-size-h6;
     line-height: $line-height-size-h6;
+  }
+
+  h1,
+  h2,
+  h3 {
+    // 非中文时不加间距
+    @include non-cjk-block {
+      letter-spacing: 0;
+    }
   }
 
   // 压缩两个标题之间的间距
