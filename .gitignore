@@ -3,6 +3,7 @@
 .settings/
 
 # Dev dependencies and cache files
+dist/
 node_modules/
 npm-debug.log
 
@@ -18,5 +19,3 @@ Thumbs.db
 # Files that might appear on external disks
 .Spotlight-V100
 .Trashes
-
-dist/
