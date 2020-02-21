@@ -14,7 +14,6 @@
     "build:expanded": "node-sass lib/heti.scss dist/heti.css --output-style=expanded",
     "build:compressed": "node-sass lib/heti.scss dist/heti.min.css --output-style=compressed",
     "build": "npm run build:expanded && npm run build:compressed",
-    "deploy": "gh-pages -d _site",
     "test": "npx stylelint --config package.json 'lib/**/*.scss'"
   },
   "repository": {
@@ -35,7 +34,6 @@
   },
   "homepage": "https://github.com/sivan/heti#readme",
   "devDependencies": {
-    "gh-pages": "^2.2.0",
     "node-sass": "^4.13.1",
     "stylelint": "^13.0.0",
     "stylelint-config-recommended-scss": "^4.1.0",
