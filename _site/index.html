@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="./normalize.css">
   <link rel="stylesheet" href="./index.css">
-  <link rel="stylesheet" href="./heti.min.css">
+  <link rel="stylesheet" href="./heti.debug.css">
   <link rel="icon" href="./favicon.svg">
 </head>
 <body>
@@ -15,7 +15,7 @@
       <h1>赫蹏</h1>
       <blockquote>古代称用以书写的小幅绢帛。后亦以借指纸。《汉书·外戚传下·孝成赵皇后》：<q>武（籍武 ）发篋中，有裹药二枚，赫蹏书。</q><u>颜师古</u>注：<q><u>邓展</u>曰：<q>赫音兄弟鬩墙之鬩。</q><u>应劭</u>曰：<q>赫蹏，薄小纸也。</q></q><u>宋</u><u>赵彦卫</u> 《云麓漫钞》卷七：<q>《赵后传》所谓『赫蹏』者，注云<q>薄小纸</q>，然其寔亦縑帛。</q></blockquote>
 
-      <nav class="article__toc">
+      <nav class="article__toc heti-skip">
         <details open>
           <summary>目录</summary>
           <ol>
@@ -49,16 +49,14 @@
       <h2 id="intro">介绍<a class="anchor" href="#intro">#</a></h2>
       <p><dfn>赫蹏</dfn>（<code>hètí</code>）是专为中文内容展示设计的排版样式增强。它基于通行的中文排版规范而来，可以为网站的读者带来更好的文章阅读体验。由于它不同于传统的网页样式重置，而是专注于<em>正文区域</em>的样式增强，因此可以很好的与常见的CSS样式重置方案共存。</p>
       <ul>
-        <li>全标签样式统一；</li>
         <li>贴合网格的排版；</li>
-        <li>预置多种预设字体族（仅限桌面端）；</li>
-        <li>预置横排、直排（竖排）样式；</li>
+        <li>全标签样式美化；</li>
+        <li>预置多种排版样式（横/竖排、行间注、多栏等）；</li>
         <li>预置古文、诗词样式；</li>
-        <li>预置行间注排版样式；</li>
-        <li>预置多栏排版样式；</li>
-        <li>兼容<i>normalize.css</i>、<i>CSS Reset</i><sup><a href="#fn-01">[1]</a></sup>；</li>
+        <li>多种预设字体族（仅限桌面端）；</li>
+        <li>中西文混排美化（基于JavaScript脚本实现）；</li>
+        <li>兼容<i>normalize.css</i>、<i>CSS Reset<sup><a href="#fn-01">[1]</a></sup></i>；</li>
         <li>移动端支持；</li>
-        <li>基于BEM<sup><a href="#fn-02">[2]</a></sup>命名；</li>
         <li>……</li>
       </ul>
       <p>总之，用上就会变好看。</p>
@@ -68,25 +66,35 @@
       <h2 id="usage">使用方法<a class="anchor" href="#usage">#</a></h2>
       <p>赫蹏的使用方法很简单，只需要引入样式文件并设定作用范围即可：</p>
       <ol>
+        <li>下载项目（<a href="https://github.com/sivan/heti">https://github.com/sivan/heti</a>），将<code>dist</code>文件夹下文件拷出待用；</li>
         <li>
-          在页面的<code>&lt;head&gt;</code>标签中引入<code>heti.css</code>文件：
+          在页面的<code>&lt;/head&gt;</code>标签前中引入<code>heti.css</code>样式文件：
           <pre><code>&lt;link rel=&quot;stylesheet&quot; href=&quot;./heti.css&quot;&gt;</code></pre>
         </li>
         <li>
           在要作用的容器元素上增加<code>class="heti"</code>的类名即可：
-          <pre><code>&lt;article class=&quot;entry heti&quot;&gt;
+          <pre><code>&lt;article class=&quot;entry <ins>heti</ins>&quot;&gt;
   &lt;h1&gt;我的世界观&lt;/h1&gt;
   &lt;p&gt;有钱人的生活就是这么朴实无华，且枯燥&lt;/p&gt;
   ……
 &lt;/article&gt;</code></pre>
         </li>
-        <li>不建议将样式作用在根标签（比如<code>&lt;body&gt;</code>或<code>&lt;div class=&quot;container&quot;&gt;</code>）上，除非你的页面<u title="就像本页面一样">通篇都是文章的一部分</u>。</li>
+        <li>
+          * 如需中西文混排美化，还要在页面的<code>&lt;/body&gt;</code>标签前引入JavaScript脚本：
+          <pre><code>&lt;script src=&quot;./heti-addon.min.js&quot;&gt;&lt;/script&gt;
+&lt;script&gt;
+  const heti = new Heti();
+  heti.autoSpacing();
+&lt;/script&gt;</code></pre>
+        </li>
+        <li>大功告成，查看效果吧~</li>
       </ol>
+      <p>注：赫蹏是正文区域的样式增强，不是<i>normalize.css</i>或<i>CSS Reset</i>的替代。因此<b>不建议</b>将它作用在根标签（如<code>&lt;body&gt;</code>或<code>&lt;div class=&quot;container&quot;&gt;</code>）上，除非像本页面一样通篇都是文章的一部分。</p>
 
       <hr>
 
       <h2 id="examples">效果示例<a class="anchor" href="#examples">#</a></h2>
-      <p>本站已<em>全页</em>应用了赫蹏样式，下面是赫蹏在特殊排版下的效果演示。</p>
+      <p>本页面<em>全页</em>应用了赫蹏样式，所见即所得。下面是内置的多种排版效果演示。</p>
       <details open>
         <summary id="example-1">示例1：古文</summary>
         <section class="demo">
@@ -120,12 +128,12 @@
           </div>
           <hr>
           <div class="heti--poetry">
-            <h2>丑奴儿·书博山道中壁<span class="heti-meta heti-small">[宋]<abbr title="号稼轩">辛弃疾</abbr></span></h2>
+            <h2>赠汪伦<span class="heti-meta heti-small">[唐]<abbr title="号青莲居士">李白</abbr></span></h2>
             <p class="heti-x-large">
-              少年不识愁滋味，爱上层楼<span class="heti-hang">。</span><br>
-              爱上层楼，为赋新词强说愁<span class="heti-hang">。</span><br>
-              而今识尽愁滋味，欲说还休<span class="heti-hang">。</span><br>
-              欲说还休，却道天凉好个秋<span class="heti-hang">。</span>
+              李白乘舟将欲行<span class="heti-hang">，</span><br>
+              忽闻岸上踏歌声<span class="heti-hang">。</span><br>
+              桃花潭水深千尺<span class="heti-hang">，</span><br>
+              不及汪伦送我情<span class="heti-hang">。</span>
             </p>
           </div>
         </section>
@@ -165,7 +173,7 @@
       <p>赫蹏预置了多种多栏布局类，可以按栏数或栏宽进行设置。</p>
       <details>
         <summary>查看使用说明</summary>
-        <p>为容器元素添加名为<code>heti--columns-2</code>class即可实现三栏排版。</p>
+        <p>为容器元素添加名为<code>heti--columns-2</code>的class即可实现三栏排版。</p>
         <pre><code>&lt;div class=&quot;heti heti--columns-2&quot;&gt;&lt;/div&gt;</code></pre>
         <table>
           <thead>
@@ -210,7 +218,7 @@
       <p>赫蹏预置了传统的垂直方向排版，同样贴合栅格。</p>
       <details>
         <summary>查看使用说明</summary>
-        <p>为容器元素添加名为<code>heti--vertical</code>class即可实现垂直布局：</p>
+        <p>为容器元素添加名为<code>heti--vertical</code>的class即可实现垂直布局：</p>
         <pre><code>&lt;div class=&quot;heti heti--vertical&quot;&gt;&lt;/div&gt;</code></pre>
       </details>
       <figure class="card card--vertical">
@@ -232,14 +240,14 @@
 
       <hr>
 
-      <h2 id="guidelines">排版原则<a class="anchor" href="#guidelines">#</a></h2>
+      <h2 id="guidelines">设计原则<a class="anchor" href="#guidelines">#</a></h2>
       <h3>核心</h3>
       <p>以美化中文方块字排版为目标，假定作用范围是网页中的文章区域（含标题、正文、元信息等），不包含网页导航、表单、侧边栏等区域（它们也不需要这套格式排版）。</p>
       <p>使用<code>heti.css</code>时建议搭配良好的中文书写习惯，即：使用正确的HTML标签、正确的引号、中文全角标点等。使用Markdown书写文章将助你一臂之力。</p>
       <h3>字号</h3>
       <p><code>heti.css</code> 采用16px作为默认字号。在文字较大时（作用于标题等情况），会适当地增加字间距以便获得更好地可读性。</p>
       <h3>字体</h3>
-      <p>参考《中文排版需求<sup><a href="#fn-03">[3]</a></sup>》中描述的四种常见书籍排版字体：宋体、楷体、黑体、仿宋。赫蹏提供黑体、宋体和<u title="以正文宋体、标题楷体构成的搭配">传统</u>三种字体风格，前两者分别对应无衬线、衬线字体族。</p>
+      <p>参考《中文排版需求<sup><a href="#fn-03">[2]</a></sup>》中描述的四种常见书籍排版字体：宋体、楷体、黑体、仿宋。赫蹏提供黑体、宋体和<u title="以正文宋体、标题楷体构成的搭配">传统</u>三种字体风格，前两者分别对应无衬线、衬线字体族。</p>
       <details>
         <summary>查看对照表</summary>
         <section class="section">
@@ -364,6 +372,12 @@
       <p>参考《中文排版需求》制定符号样式。唯一差异在于简体中文一律采用直角引号（「」）替代圆角引号（“”），这样可以保持字符等宽。</p>
       <h3>间距</h3>
       <p>为保持页面元素总是贴合垂直栅格，大部分块级元素（段落、列表、表格等）采用一行行高作为底边距，半行行高作为顶边距。</p>
+      <h3>其它</h3>
+      <p>赫蹏基于BEM<sup><a href="#fn-02">[3]</a></sup>命名，并提供了一些 helper classes。详细内容看下表：</p>
+      <details>
+        <summary>查看辅助样式列表</summary>
+        <p><i>待补充…</i></p>
+      </details>
 
       <hr>
 
@@ -472,9 +486,9 @@
 
       <h2 id="wip">待开发功能<a class="anchor" href="#wip">#</a></h2>
       <ul>
-        <li>️☑ 中、西文混排</li>
         <li>☑ 标点挤压</li>
         <li>☑ 标点悬挂</li>
+        <li>✅ 中、西文混排</li>
         <li>✅ 诗词版式</li>
         <li>✅ 行间注版式</li>
       </ul>
@@ -482,8 +496,8 @@
       <footer class="heti-fn">
         <ol>
           <li id="fn-01">CSS Reset：指代类似Eric Meyer's Reset CSS的样式重置方案</li>
-          <li id="fn-02">BEM：由Yandex公司创造的命名方式 https://en.bem.info/</li>
-          <li id="fn-03">《中文排版需求》：https://w3c.github.io/clreq/</li>
+          <li id="fn-02">《中文排版需求》：https://w3c.github.io/clreq/</li>
+          <li id="fn-03">BEM：由Yandex公司创造的命名方式 https://en.bem.info/</li>
         </ol>
       </footer>
     </article>
@@ -502,6 +516,7 @@
     </ul>
   </aside>
 
+  <script src="./heti-addon.debug.js"></script>
   <script>
     const $$root = document.getElementsByTagName('article')[0]
 
@@ -518,6 +533,10 @@
     addEventListeners(document.getElementsByClassName('J_radioGrid'), 'change', function (e) {
       $$root.setAttribute('data-bg-grid', e.target.value)
     })
+
+    const heti = new Heti()
+    heti.autoSpacing()
+    // hetiSpacing.spacingElements(document.getElementsByClassName('heti'))
   </script>
 </body>
 </html>

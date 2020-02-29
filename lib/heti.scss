@@ -17,6 +17,7 @@
 @import "modifiers/annotation";
 @import "helpers/block";
 @import "helpers/inline";
+@import "helpers/add-on";
 
 #{$root-selector} {
   // 中文每行展示文字（CPL）建议在 30~50 之间，默认 42
@@ -52,4 +53,5 @@
   // .heti .heti-verse, .heti .heti-hang
   @include hetiBlockHelperClasses();
   @include hetiInlineHelperClasses();
+  @include hetiAddOns();
 }

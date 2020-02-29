@@ -182,19 +182,16 @@
   margin-block-end: 24px;
   font-size: 32px;
   line-height: 48px;
-  letter-spacing: 1.6px;
 }
 
 .heti h2 {
   font-size: 24px;
   line-height: 36px;
-  letter-spacing: 1.2px;
 }
 
 .heti h3 {
   font-size: 20px;
   line-height: 36px;
-  letter-spacing: 1px;
 }
 
 .heti h4 {
@@ -210,6 +207,20 @@
 .heti h6 {
   font-size: 14px;
   line-height: 24px;
+}
+
+.heti h1,
+.heti h2,
+.heti h3 {
+  letter-spacing: 0.05em;
+}
+
+.heti h1:not(:lang(zh)):not(:lang(ja)):not(:lang(kr)), .heti h1:not(:lang(zh)),
+.heti h2:not(:lang(zh)):not(:lang(ja)):not(:lang(kr)),
+.heti h2:not(:lang(zh)),
+.heti h3:not(:lang(zh)):not(:lang(ja)):not(:lang(kr)),
+.heti h3:not(:lang(zh)) {
+  letter-spacing: 0;
 }
 
 .heti h1 + h2,
@@ -391,6 +402,7 @@
   margin-inline-end: 0.25em;
   font-size: 0.75em;
   font-family: "Helvetica Neue", Helvetica, Arial, "Heti Hei", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-style: normal;
   line-height: 1;
   vertical-align: baseline;
 }
@@ -685,6 +697,7 @@
 .heti .heti-x-large {
   font-size: 20px;
   line-height: 30px;
+  letter-spacing: 0.05em;
 }
 
 .heti .heti-small {
@@ -747,4 +760,21 @@
 
 .heti .heti-em:not(:lang(zh)):not(:lang(ja)):not(:lang(kr)), .heti .heti-em:not(:lang(zh)) {
   -webkit-text-emphasis: none;
+}
+
+.heti heti-spacing {
+  display: inline;
+}
+
+.heti heti-spacing.heti-spacing-start {
+  margin-inline-end: 0.25em;
+}
+
+.heti heti-spacing.heti-spacing-end {
+  margin-inline-start: 0.25em;
+}
+
+.heti heti-spacing + sup,
+.heti heti-spacing + sub {
+  margin-inline-start: 0;
 }
