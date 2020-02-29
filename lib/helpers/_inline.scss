@@ -3,18 +3,36 @@
 @import "../variables";
 
 @mixin hetiInlineHelperClasses {
+  // 标点悬挂 Punctuation mark hanging
   // @todo: 用于标点悬挂用的样式
   #{$root-selector}-hang {
     @include hang();
   }
 
-  // 显示强烈的着重号
+  // 强烈着重号 Emphasis Mark
   #{$root-selector}-em {
     -webkit-text-emphasis: filled circle;
     -webkit-text-emphasis-position: under;
 
     @include non-cjk-block {
       -webkit-text-emphasis: none;
+    }
+  }
+
+  // 内联 Ruby
+  // 在非行间注排版中使用 ruby 标签，且不额外占据空间
+  // 注：使用此样式需按字拆分 <ruby class="heti-ruby heti-ruby--inline"><rb>赫</rb><rp>(</rp><rt>hè</rt><rp>)</rp></ruby>
+  // https://stackoverflow.com/questions/38680695/adjust-the-vertical-positioning-of-ruby-text/38877801#38877801
+  #{$root-selector}-ruby {
+    &--inline {
+      display: inline-flex;
+      flex-direction: column-reverse;
+      height: 1.5em;
+
+      rt {
+        display: inline;
+        line-height: 0.5;
+      }
     }
   }
 }
