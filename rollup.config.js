@@ -6,7 +6,7 @@ export default {
   input: 'add-ons/add-on.js',
   output: [
     {
-      file: '_site/heti-addon.debug.js',
+      file: '_site/heti-addon.js',
       name: 'Heti',
       format: 'umd'
     },

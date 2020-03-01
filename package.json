@@ -10,7 +10,7 @@
     "lib": "lib"
   },
   "scripts": {
-    "start": "node-sass -w --output-style=expanded lib/heti.scss _site/heti.debug.css",
+    "start": "node-sass -w --output-style=expanded lib/heti.scss _site/heti.css",
     "build:expanded": "node-sass lib/heti.scss dist/heti.css --output-style=expanded",
     "build:compressed": "node-sass lib/heti.scss dist/heti.min.css --output-style=compressed",
     "build:script": "rollup -c",
