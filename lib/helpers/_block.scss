@@ -26,6 +26,7 @@
     &-x-large {
       font-size: $font-size-x-large;
       line-height: $line-height-size-x-large;
+      letter-spacing: 0.05em;
     }
 
     &-small {
@@ -77,6 +78,12 @@
     ol {
       margin-block-start: $std-block-unit / 2;
       margin-block-end: 0;
+    }
+
+    li {
+      &:target {
+        background-color: #def;
+      }
     }
   }
 }

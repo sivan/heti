@@ -1,19 +1,18 @@
 {
   "name": "heti",
-  "version": "0.3.5",
+  "version": "0.4.0",
   "description": "赫蹏是专为中文内容展示设计的排版样式增强。它基于通行的中文排版规范而来，可以为网站的读者带来更好的文章阅读体验。",
   "main": "lib/heti.scss",
   "files": [
+    "add-ons",
     "lib"
   ],
-  "directories": {
-    "lib": "lib"
-  },
   "scripts": {
-    "start": "node-sass -w --output-style=expanded lib/heti.scss _site/heti.min.css",
-    "build:expanded": "node-sass lib/heti.scss dist/heti.css --output-style=expanded",
-    "build:compressed": "node-sass lib/heti.scss dist/heti.min.css --output-style=compressed",
-    "build": "npm run build:expanded && npm run build:compressed",
+    "start": "node-sass -w --output-style=expanded lib/heti.scss _site/heti.css",
+    "compile": "rollup -c -w",
+    "build:style": "node-sass lib/heti.scss dist/heti.min.css --output-style=compressed",
+    "build:script": "rollup -c",
+    "build": "npm run build:style && npm run build:script",
     "test": "npx stylelint --config package.json 'lib/**/*.scss'"
   },
   "repository": {
@@ -33,8 +32,15 @@
     "url": "https://github.com/sivan/heti/issues"
   },
   "homepage": "https://github.com/sivan/heti#readme",
+  "dependencies": {
+    "findandreplacedomtext": "^0.4.6"
+  },
   "devDependencies": {
+    "@rollup/plugin-commonjs": "^11.0.2",
+    "@rollup/plugin-node-resolve": "^7.1.1",
     "node-sass": "^4.13.1",
+    "rollup": "^1.32.0",
+    "rollup-plugin-terser": "^5.2.0",
     "stylelint": "^13.0.0",
     "stylelint-config-recommended-scss": "^4.1.0",
     "stylelint-config-standard": "^19.0.0",
@@ -51,6 +57,14 @@
         {
           "ignore": [
             "selectors-within-list"
+          ]
+        }
+      ],
+      "selector-type-no-unknown": [
+        true,
+        {
+          "ignore": [
+            "custom-elements"
           ]
         }
       ]
