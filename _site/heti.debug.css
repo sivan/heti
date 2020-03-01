@@ -772,6 +772,7 @@
   -webkit-text-emphasis: none;
 }
 
+<<<<<<< HEAD:_site/heti.debug.css
 .heti .heti-ruby--inline {
   display: inline-flex;
   flex-direction: column-reverse;
@@ -785,12 +786,25 @@
 
 .heti heti-spacing {
   display: inline;
+=======
+.heti heti-spacing {
+  display: inline;
+}
+
+.heti heti-spacing.heti-spacing-start {
+  margin-inline-end: 0.25em;
+}
+
+.heti heti-spacing.heti-spacing-end {
+  margin-inline-start: 0.25em;
+>>>>>>> 20c70557b52890ee555f81223c2dfeb4ca795af2:_site/heti.debug.css
 }
 
 .heti heti-spacing + sup,
 .heti heti-spacing + sub {
   margin-inline-start: 0;
 }
+<<<<<<< HEAD:_site/heti.debug.css
 
 .heti .heti-spacing-start {
   margin-inline-end: 0.25em;
@@ -799,3 +813,5 @@
 .heti .heti-spacing-end {
   margin-inline-start: 0.25em;
 }
+=======
+>>>>>>> 20c70557b52890ee555f81223c2dfeb4ca795af2:_site/heti.debug.css
