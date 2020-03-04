@@ -44,6 +44,13 @@ const hasOwn = {}.hasOwnProperty
 
 class Heti {
   constructor (rootSelector) {
+    try {
+      new RegExp(`(?<=\d)\d`, 'g').test('')
+    } catch (err) {
+      console.warn(err.name, '浏览器尚未实现 RegExp positive lookbehind')
+      return
+    }
+
     this.rootSelector = rootSelector || '.heti'
     this.REG_FULL = new RegExp(`(?<=[${CJK}])( *[${ANS}]+(?: +[${ANS}]+)* *)(?=[${CJK}])`, 'g')
     this.REG_START = new RegExp(`([${ANS}]+(?: +[${ANS}]+)* *)(?=[${CJK}])`, 'g')
