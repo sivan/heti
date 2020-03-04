@@ -11,7 +11,7 @@ export default {
       format: 'umd'
     },
     {
-      file: 'dist/heti-addon.min.js',
+      file: 'umd/heti-addon.min.js',
       format: 'umd',
       name: 'Heti',
       plugins: [
