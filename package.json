@@ -5,13 +5,14 @@
   "main": "lib/heti.scss",
   "files": [
     "dist",
+    "umd",
     "add-ons",
     "lib"
   ],
   "scripts": {
     "start": "node-sass -w --output-style=expanded lib/heti.scss _site/heti.css",
     "compile": "rollup -c -w",
-    "build:style": "node-sass lib/heti.scss dist/heti.min.css --output-style=compressed",
+    "build:style": "node-sass lib/heti.scss umd/heti.min.css --output-style=compressed",
     "build:script": "rollup -c",
     "build": "npm run build:style && npm run build:script",
     "test": "npx stylelint --config package.json 'lib/**/*.scss'"

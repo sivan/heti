@@ -21,3 +21,4 @@ Thumbs.db
 
 # Dist files
 dist/
+umd/

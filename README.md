@@ -22,7 +22,7 @@
 
 1. 在页面的 `<head>` 标签中引入 `heti.css` 文件：
     ```
-    <link rel="stylesheet" href="./dist/heti.min.css">
+    <link rel="stylesheet" href="//unpkg.com/heti/umd/heti.min.css">
     ```
 1. 在要作用的容器元素上增加 `class="heti"` 的类名即可：。
     ```
