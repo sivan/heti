@@ -36,7 +36,7 @@ a {
 .container {
   box-sizing: border-box;
   padding-block-start: 12px;
-  padding-block-end: 12px;
+  padding-block-end: 72px;
   padding-inline-start: 12px;
   padding-inline-end: 12px;
 }
