@@ -802,3 +802,15 @@
 .heti .heti-spacing-end {
   margin-inline-start: 0.25em;
 }
+
+.heti heti-adjacent {
+  display: inline;
+}
+
+.heti .heti-adjacent-half {
+  margin-inline-end: -0.5em;
+}
+
+.heti .heti-adjacent-quarter {
+  margin-inline-end: -0.25em;
+}

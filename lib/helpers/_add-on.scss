@@ -20,4 +20,16 @@
   .heti-spacing-end {
     margin-inline-start: 0.25em;
   }
+
+  heti-adjacent {
+    display: inline;
+  }
+
+  .heti-adjacent-half {
+    margin-inline-end: -0.5em;
+  }
+
+  .heti-adjacent-quarter {
+    margin-inline-end: -0.25em;
+  }
 }
