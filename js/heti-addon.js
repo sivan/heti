@@ -5,28 +5,32 @@
 
 import Finder from 'heti-findandreplacedomtext'
 
-// 正则表达式来自 pangu.js https://github.com/vinta/pangu.js
-const CJK = '\u2e80-\u2eff\u2f00-\u2fdf\u3040-\u309f\u30a0-\u30fa\u30fc-\u30ff\u3100-\u312f\u3200-\u32ff\u3400-\u4dbf\u4e00-\u9fff\uf900-\ufaff'
-const A = 'A-Za-z\u0370-\u03ff'
-const N = '0-9'
-const S = '`~!@#\\$%\\^&\\*\\(\\)-_=\\+\\[\\]{}\\\\\\|;:\'",<.>\\/\\?'
-const ANS = `${A}${N}${S}`
+const hasOwn = {}.hasOwnProperty
 const HETI_NON_CONTIGUOUS_ELEMENTS = Object.assign({}, Finder.NON_CONTIGUOUS_PROSE_ELEMENTS, {
-  // Inline elements
   ins: 1, del: 1, s: 1,
 })
 const HETI_SKIPPED_ELEMENTS = Object.assign({}, Finder.NON_PROSE_ELEMENTS, {
-  pre: 1, code: 1, sup: 1, sub: 1,
-  // Heti elements
-  'heti-spacing': 1,
+  pre: 1, code: 1, sup: 1, sub: 1, 'heti-spacing': 1, 'heti-close': 1,
 })
 const HETI_SKIPPED_CLASS = 'heti-skip'
-const hasOwn = {}.hasOwnProperty
-const REG_FULL = `(?<=[${CJK}])( *[${ANS}]+(?: +[${ANS}]+)* *)(?=[${CJK}])`
-const REG_FULL_FIX = `(?:[${CJK}])( *[${ANS}]+(?: +[${ANS}]+)* *)(?=[${CJK}])`
-const REG_START = `([${ANS}]+(?: +[${ANS}]+)* *)(?=[${CJK}])`
-const REG_END = `(?<=[${CJK}])( *[${ANS}]+(?: +[${ANS}]+)*)`
-const REG_END_FIX = `(?:[${CJK}])( *[${ANS}]+(?: +[${ANS}]+)*)`
+
+// 部分正则表达式修改自 pangu.js https://github.com/vinta/pangu.js
+const CJK = '\u2e80-\u2eff\u2f00-\u2fdf\u3040-\u309f\u30a0-\u30fa\u30fc-\u30ff\u3100-\u312f\u3200-\u32ff\u3400-\u4dbf\u4e00-\u9fff\uf900-\ufaff'
+const A = 'A-Za-z\u0080-\u00ff\u0370-\u03ff'
+const N = '0-9'
+const S = '`~!@#\\$%\\^&\\*\\(\\)-_=\\+\\[\\]{}\\\\\\|;:\'",<.>\\/\\?'
+const ANS = `${A}${N}${S}`
+const REG_CJK_FULL = `(?<=[${CJK}])( *[${ANS}]+(?: +[${ANS}]+)* *)(?=[${CJK}])`
+const REG_CJK_START = `([${ANS}]+(?: +[${ANS}]+)* *)(?=[${CJK}])`
+const REG_CJK_END = `(?<=[${CJK}])( *[${ANS}]+(?: +[${ANS}]+)*)`
+const REG_CJK_FULL_WITHOUT_LOOKBEHIND = `(?:[${CJK}])( *[${ANS}]+(?: +[${ANS}]+)* *)(?=[${CJK}])`
+const REG_CJK_END_WITHOUT_LOOKBEHIND = `(?:[${CJK}])( *[${ANS}]+(?: +[${ANS}]+)*)`
+const REG_BD_STOP = `。．，、：；！‼？⁇`
+const REG_BD_SEP = `·・‧`
+const REG_BD_OPEN = `「『（《〈【〖〔［｛`
+const REG_BD_CLOSE = `」』）》〉】〗〕］｝`
+const REG_BD_START = `${REG_BD_OPEN}${REG_BD_CLOSE}`
+const REG_BD_END = `${REG_BD_STOP}${REG_BD_OPEN}${REG_BD_CLOSE}`
 
 class Heti {
   constructor (rootSelector) {
@@ -40,13 +44,12 @@ class Heti {
     }
 
     this.rootSelector = rootSelector || '.heti'
-    this.REG_FULL = new RegExp(supportLookBehind ? REG_FULL : REG_FULL_FIX, 'g')
-    this.REG_START = new RegExp(REG_START, 'g')
-    this.REG_END = new RegExp(supportLookBehind ? REG_END : REG_END_FIX, 'g')
+    this.REG_FULL = new RegExp(supportLookBehind ? REG_CJK_FULL : REG_CJK_FULL_WITHOUT_LOOKBEHIND, 'g')
+    this.REG_START = new RegExp(REG_CJK_START, 'g')
+    this.REG_END = new RegExp(supportLookBehind ? REG_CJK_END : REG_CJK_END_WITHOUT_LOOKBEHIND, 'g')
     this.offsetWidth = supportLookBehind ? 0 : 1
     this.funcForceContext = function forceContext (el) {
       return hasOwn.call(HETI_NON_CONTIGUOUS_ELEMENTS, el.nodeName.toLowerCase())
-      // return true
     }
     this.funcFilterElements = function filterElements (el) {
       return (
@@ -67,8 +70,8 @@ class Heti {
       forceContext: this.funcForceContext,
       filterElements: this.funcFilterElements,
     }
-    const getWrapper = function (classList, text) {
-      const $$r = document.createElement('heti-spacing')
+    const getWrapper = function (elementName, classList, text) {
+      const $$r = document.createElement(elementName)
       $$r.className = classList
       $$r.textContent = text.trim()
       return $$r
@@ -76,18 +79,30 @@ class Heti {
 
     Finder($$elm, Object.assign({}, commonConfig, {
       find: this.REG_FULL,
-      replace: portion => getWrapper('heti-spacing-start heti-spacing-end', portion.text),
+      replace: portion => getWrapper('heti-spacing', 'heti-spacing-start heti-spacing-end', portion.text),
       offset: this.offsetWidth,
     }))
 
     Finder($$elm, Object.assign({}, commonConfig, {
       find: this.REG_START,
-      replace: portion => getWrapper('heti-spacing-start', portion.text),
+      replace: portion => getWrapper('heti-spacing', 'heti-spacing-start', portion.text),
     }))
 
     Finder($$elm, Object.assign({}, commonConfig, {
       find: this.REG_END,
-      replace: portion => getWrapper('heti-spacing-end', portion.text),
+      replace: portion => getWrapper('heti-spacing', 'heti-spacing-end', portion.text),
+      offset: this.offsetWidth,
+    }))
+
+    Finder($$elm, Object.assign({}, commonConfig, {
+      find: new RegExp(`([${REG_BD_STOP}])(?=[${REG_BD_START}])|([${REG_BD_OPEN}])(?=[${REG_BD_OPEN}])|([${REG_BD_CLOSE}])(?=[${REG_BD_END}])`,'g'),
+      replace: portion => getWrapper('heti-adjacent', 'heti-adjacent-half', portion.text),
+      offset: this.offsetWidth,
+    }))
+
+    Finder($$elm, Object.assign({}, commonConfig, {
+      find: new RegExp(`([${REG_BD_SEP}])(?=[${REG_BD_OPEN}])|([${REG_BD_CLOSE}])(?=[${REG_BD_SEP}])`,'g'),
+      replace: portion => getWrapper('heti-adjacent', 'heti-adjacent-quarter', portion.text),
       offset: this.offsetWidth,
     }))
   }
