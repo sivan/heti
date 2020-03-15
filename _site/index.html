@@ -13,7 +13,7 @@
   <main class="container">
     <article class="article heti heti--classic">
       <h1>赫蹏</h1>
-      <blockquote>古代称用以书写的小幅绢帛。后亦以借指纸。《汉书·外戚传下·孝成赵皇后》：<q>武（籍武 ）发篋中，有裹药二枚，赫蹏书。</q><u>颜师古</u>注：<q><u>邓展</u>曰：<q>赫音兄弟鬩墙之鬩。</q><u>应劭</u>曰：<q>赫蹏，薄小纸也。</q></q><u>宋</u><u>赵彦卫</u> 《云麓漫钞》卷七：<q>《赵后传》所谓『赫蹏』者，注云<q>薄小纸</q>，然其寔亦縑帛。</q></blockquote>
+      <blockquote>古代称用以书写的小幅绢帛。后亦以借指纸。《汉书·外戚传下·孝成赵皇后》：「武（籍武 ）发篋中，有裹药二枚，赫蹏书。」<u>颜师古</u>注：「<u>邓展</u>曰：『赫音兄弟鬩墙之鬩。』<u>应劭</u>曰：『赫蹏，薄小纸也。』」<u>宋</u><u>赵彦卫</u> 《云麓漫钞》卷七：「《赵后传》所谓『赫蹏』者，注云『薄小纸』，然其寔亦縑帛。」</blockquote>
 
       <nav class="article__toc heti-skip">
         <details open>
@@ -55,7 +55,8 @@
         <li>预置多种排版样式（行间注、多栏、竖排等）；</li>
         <li>多种预设字体族（仅限桌面端）；</li>
         <li>简/繁体中文支持；</li>
-        <li>中西文混排美化（基于JavaScript脚本实现）；</li>
+        <li>中西文混排美化，不再手敲空格（基于JavaScript脚本）；</li>
+        <li>标点挤压（基于JavaScript脚本）；</li>
         <li>兼容<i>normalize.css</i>、<i>CSS Reset<sup><a id="ref-01" href="#fn-01">[1]</a></sup></i>等常见样式重置；</li>
         <li>移动端支持；</li>
         <li>……</li>
@@ -464,15 +465,89 @@
       </details>
 
       <h3 id="javascript">增强脚本<sup>beta</sup><a class="anchor" href="#javascript">#</a></h3>
-      <p>由于部分CSS特性尚未有浏览器，所以可选择使用增强脚本进行中西文混排优化。无论你的输入习惯是否在中西文之间加入「空格」，都会统一成一样的间距（1/4字宽的空白）。</p>
+      <p>由于部分CSS特性尚未有浏览器支持等原因，可选择使用增强脚本进行排版效果优化。目前增强脚本的功能有：</p>
+      <ul>
+        <li>中英文混排优化：无论你的输入习惯是否在中西文之间留有「空格」<sup><a id="ref-03" href="#fn-03">[3]</a></sup>，都会统一成标准间距（¼字宽的空白）；</li>
+        <li>标点挤压：自动对中文标点进行½字宽的挤压（间隔符挤压¼字宽）。</li>
+      </ul>
       <details>
-        <summary>查看使用说明</summary>
+        <summary>使用方法与效果</summary>
         <p>在页面的<code>&lt;/body&gt;</code>标签前引入JavaScript脚本：</p>
         <pre><code>&lt;script src=&quot;//unpkg.com/heti/umd/heti-addon.min.js&quot;&gt;&lt;/script&gt;
 &lt;script&gt;
-  const heti = new Heti();
+  const heti = new Heti('.heti');
   heti.autoSpacing();
 &lt;/script&gt;</code></pre>
+        <section>
+          <table>
+            <caption>增强脚本示例表</caption>
+            <tr>
+              <th colspan="4">中英文间距</th>
+            </tr>
+            <tr>
+              <th style="width: 80px;">默认文本</th>
+              <td colspan="3">
+                <div class="heti-skip"><b>Hello, world!</b>是大家第一次学习Programming时最常写的demo，它看似简单，但对有些人来说寥寥数语有时也会产生bug。</div>
+              </td>
+            </tr>
+            <tr>
+              <th>脚本效果</th>
+              <td colspan="3">
+                <div><b>Hello, world!</b>是大家第一次学习Programming时最常写的demo，它看似简单，但对有些人来说寥寥数语有时也会产生bug。</div>
+              </td>
+            </tr>
+            <tr>
+              <th colspan="4">标点挤压</th>
+            </tr>
+            <tr>
+              <th>默认文本</th>
+              <td colspan="3">
+                <blockquote class="heti-skip" style="margin-inline-start: 0; margin-inline-end: 0;">古代称用以书写的小幅绢帛。后亦以借指纸<mark>。《</mark>汉书·外戚传下·孝成赵皇后<mark>》：「</mark>武（籍武 ）发篋中，有裹药二枚，赫蹏书。」<u>颜师古</u>注：「<u>邓展</u>曰：『赫音兄弟鬩墙之鬩。』<u>应劭</u>曰：『赫蹏，薄小纸也。』」<u>宋</u><u>赵彦卫</u> 《云麓漫钞》卷七：「《赵后传》所谓『赫蹏』者，注云『薄小纸』，然其寔亦縑帛。」</blockquote>
+              </td>
+            </tr>
+            <tr>
+              <th>脚本效果</th>
+              <td colspan="3">
+                <blockquote style="margin-inline-start: 0; margin-inline-end: 0;">古代称用以书写的小幅绢帛。后亦以借指纸<mark>。《</mark>汉书·外戚传下·孝成赵皇后<mark>》：「</mark>武（籍武 ）发篋中，有裹药二枚，赫蹏书。」<u>颜师古</u>注：「<u>邓展</u>曰：『赫音兄弟鬩墙之鬩。』<u>应劭</u>曰：『赫蹏，薄小纸也。』」<u>宋</u><u>赵彦卫</u> 《云麓漫钞》卷七：「《赵后传》所谓『赫蹏』者，注云『薄小纸』，然其寔亦縑帛。」</blockquote>
+              </td>
+            </tr>
+            <!--
+            <tr>
+              <th colspan="4">标点挤压</th>
+            </tr>
+            <tr>
+              <th>默认文本</th>
+              <td>
+                <ul class="heti-skip">
+                  <li>结束。」</li>
+                  <li>结束」，</li>
+                  <li>开始。「</li>
+                  <li>连接」「</li>
+                  <li>连续「『</li>
+                  <li>连续』」</li>
+                  <li>间隔号」·</li>
+                  <li>间隔号·「</li>
+                  <li>不改「」</li>
+                </ul>
+              </td>
+              <th>脚本效果</th>
+              <td>
+                <ul>
+                  <li>结束。」</li>
+                  <li>结束」，</li>
+                  <li>开始。「</li>
+                  <li>连接」「</li>
+                  <li>连续「『</li>
+                  <li>连续』」</li>
+                  <li>间隔号」·</li>
+                  <li>间隔号·「</li>
+                  <li>不改「」</li>
+                </ul>
+              </td>
+            </tr>
+            -->
+          </table>
+        </section>
       </details>
 
       <h3 id="license">开源协议<a class="anchor" href="#tags">#</a></h3>
@@ -482,8 +557,8 @@
 
       <h2 id="wip">待开发功能<a class="anchor" href="#wip">#</a></h2>
       <ul>
-        <li>☑ 标点挤压</li>
-        <li>☑ 标点悬挂</li>
+        <li>☑ 自适应黑暗模式</li>
+        <li>✅ 标点挤压</li>
         <li>✅ 中、西文混排</li>
         <li>✅ 诗词版式</li>
         <li>✅ 行间注版式</li>
@@ -498,6 +573,9 @@
           <li id="fn-02">
             <a href="#ref-02" title="移至">^</a>
             《中文排版需求》：https://w3c.github.io/clreq/
+          </li>
+          <li id="fn-03">
+            <a href="#ref-03" title="移至">^</a>在当下前端技术尚不能完美解决中西文混排间距的情况下，常见的输入习惯是手动在中西文间加入空格（https://github.com/vinta/pangu.js）。这样做的弊端一是间距不可控（有时显得过大），二是通过空格符来排版只能算无奈之举。好消息是在最新的macOS、iOS中，使用原生语言开发的文本区域会自动处理中西文混排的间距（无论是否加空格），期待不用手敲空格的日子早日到来。
           </li>
         </ol>
       </footer>
