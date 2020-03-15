@@ -13,7 +13,7 @@
 - 预置多种排版样式（行间注、多栏、竖排等）；
 - 多种预设字体族（仅限桌面端）；
 - 简/繁体中文支持；
-- 中西文混排美化，不再手敲空格👏（基于JavaScript脚本）；
+- 中西文混排美化，不再手敲空格👏（基于 JavaScript 脚本）；
 - 兼容 *normalize.css*、*CSS Reset* 等常见样式重置；
 - 移动端支持；
 - ……
@@ -26,13 +26,21 @@
     ```
     <link rel="stylesheet" href="//unpkg.com/heti/umd/heti.min.css">
     ```
-1. 在要作用的容器元素上增加 `class="heti"` 的类名即可：。
+1. 在要作用的容器元素上增加 `class="heti"` 的类名即可：
     ```
     <article class="entry heti">
       <h1>我的世界观</h1>
       <p>有钱人的生活就是这么朴实无华，且枯燥</p>
       ……
     </article>
+    ```
+1. 使用增强脚本（可选）：
+    ```
+    <script src="//unpkg.com/heti/umd/heti-addon.min.js"></script>
+    <script>
+      const heti = new Heti('.heti');
+      heti.autoSpacing(); // 自动进行中西文混排美化和标点挤压
+    </script>
     ```
 
 
