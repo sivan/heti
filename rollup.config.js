@@ -16,6 +16,9 @@ export default {
       name: 'Heti',
       plugins: [
         terser({
+          compress: {
+            pure_funcs: ["console.info"] // 移除调试信息
+          },
           output: {
             comments: false
           }
