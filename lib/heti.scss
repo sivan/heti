@@ -29,6 +29,12 @@
   -webkit-font-smoothing: subpixel-antialiased;
   line-height: $line-height-normal;
 
+  // 针对混合英文段落，采取按词折行，长单词通过连词符段行
+  // https://justmarkup.com/articles/2015-07-31-dealing-with-long-words-in-css/
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  hyphens: auto;
+
   // 自动在中西文间加 1/4 空格（暂无浏览器支持）
   //text-spacing: ideograph-alpha;
 
