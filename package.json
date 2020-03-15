@@ -34,7 +34,7 @@
   },
   "homepage": "https://github.com/sivan/heti#readme",
   "dependencies": {
-    "findandreplacedomtext": "^0.4.6"
+    "heti-findandreplacedomtext": "^0.5.0"
   },
   "devDependencies": {
     "@rollup/plugin-commonjs": "^11.0.2",
