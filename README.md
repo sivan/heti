@@ -4,6 +4,8 @@
 
 预览：[https://sivan.github.io/heti/](https://sivan.github.io/heti/)
 
+![Preview](https://raw.githubusercontent.com/sivan/heti/master/_site/assets/screenshot-grid.png)
+
 主要特性：
 - 贴合网格的排版；
 - 全标签样式美化；
@@ -11,7 +13,7 @@
 - 预置多种排版样式（行间注、多栏、竖排等）；
 - 多种预设字体族（仅限桌面端）；
 - 简/繁体中文支持；
-- 中西文混排美化（基于JavaScript脚本实现）；
+- 中西文混排美化，不再手敲空格👏（基于JavaScript脚本）；
 - 兼容 *normalize.css*、*CSS Reset* 等常见样式重置；
 - 移动端支持；
 - ……
@@ -36,8 +38,8 @@
 
 ## WIP
 
-- [ ] 标点挤压
-- [ ] 标点悬挂
+- [ ] 自适应黑暗模式
+- [x] 标点挤压
 - [x] 中、西文混排
 - [x] 繁体中文支持
 - [x] 诗词版式
