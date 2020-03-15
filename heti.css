@@ -73,6 +73,9 @@
   font-weight: 400;
   -webkit-font-smoothing: subpixel-antialiased;
   line-height: 1.5;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  hyphens: auto;
 }
 
 .heti::before, .heti::after {
