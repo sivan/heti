@@ -36,7 +36,7 @@ a {
 .container {
   box-sizing: border-box;
   padding-block-start: 12px;
-  padding-block-end: 12px;
+  padding-block-end: 72px;
   padding-inline-start: 12px;
   padding-inline-end: 12px;
 }
@@ -315,6 +315,7 @@ a {
     margin-block-start: 12px;
     margin-block-end: 0;
   }
+
   .article .article__toc ol ol {
     margin-block-start: 0;
   }
