@@ -37,15 +37,15 @@
     "heti-findandreplacedomtext": "^0.5.0"
   },
   "devDependencies": {
-    "@rollup/plugin-commonjs": "^11.0.2",
-    "@rollup/plugin-node-resolve": "^7.1.1",
-    "node-sass": "^4.13.1",
-    "rollup": "^1.32.0",
-    "rollup-plugin-terser": "^5.2.0",
-    "stylelint": "^13.0.0",
-    "stylelint-config-recommended-scss": "^4.1.0",
+    "@rollup/plugin-commonjs": "^11.1.0",
+    "@rollup/plugin-node-resolve": "^7.1.3",
+    "node-sass": "^4.14.0",
+    "rollup": "^1.32.1",
+    "rollup-plugin-terser": "^5.3.0",
+    "stylelint": "^13.3.3",
+    "stylelint-config-recommended-scss": "^4.2.0",
     "stylelint-config-standard": "^19.0.0",
-    "stylelint-scss": "^3.13.0"
+    "stylelint-scss": "^3.17.1"
   },
   "stylelint": {
     "extends": [
