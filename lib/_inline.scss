@@ -72,7 +72,12 @@
     padding-inline-end: 1px;
     margin-inline-start: 1px;
     margin-inline-end: 1px;
-    background-color: rgba(255, 247, 0, 0.88);
+    background-color: hsla(58, 100%, 50%, 0.88);
+    color: inherit;
+
+    @media (prefers-color-scheme: dark) {
+      background-color: hsla(58, 100%, 15%, 0.88);
+    }
   }
 
   // 设置引用文本为中文引号
@@ -125,7 +130,11 @@
 
     &:target,
     a:target {
-      background-color: #def;
+      background-color: hsl(210, 100%, 93%);
+
+      @media (prefers-color-scheme: dark) {
+        background-color: hsl(210, 40%, 38%);
+      }
     }
   }
 
@@ -142,9 +151,13 @@
 
   u[title] {
     cursor: help;
-    border-block-end-color: rgba(0, 0, 0, 0.54);
     border-block-end-width: 3px;
     border-block-end-style: double;
+    border-block-end-color: hsla(0, 0%, 0%, 0.54);
+
+    @media (prefers-color-scheme: dark) {
+      border-block-end-color: hsla(0, 0%, 100%, 0.54);
+    }
   }
 
   // 默认禁用中文斜体 https://www.zhihu.com/question/20120243

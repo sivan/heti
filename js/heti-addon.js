@@ -7,7 +7,7 @@ import Finder from 'heti-findandreplacedomtext'
 
 const hasOwn = {}.hasOwnProperty
 const HETI_NON_CONTIGUOUS_ELEMENTS = Object.assign({}, Finder.NON_CONTIGUOUS_PROSE_ELEMENTS, {
-  ins: 1, del: 1, s: 1,
+  ins: 1, del: 1, s: 1, a: 1,
 })
 const HETI_SKIPPED_ELEMENTS = Object.assign({}, Finder.NON_PROSE_ELEMENTS, {
   pre: 1, code: 1, sup: 1, sub: 1, 'heti-spacing': 1, 'heti-close': 1,
