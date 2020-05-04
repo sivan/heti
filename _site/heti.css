@@ -111,6 +111,12 @@
   background-color: rgba(0, 0, 0, 0.054);
 }
 
+@media (prefers-color-scheme: dark) {
+  .heti blockquote {
+    background-color: rgba(255, 255, 255, 0.054);
+  }
+}
+
 .heti figure {
   display: block;
   text-align: center;
@@ -130,7 +136,13 @@
   margin-inline-start: auto;
   margin-inline-end: auto;
   border: 0;
-  background-color: #ddd;
+  background-color: #cccccc;
+}
+
+@media (prefers-color-scheme: dark) {
+  .heti hr {
+    background-color: #404040;
+  }
 }
 
 .heti p {
@@ -156,8 +168,14 @@
   font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   white-space: pre;
   word-wrap: normal;
-  background-color: rgba(0, 0, 0, 0.054);
   border-radius: 4px;
+  background-color: rgba(0, 0, 0, 0.054);
+}
+
+@media (prefers-color-scheme: dark) {
+  .heti pre {
+    background-color: rgba(255, 255, 255, 0.054);
+  }
 }
 
 .heti pre code {
@@ -282,22 +300,39 @@
 .heti table {
   box-sizing: border-box;
   table-layout: fixed;
-  border-collapse: collapse;
-  border: 1px solid #ccc;
   margin-block-start: 12px;
   margin-block-end: 24px;
   margin-inline-start: auto;
   margin-inline-end: auto;
+  border-collapse: collapse;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #cccccc;
   word-break: break-word;
+}
+
+@media (prefers-color-scheme: dark) {
+  .heti table {
+    border-color: #404040;
+  }
 }
 
 .heti th,
 .heti td {
-  border: 1px solid #ccc;
   padding-block-start: 6px;
   padding-block-end: 6px;
   padding-inline-start: 8px;
   padding-inline-end: 8px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #cccccc;
+}
+
+@media (prefers-color-scheme: dark) {
+  .heti th,
+  .heti td {
+    border-color: #404040;
+  }
 }
 
 .heti caption {
@@ -375,6 +410,13 @@
   margin-inline-start: 1px;
   margin-inline-end: 1px;
   background-color: rgba(255, 247, 0, 0.88);
+  color: inherit;
+}
+
+@media (prefers-color-scheme: dark) {
+  .heti mark {
+    background-color: rgba(77, 74, 0, 0.88);
+  }
 }
 
 .heti q {
@@ -421,7 +463,14 @@
 
 .heti sup:target,
 .heti sup a:target {
-  background-color: #def;
+  background-color: #dbedff;
+}
+
+@media (prefers-color-scheme: dark) {
+  .heti sup:target,
+  .heti sup a:target {
+    background-color: #3a6188;
+  }
 }
 
 .heti summary {
@@ -437,9 +486,15 @@
 
 .heti u[title] {
   cursor: help;
-  border-block-end-color: rgba(0, 0, 0, 0.54);
   border-block-end-width: 3px;
   border-block-end-style: double;
+  border-block-end-color: rgba(0, 0, 0, 0.54);
+}
+
+@media (prefers-color-scheme: dark) {
+  .heti u[title] {
+    border-block-end-color: rgba(255, 255, 255, 0.54);
+  }
 }
 
 .heti address,
@@ -745,10 +800,17 @@
 
 .heti .heti-fn {
   margin-block-start: 59px;
-  border-block-start: 1px solid #ccc;
+  border-block-start: 1px solid;
+  border-block-start-color: #cccccc;
   font-size: 14px;
   font-family: "Helvetica Neue", Helvetica, Arial, "Heti Hei", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   line-height: 24px;
+}
+
+@media (prefers-color-scheme: dark) {
+  .heti .heti-fn {
+    border-block-start-color: #404040;
+  }
 }
 
 .heti .heti-fn ol {
@@ -757,7 +819,13 @@
 }
 
 .heti .heti-fn li:target {
-  background-color: #def;
+  background-color: #dbedff;
+}
+
+@media (prefers-color-scheme: dark) {
+  .heti .heti-fn li:target {
+    background-color: #3a6188;
+  }
 }
 
 .heti .heti-hang {

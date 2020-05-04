@@ -1,6 +1,6 @@
 {
   "name": "heti",
-  "version": "0.6.0",
+  "version": "0.7.0",
   "description": "赫蹏是专为中文内容展示设计的排版样式增强。它基于通行的中文排版规范而来，可以为网站的读者带来更好的文章阅读体验。",
   "main": "lib/heti.scss",
   "files": [
@@ -11,9 +11,10 @@
   "scripts": {
     "start": "node-sass -w --output-style=expanded lib/heti.scss _site/heti.css",
     "compile": "rollup -c -w",
+    "build:site": "node-sass _site/scss/index.scss _site/index.css --output-style=compact",
     "build:style": "node-sass lib/heti.scss umd/heti.min.css --output-style=compressed",
     "build:script": "rollup -c",
-    "build": "npm run build:style && npm run build:script",
+    "build": "npm run build:style && npm run build:style && npm run build:script",
     "test": "npx stylelint --config package.json 'lib/**/*.scss'"
   },
   "repository": {

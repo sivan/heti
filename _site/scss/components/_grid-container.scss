@@ -1,0 +1,66 @@
+// Author: Sivan [sun.sivan@gmail.com]
+// Description: grid container.
+
+$grid-sizes: (
+  "12": 12px,
+  "24": 24px
+);
+$padding-mobile: 12px;
+$padding-desktop: 48px;
+
+@mixin grid-image-horizontal($grid-width, $padding-width, $grid-color: hsl(0, 0%, 93%), $margin-color: $grid-color) {
+  background-image:
+    linear-gradient(transparent ($grid-width - 1px), $grid-color 1px),
+    linear-gradient(to left, transparent $padding-width, $grid-color, transparent ($padding-width + 1px)),
+    linear-gradient(to right, transparent $padding-width, $margin-color, transparent ($padding-width + 1px));
+}
+
+@mixin grid-image-vertical($grid-width, $grid-color: hsl(0, 0%, 93%)) {
+  background-size: $grid-width 100%;
+  background-image: linear-gradient(to left, transparent ($grid-width - 1px), $grid-color 1px);
+}
+
+.container {
+  @each $size, $width in $grid-sizes {
+    &[data-bg-grid="grid-#{$size}"] {
+      background-size: 100% $width;
+
+      @include grid-image-horizontal($width, $padding-mobile);
+
+      .heti--vertical {
+        outline: 1px solid hsl(0, 0%, 93%);
+
+        @include grid-image-vertical($width);
+      }
+    }
+  }
+
+  @media (prefers-color-scheme: dark) {
+    @each $size, $width in $grid-sizes {
+      &[data-bg-grid="grid-#{$size}"] {
+        @include grid-image-horizontal($width, $padding-mobile, hsl(0, 0%, 20%));
+
+        .heti--vertical {
+          @include grid-image-vertical($width, hsl(0, 0%, 20%));
+        }
+      }
+    }
+  }
+
+  @media screen and (min-width: 640px) {
+    @each $size, $width in $grid-sizes {
+      &[data-bg-grid="grid-#{$size}"] {
+        // 桌面端增加缩进，修改边距线为红色
+        @include grid-image-horizontal($width, $padding-desktop, hsl(0, 0%, 93%), hsla(360, 100%, 50%, 0.4));
+      }
+    }
+
+    @media (prefers-color-scheme: dark) {
+      @each $size, $width in $grid-sizes {
+        &[data-bg-grid="grid-#{$size}"] {
+          @include grid-image-horizontal($width, $padding-desktop, hsl(0, 0%, 20%), hsla(360, 100%, 65%, 0.4));
+        }
+      }
+    }
+  }
+}
