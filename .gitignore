@@ -1,6 +1,7 @@
 # Editor generate files
 .idea/
 .settings/
+._project/
 
 # Dev dependencies and cache files
 node_modules/
