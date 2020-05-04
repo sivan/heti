@@ -136,7 +136,7 @@ ul, li { list-style: none; }
 @media screen and (min-width: 640px) and (prefers-color-scheme: dark) { .container[data-bg-grid="grid-12"] { background-image: linear-gradient(transparent 11px, #333333 1px), linear-gradient(to left, transparent 48px, #333333, transparent 49px), linear-gradient(to right, transparent 48px, rgba(255, 77, 77, 0.4), transparent 49px); }
   .container[data-bg-grid="grid-24"] { background-image: linear-gradient(transparent 23px, #333333 1px), linear-gradient(to left, transparent 48px, #333333, transparent 49px), linear-gradient(to right, transparent 48px, rgba(255, 77, 77, 0.4), transparent 49px); } }
 
-.panel-list { --bg-color: hsl(240, 100%, 100%); --bg-tap-color: hsl(300, 3%, 94%); --border-color: hsla(0, 0%, 76%, 0.88); --border-inline-start-color: hsl(0, 0%, 76%); --border-inline-end-color: hsl(0, 0%, 76%); --border-block-start-color: hsl(0, 0%, 79%); --border-block-end-color: hsl(0, 0%, 65%); --text-color: hsl(60, 1%, 16%); --box-shadow-color: hsla(0, 0%, 86%, 0.54); --bg-highlight-color-start: hsl(216, 87%, 70%); --bg-highlight-color-end: hsl(215, 93%, 52%); --bg-highlight-tap-color-start: hsl(216, 92%, 65%); --bg-highlight-tap-color-end: hsl(215, 95%, 44%); --border-highlight-color: hsla(216, 90%, 57%, 0.88); --border-highlight-tap-color: hsla(216, 85%, 52%, 0.88); --border-inline-start-highlight-color: hsl(216, 90%, 57%); --border-inline-end-highlight-color: hsl(216, 90%, 57%); --border-inline-start-highlight-tap-color: hsl(216, 85%, 52%); --border-inline-end-highlight-tap-color: hsl(216, 85%, 52%); --border-block-start-highlight-color: hsl(216, 87%, 63%); --border-block-end-highlight-color: hsl(215, 99%, 49%); --border-block-start-highlight-tap-color: hsl(216, 93%, 57%); --border-block-end-highlight-tap-color: hsl(216, 100%, 42%); --text-highlight-color: hsl(0, 0%, 100%); display: inline-flex; margin: 0; padding: 0; list-style-type: none; margin-inline-start: 16px; }
+.panel-list { --bg-color: hsl(240, 100%, 100%); --bg-tap-color: hsl(300, 3%, 94%); --border-color: hsla(0, 0%, 76%, 0.88); --border-inline-start-color: hsl(0, 0%, 76%); --border-inline-end-color: hsl(0, 0%, 76%); --border-block-start-color: hsl(0, 0%, 79%); --border-block-end-color: hsl(0, 0%, 65%); --text-color: hsl(60, 1%, 16%); --box-shadow-color: hsla(0, 0%, 86%, 0.54); --bg-highlight-color-start: hsl(216, 87%, 70%); --bg-highlight-color-end: hsl(215, 93%, 52%); --bg-highlight-tap-color-start: hsl(216, 92%, 65%); --bg-highlight-tap-color-end: hsl(215, 95%, 44%); --border-highlight-color: hsla(216, 90%, 57%, 0.88); --border-highlight-tap-color: hsla(216, 85%, 52%, 0.88); --border-inline-start-highlight-color: hsl(216, 90%, 57%); --border-inline-end-highlight-color: hsl(216, 90%, 57%); --border-inline-start-highlight-tap-color: hsl(216, 85%, 52%); --border-inline-end-highlight-tap-color: hsl(216, 85%, 52%); --border-block-start-highlight-color: hsl(216, 87%, 63%); --border-block-end-highlight-color: hsl(215, 99%, 49%); --border-block-start-highlight-tap-color: hsl(216, 93%, 57%); --border-block-end-highlight-tap-color: hsl(216, 100%, 42%); --text-highlight-color: hsl(0, 0%, 100%); display: inline-flex; margin: 0; padding: 0; list-style-type: none; }
 
 .panel-list--gray { --bg-color: hsl(180, 100%, 100%); --bg-tap-color: hsl(0, 0%, 94%); --border-color: hsla(0, 0%, 72%, 0.88); --border-inline-start-color: hsl(0, 0%, 76%); --border-inline-end-color: hsl(0, 0%, 76%); --border-block-start-color: hsl(0, 0%, 79%); --border-block-end-color: hsl(0, 0%, 65%); --text-color: hsl(0, 0%, 16%); --box-shadow-color: hsla(0, 0%, 86%, 0.54); --bg-highlight-color-start: hsl(225, 3%, 70%); --bg-highlight-color-end: hsl(228, 2%, 58%); --bg-highlight-tap-color-start: hsl(228, 2%, 58%); --bg-highlight-tap-color-end: hsl(240, 3%, 35%); --border-highlight-color: hsla(225, 2%, 64%, 0.88); --border-highlight-tap-color: hsla(228, 2%, 47%, 0.88); --border-inline-start-highlight-color: hsl(240, 3%, 59%); --border-inline-end-highlight-color: hsl(228, 2%, 54%); --border-inline-start-highlight-tap-color: hsl(240, 3%, 39%); --border-inline-end-highlight-tap-color: hsl(228, 3%, 39%); --border-block-start-highlight-color: hsl(240, 3%, 66%); --border-block-end-highlight-color: hsl(228, 2%, 50%); --border-block-start-highlight-tap-color: hsl(228, 2%, 51%); --border-block-end-highlight-tap-color: hsl(228, 4%, 26%); --text-highlight-color: hsl(0, 0%, 92%); }
 
@@ -145,15 +145,15 @@ ul, li { list-style: none; }
 
 .panel-list + .panel-list { margin-inline-start: 12px; }
 
+.panel-list label { position: relative; display: block; box-sizing: border-box; height: 20px; padding: 0; padding-inline-start: 12px; padding-inline-end: 12px; border: 1px solid; font-size: 12px; line-height: 18px; text-align: center; user-select: none; background-color: var(--bg-color); border-color: var(--border-color); border-block-start-color: var(--border-block-start-color); border-block-end-color: var(--border-block-end-color); color: var(--text-color); box-shadow: 0 1px 0 var(--box-shadow-color); }
+
+.panel-list label:active { background-color: var(--bg-tap-color); }
+
 .panel-list li { margin-inline-end: -1px; }
 
 .panel-list li:first-child label { border-top-left-radius: 4px; border-bottom-left-radius: 4px; border-inline-start-color: var(--border-inline-start-color); }
 
 .panel-list li:last-child label { border-top-right-radius: 4px; border-bottom-right-radius: 4px; border-inline-end-color: var(--border-inline-end-color); }
-
-.panel-list label { position: relative; display: block; box-sizing: border-box; height: 20px; padding: 0; padding-inline-start: 12px; padding-inline-end: 12px; border: 1px solid; font-size: 12px; line-height: 18px; text-align: center; user-select: none; background-color: var(--bg-color); border-color: var(--border-color); border-block-start-color: var(--border-block-start-color); border-block-end-color: var(--border-block-end-color); color: var(--text-color); box-shadow: 0 1px 0 var(--box-shadow-color); }
-
-.panel-list label:active { background-color: var(--bg-tap-color); }
 
 .panel-list input { display: none; }
 
@@ -183,7 +183,7 @@ ul, li { list-style: none; }
   .card__vertical-container { border-color: #333333; } }
 
 /** 基础样式 **/
-body { background-color: white; }
+body { font-family: -apple-system, system-ui, "Helvetica Neue", Helvetica, Arial, "Heti Hei", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"; background-color: white; }
 
 a { color: #4387f4; text-decoration: none; }
 
@@ -195,7 +195,7 @@ a { color: #4387f4; text-decoration: none; }
 .article__nav ol { margin-block-start: 24px; margin-block-end: 24px; }
 
 /** 控制栏样式 **/
-.panel { position: fixed; z-index: 2; right: 12px; top: 12px; display: flex; text-align: right; }
+.panel { position: fixed; z-index: 2; right: 14px; top: 14px; display: flex; text-align: right; }
 
 /** 演示区块 **/
 .demo { margin-block-start: 24px; margin-block-end: 24px; }
@@ -203,7 +203,7 @@ a { color: #4387f4; text-decoration: none; }
 .section { width: 100%; max-height: 85vh; margin-block-start: 12px; margin-block-end: 12px; overflow: auto; }
 
 @media screen and (min-width: 640px) { body { min-width: 640px; background-color: #ededed; }
-  .container { box-sizing: border-box; width: 80%; min-width: 640px; max-width: 880px; margin-block-start: 48px; margin-block-end: 72px; margin-inline-start: auto; margin-inline-end: auto; padding-block-start: 48px; padding-block-end: 48px; padding-inline-start: 48px; padding-inline-end: 48px; border-radius: 2px; box-shadow: 0 8px 32px rgba(0, 0, 0, 0.32); background-color: white; }
+  .container { box-sizing: border-box; width: 80%; min-width: 640px; max-width: 768px; margin-block-start: 48px; margin-block-end: 72px; margin-inline-start: auto; margin-inline-end: auto; padding-block-start: 48px; padding-block-end: 48px; padding-inline-start: 48px; padding-inline-end: 48px; border-radius: 2px; box-shadow: 0 8px 32px rgba(0, 0, 0, 0.32); background-color: white; }
   .section { max-height: none; overflow: visible; } }
 
 @media screen and (min-width: 900px) { .article__nav { position: relative; z-index: 1; float: right; width: 192px; margin-block-start: -1px; margin-block-end: 12px; margin-inline-start: 32px; margin-inline-end: -16px; padding-block-start: 12px; padding-block-end: 12px; padding-inline-start: 8px; padding-inline-end: 8px; border: 1px solid #ededed; border-radius: 2px; }
