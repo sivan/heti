@@ -1,0 +1,16 @@
+/* 简单模拟 css reset */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+/* 模拟不知道哪里流传出来的垃圾代码 */
+ul,
+li {
+  list-style: none;
+}

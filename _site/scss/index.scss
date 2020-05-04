@@ -1,0 +1,152 @@
+/*
+ * Project: Heti homepage
+ * URL: https://github.com/sivan/heti
+ * Author: Sivan [sun.sivan@gmail.com]
+ */
+@import "lib/normalize";
+@import "lib/reset";
+@import "components/grid-container";
+@import "components/panel-list";
+@import "components/anchor";
+@import "components/card";
+
+/** 基础样式 **/
+body {
+  background-color: hsl(0, 0%, 100%);
+}
+
+a {
+  color: hsl(217, 89%, 61%);
+  text-decoration: none;
+}
+
+.container {
+  box-sizing: border-box;
+  padding-block-start: 12px;
+  padding-block-end: 72px;
+  padding-inline-start: 12px;
+  padding-inline-end: 12px;
+}
+
+/** 首页样式 **/
+.article {
+  margin-inline-start: auto;
+  margin-inline-end: auto;
+
+  // 导航样式
+  &__nav {
+    ol {
+      margin-block-start: 24px;
+      margin-block-end: 24px;
+    }
+  }
+}
+
+/** 控制栏样式 **/
+.panel {
+  position: fixed;
+  z-index: 2;
+  right: 12px;
+  top: 12px;
+  display: flex;
+  text-align: right;
+}
+
+/** 演示区块 **/
+.demo {
+  margin-block-start: 24px;
+  margin-block-end: 24px;
+}
+
+.section {
+  width: 100%;
+  max-height: 85vh;
+  margin-block-start: 12px;
+  margin-block-end: 12px;
+  overflow: auto;
+}
+
+@media screen and (min-width: 640px) {
+  body {
+    min-width: 640px;
+    background-color: hsl(0, 0%, 93%);
+  }
+
+  .container {
+    box-sizing: border-box;
+    width: 80%;
+    min-width: 640px;
+    max-width: 880px;
+    margin-block-start: 48px;
+    margin-block-end: 72px;
+    margin-inline-start: auto;
+    margin-inline-end: auto;
+    padding-block-start: 48px;
+    padding-block-end: 48px;
+    padding-inline-start: 48px;
+    padding-inline-end: 48px;
+    border-radius: 2px;
+    box-shadow: 0 8px 32px hsla(0, 0%, 0%, 0.32);
+    background-color: hsl(0, 0%, 100%);
+  }
+
+  .section {
+    max-height: none;
+    overflow: visible;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .article {
+    &__nav {
+      position: relative;
+      z-index: 1;
+      float: right;
+      width: 192px;
+      margin-block-start: -1px;
+      margin-block-end: 12px;
+      margin-inline-start: 32px;
+      margin-inline-end: -16px;
+      padding-block-start: 12px;
+      padding-block-end: 12px;
+      padding-inline-start: 8px;
+      padding-inline-end: 8px;
+      border: 1px solid hsl(0, 0%, 93%);
+      border-radius: 2px;
+
+      ol {
+        margin-block-start: 12px;
+        margin-block-end: 0;
+
+        ol {
+          margin-block-start: 0;
+        }
+      }
+    }
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: hsl(0, 0%, 24%);
+  }
+
+  a {
+    color: hsl(217, 49%, 61%);
+
+    &:visited {
+      color: hsl(217, 49%, 36%);
+    }
+  }
+
+  .container {
+    background-color: hsl(0, 0%, 16%);
+    color: hsl(0, 0%, 64%);
+  }
+
+  .article {
+    &__nav {
+      border-color: hsl(0, 0%, 20%);
+    }
+  }
+}

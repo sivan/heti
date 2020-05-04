@@ -1,0 +1,181 @@
+// Author: Sivan [sun.sivan@gmail.com]
+// Description: panel list.
+
+.panel-list {
+  --bg-color: hsl(240, 100%, 100%);
+  --bg-tap-color: hsl(300, 3%, 94%);
+  --border-color: hsla(0, 0%, 76%, 0.88);
+  --border-inline-start-color: hsl(0, 0%, 76%);
+  --border-inline-end-color: hsl(0, 0%, 76%);
+  --border-block-start-color: hsl(0, 0%, 79%);
+  --border-block-end-color: hsl(0, 0%, 65%);
+  --text-color: hsl(60, 1%, 16%);
+  --box-shadow-color: hsla(0, 0%, 86%, 0.54);
+  --bg-highlight-color-start: hsl(216, 87%, 70%);
+  --bg-highlight-color-end: hsl(215, 93%, 52%);
+  --bg-highlight-tap-color-start: hsl(216, 92%, 65%);
+  --bg-highlight-tap-color-end: hsl(215, 95%, 44%);
+  --border-highlight-color: hsla(216, 90%, 57%, 0.88);
+  --border-highlight-tap-color: hsla(216, 85%, 52%, 0.88);
+  --border-inline-start-highlight-color: hsl(216, 90%, 57%);
+  --border-inline-end-highlight-color: hsl(216, 90%, 57%);
+  --border-inline-start-highlight-tap-color: hsl(216, 85%, 52%);
+  --border-inline-end-highlight-tap-color: hsl(216, 85%, 52%);
+  --border-block-start-highlight-color: hsl(216, 87%, 63%);
+  --border-block-end-highlight-color: hsl(215, 99%, 49%);
+  --border-block-start-highlight-tap-color: hsl(216, 93%, 57%);
+  --border-block-end-highlight-tap-color: hsl(216, 100%, 42%);
+  --text-highlight-color: hsl(0, 0%, 100%);
+
+  &--gray {
+    --bg-color: hsl(180, 100%, 100%);
+    --bg-tap-color: hsl(0, 0%, 94%);
+    --border-color: hsla(0, 0%, 72%, 0.88);
+    --border-inline-start-color: hsl(0, 0%, 76%);
+    --border-inline-end-color: hsl(0, 0%, 76%);
+    --border-block-start-color: hsl(0, 0%, 79%);
+    --border-block-end-color: hsl(0, 0%, 65%);
+    --text-color: hsl(0, 0%, 16%);
+    --box-shadow-color: hsla(0, 0%, 86%, 0.54);
+    --bg-highlight-color-start: hsl(225, 3%, 70%);
+    --bg-highlight-color-end: hsl(228, 2%, 58%);
+    --bg-highlight-tap-color-start: hsl(228, 2%, 58%);
+    --bg-highlight-tap-color-end: hsl(240, 3%, 35%);
+    --border-highlight-color: hsla(225, 2%, 64%, 0.88);
+    --border-highlight-tap-color: hsla(228, 2%, 47%, 0.88);
+    --border-inline-start-highlight-color: hsl(240, 3%, 59%);
+    --border-inline-end-highlight-color: hsl(228, 2%, 54%);
+    --border-inline-start-highlight-tap-color: hsl(240, 3%, 39%);
+    --border-inline-end-highlight-tap-color: hsl(228, 3%, 39%);
+    --border-block-start-highlight-color: hsl(240, 3%, 66%);
+    --border-block-end-highlight-color: hsl(228, 2%, 50%);
+    --border-block-start-highlight-tap-color: hsl(228, 2%, 51%);
+    --border-block-end-highlight-tap-color: hsl(228, 4%, 26%);
+    --text-highlight-color: hsl(0, 0%, 92%);
+  }
+
+  @media (prefers-color-scheme: dark) {
+    --bg-color: hsl(225, 2%, 40%);
+    --bg-tap-color: hsl(210, 2%, 49%);
+    --border-color: hsla(210, 2%, 33%, 0.88);
+    --border-inline-start-color: hsl(210, 2%, 33%);
+    --border-inline-end-color: hsl(210, 2%, 33%);
+    --border-block-start-color: hsl(225, 2%, 45%);
+    --border-block-end-color: hsl(210, 2%, 40%);
+    --text-color: hsl(0, 0%, 91%);
+    --box-shadow-color: hsla(225, 4%, 21%, 0.54);
+    --bg-highlight-color-start: hsl(216, 77%, 49%);
+    --bg-highlight-color-end: hsl(216, 76%, 45%);
+    --bg-highlight-tap-color-start: hsl(214, 83%, 55%);
+    --bg-highlight-tap-color-end: hsl(215, 74%, 51%);
+    --border-highlight-color: hsla(215, 77%, 47%, 0.88);
+    --border-highlight-tap-color: hsla(215, 79%, 54%, 0.88);
+    --border-inline-start-highlight-color: hsl(215, 77%, 47%);
+    --border-inline-end-highlight-color: hsl(215, 77%, 47%);
+    --border-inline-start-highlight-tap-color: hsl(215, 79%, 54%);
+    --border-inline-end-highlight-tap-color: hsl(215, 79%, 54%);
+    --border-block-start-highlight-color: hsl(216, 76%, 55%);
+    --border-block-end-highlight-color: hsl(216, 76%, 44%);
+    --border-block-start-highlight-tap-color: hsl(215, 84%, 60%);
+    --border-block-end-highlight-tap-color: hsl(215, 74%, 51%);
+    --text-highlight-color: hsl(0, 0%, 100%);
+
+    &--gray {
+      --bg-color: hsl(0, 0%, 40%);
+      --bg-tap-color: hsl(0, 0%, 49%);
+      --border-color: hsla(120, 1%, 34%, 0.88);
+      --border-inline-start-color: hsl(0, 0%, 40%);
+      --border-inline-end-color: hsl(360, 0%, 40%);
+      --border-block-start-color: hsl(0, 0%, 46%);
+      --border-block-end-color: hsl(120, 0%, 40%);
+      --text-color: hsl(0, 0%, 91%);
+      --box-shadow-color: hsla(0, 0%, 17%, 0.54);
+      --bg-highlight-color-start: hsl(0, 0%, 60%);
+      --bg-highlight-color-end: hsl(0, 0%, 60%);
+      --bg-highlight-tap-color-start: hsl(0, 0%, 69%);
+      --bg-highlight-tap-color-end: hsl(0, 0%, 69%);
+      --border-highlight-color: hsla(0, 0%, 60%, 0.88);
+      --border-highlight-tap-color: hsla(0, 0%, 69%, 0.88);
+      --border-inline-start-highlight-color: hsl(0, 0%, 60%);
+      --border-inline-end-highlight-color: hsl(0, 0%, 60%);
+      --border-inline-start-highlight-tap-color: hsl(0, 0%, 69%);
+      --border-inline-end-highlight-tap-color: hsl(0, 0%, 69%);
+      --border-block-start-highlight-color: hsl(0, 0%, 64%);
+      --border-block-end-highlight-color: hsl(0, 0%, 60%);
+      --border-block-start-highlight-tap-color: hsl(0, 0%, 73%);
+      --border-block-end-highlight-tap-color: hsl(0, 0%, 69%);
+      --text-highlight-color: hsl(0, 0%, 15%);
+    }
+  }
+
+  display: inline-flex;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  margin-inline-start: 16px;
+
+  & + & {
+    margin-inline-start: 12px;
+  }
+
+  label {
+    position: relative;
+    display: block;
+    box-sizing: border-box;
+    height: 20px;
+    padding: 0;
+    padding-inline-start: 12px;
+    padding-inline-end: 12px;
+    border: 1px solid;
+    font-size: 12px;
+    line-height: 18px;
+    text-align: center;
+    user-select: none;
+    background-color: var(--bg-color);
+    border-color: var(--border-color);
+    border-block-start-color: var(--border-block-start-color);
+    border-block-end-color: var(--border-block-end-color);
+    color: var(--text-color);
+    box-shadow: 0 1px 0 var(--box-shadow-color);
+
+    &:active {
+      background-color: var(--bg-tap-color);
+    }
+  }
+
+  li {
+    margin-inline-end: -1px;
+
+    &:first-child label {
+      border-top-left-radius: 4px;
+      border-bottom-left-radius: 4px;
+      border-inline-start-color: var(--border-inline-start-color);
+    }
+
+    &:last-child label {
+      border-top-right-radius: 4px;
+      border-bottom-right-radius: 4px;
+      border-inline-end-color: var(--border-inline-end-color);
+    }
+  }
+
+  input {
+    display: none;
+
+    &:checked + label {
+      z-index: 1;
+      background-image: linear-gradient(to bottom, var(--bg-highlight-color-start), var(--bg-highlight-color-end));
+      border-color: var(--border-highlight-color);
+      border-block-start-color: var(--border-block-start-highlight-color);
+      border-block-end-color: var(--border-block-end-highlight-color);
+      color: var(--text-highlight-color);
+
+      &:active {
+        background-image: linear-gradient(to bottom, var(--bg-highlight-tap-color-start), var(--bg-highlight-tap-color-end));
+        border-color: var(--border-highlight-tap-color);
+        border-block-start-color: var(--border-block-start-highlight-tap-color);
+        border-block-end-color: var(--border-block-end-highlight-tap-color);
+      }
+    }
+  }
+}

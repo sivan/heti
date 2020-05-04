@@ -6,22 +6,34 @@
   table {
     box-sizing: border-box;
     table-layout: fixed;
-    border-collapse: collapse;
-    border: 1px solid #ccc;
     margin-block-start: $std-block-unit / 2;
     margin-block-end: $std-block-unit;
     margin-inline-start: auto;
     margin-inline-end: auto;
+    border-collapse: collapse;
+    border-width: 1px;
+    border-style: solid;
+    border-color: hsl(0, 0%, 80%);
     word-break: break-word;
+
+    @media (prefers-color-scheme: dark) {
+      border-color: hsl(0, 0%, 25%);
+    }
   }
 
   th,
   td {
-    border: 1px solid #ccc;
     padding-block-start: $std-block-unit / 4;
     padding-block-end: $std-block-unit / 4;
     padding-inline-start: $std-inline-unit / 2;
     padding-inline-end: $std-inline-unit / 2;
+    border-width: 1px;
+    border-style: solid;
+    border-color: hsl(0, 0%, 80%);
+
+    @media (prefers-color-scheme: dark) {
+      border-color: hsl(0, 0%, 25%);
+    }
   }
 
   caption {
