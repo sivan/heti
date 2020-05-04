@@ -4,18 +4,17 @@
   <meta charset="UTF-8">
   <title>赫蹏 - 一个简约又简单的网页中文排版增强</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="./assets/normalize.css">
-  <link rel="stylesheet" href="./assets/index.css">
   <link rel="stylesheet" href="./heti.css">
+  <link rel="stylesheet" href="./index.css">
   <link rel="icon" href="./favicon.svg">
 </head>
 <body>
   <main class="container">
     <article class="article heti heti--classic">
-      <h1>赫蹏</h1>
+      <h1 class="article__title">赫蹏</h1>
       <blockquote>古代称用以书写的小幅绢帛。后亦以借指纸。《汉书·外戚传下·孝成赵皇后》：「武（籍武 ）发篋中，有裹药二枚，赫蹏书。」<u>颜师古</u>注：「<u>邓展</u>曰：『赫音兄弟鬩墙之鬩。』<u>应劭</u>曰：『赫蹏，薄小纸也。』」<u>宋</u><u>赵彦卫</u> 《云麓漫钞》卷七：「《赵后传》所谓『赫蹏』者，注云『薄小纸』，然其寔亦縑帛。」</blockquote>
 
-      <nav class="article__toc heti-skip">
+      <nav class="article__nav heti-skip">
         <details open>
           <summary>目录</summary>
           <ol>
@@ -55,6 +54,7 @@
         <li>预置多种排版样式（行间注、多栏、竖排等）；</li>
         <li>多种预设字体族（仅限桌面端）；</li>
         <li>简/繁体中文支持；</li>
+        <li>自适应黑暗模式；</li>
         <li>中西文混排美化，不再手敲空格（基于JavaScript脚本）；</li>
         <li>标点挤压（基于JavaScript脚本）；</li>
         <li>兼容<i>normalize.css</i>、<i>CSS Reset<sup><a id="ref-01" href="#fn-01">[1]</a></sup></i>等常见样式重置；</li>
@@ -557,7 +557,7 @@
 
       <h2 id="wip">待开发功能<a class="anchor" href="#wip">#</a></h2>
       <ul>
-        <li>☑ 自适应黑暗模式</li>
+        <li>✅ 自适应黑暗模式</li>
         <li>✅ 标点挤压</li>
         <li>✅ 中、西文混排</li>
         <li>✅ 诗词版式</li>
@@ -583,12 +583,12 @@
   </main>
 
   <aside class="panel">
-    <ul class="switch-list">
+    <ul class="panel-list panel-list--gray">
       <li><input type="radio" class="J_fontStack" value="heti--classic" name="font" id="font-classic" checked><label for="font-classic">传统</label></li>
       <li><input type="radio" class="J_fontStack" value="heti--sans" name="font" id="font-sans"><label for="font-sans">黑体</label></li>
       <li><input type="radio" class="J_fontStack" value="heti--serif" name="font" id="font-serif"><label for="font-serif">宋体</label></li>
     </ul>
-    <ul class="switch-list">
+    <ul class="panel-list panel-list--gray">
       <li><input type="radio" class="J_radioGrid" value="" name="grid" id="grid-disable" checked><label for="grid-disable">网格：关</label></li>
       <li><input type="radio" class="J_radioGrid" value="grid-24" name="grid" id="grid-24"><label for="grid-24">大</label></li>
       <li><input type="radio" class="J_radioGrid" value="grid-12" name="grid" id="grid-12"><label for="grid-12">小</label></li>
@@ -597,7 +597,8 @@
 
   <script src="./heti-addon.js"></script>
   <script>
-    const $$root = document.getElementsByTagName('article')[0]
+    const $$root = document.getElementsByTagName('main')[0]
+    const $$article = document.getElementsByTagName('article')[0]
 
     function addEventListeners(nodeList, event, fn) {
       [].forEach.call(nodeList, function(elm) {
@@ -605,12 +606,12 @@
       }, false)
     }
 
-    addEventListeners(document.getElementsByClassName('J_fontStack'), 'change', function (e) {
-      $$root.className = ['article', 'heti', e.target.value].join(' ')
-    })
-
     addEventListeners(document.getElementsByClassName('J_radioGrid'), 'change', function (e) {
       $$root.setAttribute('data-bg-grid', e.target.value)
+    })
+
+    addEventListeners(document.getElementsByClassName('J_fontStack'), 'change', function (e) {
+      $$article.className = ['article', 'heti', e.target.value].join(' ')
     })
 
     const heti = new Heti()
