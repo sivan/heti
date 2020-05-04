@@ -203,7 +203,7 @@ a { color: #4387f4; text-decoration: none; }
 .section { width: 100%; max-height: 85vh; margin-block-start: 12px; margin-block-end: 12px; overflow: auto; }
 
 @media screen and (min-width: 640px) { body { min-width: 640px; background-color: #ededed; }
-  .container { box-sizing: border-box; width: 80%; min-width: 640px; max-width: 880px; margin-block-start: 48px; margin-block-end: 72px; margin-inline-start: auto; margin-inline-end: auto; padding-block-start: 48px; padding-block-end: 48px; padding-inline-start: 48px; padding-inline-end: 48px; border-radius: 2px; box-shadow: 0 8px 32px rgba(0, 0, 0, 0.32); background-color: white; }
+  .container { box-sizing: border-box; width: 80%; min-width: 640px; max-width: 768px; margin-block-start: 48px; margin-block-end: 72px; margin-inline-start: auto; margin-inline-end: auto; padding-block-start: 48px; padding-block-end: 48px; padding-inline-start: 48px; padding-inline-end: 48px; border-radius: 2px; box-shadow: 0 8px 32px rgba(0, 0, 0, 0.32); background-color: white; }
   .section { max-height: none; overflow: visible; } }
 
 @media screen and (min-width: 900px) { .article__nav { position: relative; z-index: 1; float: right; width: 192px; margin-block-start: -1px; margin-block-end: 12px; margin-inline-start: 32px; margin-inline-end: -16px; padding-block-start: 12px; padding-block-end: 12px; padding-inline-start: 8px; padding-inline-end: 8px; border: 1px solid #ededed; border-radius: 2px; }
