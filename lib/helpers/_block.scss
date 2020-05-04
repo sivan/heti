@@ -70,10 +70,15 @@
   // 页脚
   #{$root-selector}-fn {
     margin-block-start: 59px;
-    border-block-start: 1px solid #ccc;
+    border-block-start: 1px solid;
+    border-block-start-color: hsl(0, 0%, 80%);
     font-size: $font-size-small;
     font-family: $font-family-hei;
     line-height: $line-height-size-normal;
+
+    @media (prefers-color-scheme: dark) {
+      border-block-start-color: hsl(0, 0%, 25%);
+    }
 
     ol {
       margin-block-start: $std-block-unit / 2;
@@ -82,7 +87,11 @@
 
     li {
       &:target {
-        background-color: #def;
+        background-color: hsl(210, 100%, 93%);
+
+        @media (prefers-color-scheme: dark) {
+          background-color: hsl(210, 40%, 38%);
+        }
       }
     }
   }

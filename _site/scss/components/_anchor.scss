@@ -1,0 +1,43 @@
+// Author: Sivan [sun.sivan@gmail.com]
+// Description: anchor.
+
+.anchor {
+  margin-inline-start: 0.25em;
+}
+
+@media screen and (min-width: 640px) {
+  .article {
+    .anchor {
+      position: absolute;
+      left: -1em;
+      width: 1em;
+      margin-inline-start: 0;
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+      font-weight: 400;
+      line-height: inherit;
+      text-align: center;
+      opacity: 0;
+      transition: opacity 0.2s linear;
+
+      &:hover {
+        text-decoration: none;
+        border: 0;
+      }
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      position: relative;
+
+      &:hover {
+        .anchor {
+          opacity: 1;
+        }
+      }
+    }
+  }
+}

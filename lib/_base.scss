@@ -29,8 +29,12 @@
     padding-block-end: $std-block-unit / 2;
     padding-inline-start: $std-inline-unit;
     padding-inline-end: $std-inline-unit;
-    background-color: rgba(0, 0, 0, 0.054);
     //border-radius: 4px;
+    background-color: hsla(0, 0%, 0%, 0.054);
+
+    @media (prefers-color-scheme: dark) {
+      background-color: hsla(0, 0%, 100%, 0.054);
+    }
   }
 
   figure {
@@ -52,7 +56,11 @@
     margin-inline-start: auto;
     margin-inline-end: auto;
     border: 0;
-    background-color: #ddd;
+    background-color: hsl(0, 0%, 80%);
+
+    @media (prefers-color-scheme: dark) {
+      background-color: hsl(0, 0%, 25%);
+    }
   }
 
   p {
@@ -78,8 +86,12 @@
     font-family: $font-family-mono;
     white-space: pre;
     word-wrap: normal;
-    background-color: rgba(0, 0, 0, 0.054);
     border-radius: 4px;
+    background-color: hsla(0, 0%, 0%, 0.054);
+
+    @media (prefers-color-scheme: dark) {
+      background-color: hsla(0, 0%, 100%, 0.054);
+    }
 
     code {
       margin: 0;
