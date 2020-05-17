@@ -127,7 +127,7 @@ a {
   }
 }
 
-@media (prefers-color-scheme: dark) {
+@mixin darkmode() {
   body {
     background-color: hsl(0, 0%, 24%);
   }
@@ -149,5 +149,16 @@ a {
     &__nav {
       border-color: hsl(0, 0%, 20%);
     }
+  }
+}
+
+// Force dark mode
+[data-darkmode="dark"] {
+  @include darkmode();
+}
+
+@media (prefers-color-scheme: dark) {
+  [data-darkmode="auto"] {
+    @include darkmode();
   }
 }
