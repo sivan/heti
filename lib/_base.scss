@@ -32,7 +32,7 @@
     //border-radius: 4px;
     background-color: hsla(0, 0%, 0%, 0.054);
 
-    @media (prefers-color-scheme: dark) {
+    @include darkmode-style {
       background-color: hsla(0, 0%, 100%, 0.054);
     }
   }
@@ -58,7 +58,7 @@
     border: 0;
     background-color: hsl(0, 0%, 80%);
 
-    @media (prefers-color-scheme: dark) {
+    @include darkmode-style {
       background-color: hsl(0, 0%, 25%);
     }
   }
@@ -89,7 +89,7 @@
     border-radius: 4px;
     background-color: hsla(0, 0%, 0%, 0.054);
 
-    @media (prefers-color-scheme: dark) {
+    @include darkmode-style {
       background-color: hsla(0, 0%, 100%, 0.054);
     }
 

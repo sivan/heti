@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zh-Hans">
+<html lang="zh-Hans" data-darkmode="auto">
 <head>
   <meta charset="UTF-8">
   <title>赫蹏 - 一个简约又简单的网页中文排版增强</title>
@@ -74,14 +74,15 @@
         </li>
         <li>
           在要作用的容器元素上增加<code>class="heti"</code>的类名即可：
+
           <pre><code>&lt;article class=&quot;entry <ins>heti</ins>&quot;&gt;
   &lt;h1&gt;我的世界观&lt;/h1&gt;
   &lt;p&gt;有钱人的生活就是这么朴实无华，且枯燥&lt;/p&gt;
   ……
 &lt;/article&gt;</code></pre>
         </li>
-        <li>注意：赫蹏是正文区域的样式增强，不是<i>normalize.css</i>或<i>CSS Reset</i>的替代。因此<b>不建议</b>将它作用在根标签（如<code>&lt;body&gt;</code>或<code>&lt;div class=&quot;container&quot;&gt;</code>）上，除非像本页面一样通篇都是文章的一部分。</li>
       </ol>
+      <small>注：赫蹏是正文区域的样式增强，不是<i>normalize.css</i>或<i>CSS Reset</i>的替代。因此<b>不建议</b>将它作用在根标签（如<code>&lt;body&gt;</code>或<code>&lt;div class=&quot;container&quot;&gt;</code>）上。</small>
 
       <hr>
 
@@ -511,41 +512,6 @@
                 <blockquote style="margin-inline-start: 0; margin-inline-end: 0;">古代称用以书写的小幅绢帛。后亦以借指纸<mark>。《</mark>汉书·外戚传下·孝成赵皇后<mark>》：「</mark>武（籍武 ）发篋中，有裹药二枚，赫蹏书。」<u>颜师古</u>注：「<u>邓展</u>曰：『赫音兄弟鬩墙之鬩。』<u>应劭</u>曰：『赫蹏，薄小纸也。』」<u>宋</u><u>赵彦卫</u> 《云麓漫钞》卷七：「《赵后传》所谓『赫蹏』者，注云『薄小纸』，然其寔亦縑帛。」</blockquote>
               </td>
             </tr>
-            <!--
-            <tr>
-              <th colspan="4">标点挤压</th>
-            </tr>
-            <tr>
-              <th>默认文本</th>
-              <td>
-                <ul class="heti-skip">
-                  <li>结束。」</li>
-                  <li>结束」，</li>
-                  <li>开始。「</li>
-                  <li>连接」「</li>
-                  <li>连续「『</li>
-                  <li>连续』」</li>
-                  <li>间隔号」·</li>
-                  <li>间隔号·「</li>
-                  <li>不改「」</li>
-                </ul>
-              </td>
-              <th>脚本效果</th>
-              <td>
-                <ul>
-                  <li>结束。」</li>
-                  <li>结束」，</li>
-                  <li>开始。「</li>
-                  <li>连接」「</li>
-                  <li>连续「『</li>
-                  <li>连续』」</li>
-                  <li>间隔号」·</li>
-                  <li>间隔号·「</li>
-                  <li>不改「」</li>
-                </ul>
-              </td>
-            </tr>
-            -->
           </table>
         </section>
       </details>
@@ -583,11 +549,17 @@
       <li><input type="radio" class="J_radioGrid" value="grid-24" name="grid" id="grid-24"><label for="grid-24">大</label></li>
       <li><input type="radio" class="J_radioGrid" value="grid-12" name="grid" id="grid-12"><label for="grid-12">小</label></li>
     </ul>
+    <ul class="panel-list panel-list--gray panel-list--icon">
+      <li><input type="radio" class="J_darkMode" value="auto" name="darkmode" id="darkmode-auto" checked><label for="darkmode-auto">🌗</label></li>
+      <li><input type="radio" class="J_darkMode" value="light" name="darkmode" id="darkmode-light"><label for="darkmode-light">🌞</label></li>
+      <li><input type="radio" class="J_darkMode" value="dark" name="darkmode" id="darkmode-dark"><label for="darkmode-dark">🌙</label></li>
+    </ul>
   </aside>
 
   <script src="./heti-addon.js"></script>
   <script>
-    const $$root = document.getElementsByTagName('main')[0]
+    const $$root = document.getElementsByTagName('html')[0]
+    const $$main = document.getElementsByTagName('main')[0]
     const $$article = document.getElementsByTagName('article')[0]
 
     function addEventListeners(nodeList, event, fn) {
@@ -596,8 +568,12 @@
       }, false)
     }
 
+    addEventListeners(document.getElementsByClassName('J_darkMode'), 'change', function (e) {
+      $$root.setAttribute('data-darkmode', e.target.value)
+    })
+
     addEventListeners(document.getElementsByClassName('J_radioGrid'), 'change', function (e) {
-      $$root.setAttribute('data-bg-grid', e.target.value)
+      $$main.setAttribute('data-bg-grid', e.target.value)
     })
 
     addEventListeners(document.getElementsByClassName('J_fontStack'), 'change', function (e) {
