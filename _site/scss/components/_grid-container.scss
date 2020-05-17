@@ -1,6 +1,5 @@
 // Author: Sivan [sun.sivan@gmail.com]
 // Description: grid container.
-
 $grid-sizes: (
   "12": 12px,
   "24": 24px
@@ -20,6 +19,26 @@ $padding-desktop: 48px;
   background-image: linear-gradient(to left, transparent ($grid-width - 1px), $grid-color 1px);
 }
 
+@mixin darkmode-mobile {
+  @each $size, $width in $grid-sizes {
+    &[data-bg-grid="grid-#{$size}"] {
+      @include grid-image-horizontal($width, $padding-mobile, hsl(0, 0%, 20%));
+
+      .heti--vertical {
+        @include grid-image-vertical($width, hsl(0, 0%, 20%));
+      }
+    }
+  }
+}
+
+@mixin darkmode-desktop {
+  @each $size, $width in $grid-sizes {
+    &[data-bg-grid="grid-#{$size}"] {
+      @include grid-image-horizontal($width, $padding-desktop, hsl(0, 0%, 20%), hsla(360, 100%, 65%, 0.4));
+    }
+  }
+}
+
 .container {
   @each $size, $width in $grid-sizes {
     &[data-bg-grid="grid-#{$size}"] {
@@ -35,15 +54,13 @@ $padding-desktop: 48px;
     }
   }
 
-  @media (prefers-color-scheme: dark) {
-    @each $size, $width in $grid-sizes {
-      &[data-bg-grid="grid-#{$size}"] {
-        @include grid-image-horizontal($width, $padding-mobile, hsl(0, 0%, 20%));
+  [data-darkmode="dark"] & {
+    @include darkmode-mobile;
+  }
 
-        .heti--vertical {
-          @include grid-image-vertical($width, hsl(0, 0%, 20%));
-        }
-      }
+  @media (prefers-color-scheme: dark) {
+    [data-darkmode="auto"] & {
+      @include darkmode-mobile;
     }
   }
 
@@ -55,11 +72,13 @@ $padding-desktop: 48px;
       }
     }
 
+    [data-darkmode="dark"] & {
+      @include darkmode-desktop;
+    }
+
     @media (prefers-color-scheme: dark) {
-      @each $size, $width in $grid-sizes {
-        &[data-bg-grid="grid-#{$size}"] {
-          @include grid-image-horizontal($width, $padding-desktop, hsl(0, 0%, 20%), hsla(360, 100%, 65%, 0.4));
-        }
+      [data-darkmode="auto"] & {
+        @include darkmode-desktop;
       }
     }
   }

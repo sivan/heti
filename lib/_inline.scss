@@ -75,7 +75,7 @@
     background-color: hsla(58, 100%, 50%, 0.88);
     color: inherit;
 
-    @media (prefers-color-scheme: dark) {
+    @include darkmode-style {
       background-color: hsla(58, 100%, 15%, 0.88);
     }
   }
@@ -132,7 +132,7 @@
     a:target {
       background-color: hsl(210, 100%, 93%);
 
-      @media (prefers-color-scheme: dark) {
+      @include darkmode-style {
         background-color: hsl(210, 40%, 38%);
       }
     }
@@ -155,7 +155,7 @@
     border-block-end-style: double;
     border-block-end-color: hsla(0, 0%, 0%, 0.54);
 
-    @media (prefers-color-scheme: dark) {
+    @include darkmode-style {
       border-block-end-color: hsla(0, 0%, 100%, 0.54);
     }
   }
