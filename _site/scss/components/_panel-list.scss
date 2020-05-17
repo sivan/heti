@@ -1,7 +1,6 @@
 // Author: Sivan [sun.sivan@gmail.com]
 // Description: panel list.
-
-.panel-list {
+@mixin lightmode {
   --bg-color: hsl(240, 100%, 100%);
   --bg-tap-color: hsl(300, 3%, 94%);
   --border-color: hsla(0, 0%, 76%, 0.88);
@@ -53,65 +52,79 @@
     --border-block-end-highlight-tap-color: hsl(228, 4%, 26%);
     --text-highlight-color: hsl(0, 0%, 92%);
   }
+}
 
-  @media (prefers-color-scheme: dark) {
-    --bg-color: hsl(225, 2%, 40%);
-    --bg-tap-color: hsl(210, 2%, 49%);
-    --border-color: hsla(210, 2%, 33%, 0.88);
-    --border-inline-start-color: hsl(210, 2%, 33%);
-    --border-inline-end-color: hsl(210, 2%, 33%);
-    --border-block-start-color: hsl(225, 2%, 45%);
-    --border-block-end-color: hsl(210, 2%, 40%);
+@mixin darkmode {
+  --bg-color: hsl(225, 2%, 40%);
+  --bg-tap-color: hsl(210, 2%, 49%);
+  --border-color: hsla(210, 2%, 33%, 0.88);
+  --border-inline-start-color: hsl(210, 2%, 33%);
+  --border-inline-end-color: hsl(210, 2%, 33%);
+  --border-block-start-color: hsl(225, 2%, 45%);
+  --border-block-end-color: hsl(210, 2%, 40%);
+  --text-color: hsl(0, 0%, 91%);
+  --box-shadow-color: hsla(225, 4%, 21%, 0.54);
+  --bg-highlight-color-start: hsl(216, 77%, 49%);
+  --bg-highlight-color-end: hsl(216, 76%, 45%);
+  --bg-highlight-tap-color-start: hsl(214, 83%, 55%);
+  --bg-highlight-tap-color-end: hsl(215, 74%, 51%);
+  --border-highlight-color: hsla(215, 77%, 47%, 0.88);
+  --border-highlight-tap-color: hsla(215, 79%, 54%, 0.88);
+  --border-inline-start-highlight-color: hsl(215, 77%, 47%);
+  --border-inline-end-highlight-color: hsl(215, 77%, 47%);
+  --border-inline-start-highlight-tap-color: hsl(215, 79%, 54%);
+  --border-inline-end-highlight-tap-color: hsl(215, 79%, 54%);
+  --border-block-start-highlight-color: hsl(216, 76%, 55%);
+  --border-block-end-highlight-color: hsl(216, 76%, 44%);
+  --border-block-start-highlight-tap-color: hsl(215, 84%, 60%);
+  --border-block-end-highlight-tap-color: hsl(215, 74%, 51%);
+  --text-highlight-color: hsl(0, 0%, 100%);
+
+  &--gray {
+    --bg-color: hsl(0, 0%, 40%);
+    --bg-tap-color: hsl(0, 0%, 49%);
+    --border-color: hsla(120, 1%, 34%, 0.88);
+    --border-inline-start-color: hsl(0, 0%, 40%);
+    --border-inline-end-color: hsl(360, 0%, 40%);
+    --border-block-start-color: hsl(0, 0%, 46%);
+    --border-block-end-color: hsl(120, 0%, 40%);
     --text-color: hsl(0, 0%, 91%);
-    --box-shadow-color: hsla(225, 4%, 21%, 0.54);
-    --bg-highlight-color-start: hsl(216, 77%, 49%);
-    --bg-highlight-color-end: hsl(216, 76%, 45%);
-    --bg-highlight-tap-color-start: hsl(214, 83%, 55%);
-    --bg-highlight-tap-color-end: hsl(215, 74%, 51%);
-    --border-highlight-color: hsla(215, 77%, 47%, 0.88);
-    --border-highlight-tap-color: hsla(215, 79%, 54%, 0.88);
-    --border-inline-start-highlight-color: hsl(215, 77%, 47%);
-    --border-inline-end-highlight-color: hsl(215, 77%, 47%);
-    --border-inline-start-highlight-tap-color: hsl(215, 79%, 54%);
-    --border-inline-end-highlight-tap-color: hsl(215, 79%, 54%);
-    --border-block-start-highlight-color: hsl(216, 76%, 55%);
-    --border-block-end-highlight-color: hsl(216, 76%, 44%);
-    --border-block-start-highlight-tap-color: hsl(215, 84%, 60%);
-    --border-block-end-highlight-tap-color: hsl(215, 74%, 51%);
-    --text-highlight-color: hsl(0, 0%, 100%);
-
-    &--gray {
-      --bg-color: hsl(0, 0%, 40%);
-      --bg-tap-color: hsl(0, 0%, 49%);
-      --border-color: hsla(120, 1%, 34%, 0.88);
-      --border-inline-start-color: hsl(0, 0%, 40%);
-      --border-inline-end-color: hsl(360, 0%, 40%);
-      --border-block-start-color: hsl(0, 0%, 46%);
-      --border-block-end-color: hsl(120, 0%, 40%);
-      --text-color: hsl(0, 0%, 91%);
-      --box-shadow-color: hsla(0, 0%, 17%, 0.54);
-      --bg-highlight-color-start: hsl(0, 0%, 60%);
-      --bg-highlight-color-end: hsl(0, 0%, 60%);
-      --bg-highlight-tap-color-start: hsl(0, 0%, 69%);
-      --bg-highlight-tap-color-end: hsl(0, 0%, 69%);
-      --border-highlight-color: hsla(0, 0%, 60%, 0.88);
-      --border-highlight-tap-color: hsla(0, 0%, 69%, 0.88);
-      --border-inline-start-highlight-color: hsl(0, 0%, 60%);
-      --border-inline-end-highlight-color: hsl(0, 0%, 60%);
-      --border-inline-start-highlight-tap-color: hsl(0, 0%, 69%);
-      --border-inline-end-highlight-tap-color: hsl(0, 0%, 69%);
-      --border-block-start-highlight-color: hsl(0, 0%, 64%);
-      --border-block-end-highlight-color: hsl(0, 0%, 60%);
-      --border-block-start-highlight-tap-color: hsl(0, 0%, 73%);
-      --border-block-end-highlight-tap-color: hsl(0, 0%, 69%);
-      --text-highlight-color: hsl(0, 0%, 15%);
-    }
+    --box-shadow-color: hsla(0, 0%, 17%, 0.54);
+    --bg-highlight-color-start: hsl(0, 0%, 60%);
+    --bg-highlight-color-end: hsl(0, 0%, 60%);
+    --bg-highlight-tap-color-start: hsl(0, 0%, 69%);
+    --bg-highlight-tap-color-end: hsl(0, 0%, 69%);
+    --border-highlight-color: hsla(0, 0%, 60%, 0.88);
+    --border-highlight-tap-color: hsla(0, 0%, 69%, 0.88);
+    --border-inline-start-highlight-color: hsl(0, 0%, 60%);
+    --border-inline-end-highlight-color: hsl(0, 0%, 60%);
+    --border-inline-start-highlight-tap-color: hsl(0, 0%, 69%);
+    --border-inline-end-highlight-tap-color: hsl(0, 0%, 69%);
+    --border-block-start-highlight-color: hsl(0, 0%, 64%);
+    --border-block-end-highlight-color: hsl(0, 0%, 60%);
+    --border-block-start-highlight-tap-color: hsl(0, 0%, 73%);
+    --border-block-end-highlight-tap-color: hsl(0, 0%, 69%);
+    --text-highlight-color: hsl(0, 0%, 15%);
   }
+}
 
+.panel-list {
   display: inline-flex;
   margin: 0;
   padding: 0;
   list-style-type: none;
+
+  @include lightmode;
+
+  [data-darkmode="dark"] & {
+    @include darkmode;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    [data-darkmode="auto"] & {
+      @include darkmode;
+    }
+  }
 
   & + & {
     margin-inline-start: 12px;
@@ -175,6 +188,14 @@
         border-block-start-color: var(--border-block-start-highlight-tap-color);
         border-block-end-color: var(--border-block-end-highlight-tap-color);
       }
+    }
+  }
+
+  &--icon {
+    label {
+      width: 30px;
+      padding-inline-start: 8px;
+      padding-inline-end: 8px;
     }
   }
 }
