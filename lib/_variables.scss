@@ -3,6 +3,9 @@
 
 // 定义赫蹏根 class 名
 $root-selector: '.heti' !default;
+$darkmode: true !default; // true | false | 'manual'
+$manualmode-auto-selector: '[data-darkmode="auto"] &' !default;
+$manualmode-dark-selector: '[data-darkmode="dark"] &' !default;
 
 // 字体 Fonts
 // 字体栈 Font Stacks
@@ -112,6 +115,25 @@ $_css-reset-scheme: "reset";
   position: absolute;
   line-height: inherit;
   text-indent: 0;
+}
+
+@mixin darkmode-style($darkmode: $darkmode, $dark-selector: $manualmode-dark-selector, $auto-selector: $manualmode-auto-selector) {
+  // 'manual' darkmode should provide darkmode selector and auto-darkmode selector
+  @if $darkmode == 'manual' {
+    #{$dark-selector} {
+      @content;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      #{$auto-selector} {
+        @content;
+      }
+    }
+  } @else if $darkmode {
+    @media (prefers-color-scheme: dark) {
+      @content;
+    }
+  }
 }
 
 // 函数 Functions

@@ -111,8 +111,12 @@
   background-color: rgba(0, 0, 0, 0.054);
 }
 
+[data-darkmode="dark"] .heti blockquote {
+  background-color: rgba(255, 255, 255, 0.054);
+}
+
 @media (prefers-color-scheme: dark) {
-  .heti blockquote {
+  [data-darkmode="auto"] .heti blockquote {
     background-color: rgba(255, 255, 255, 0.054);
   }
 }
@@ -139,8 +143,12 @@
   background-color: #cccccc;
 }
 
+[data-darkmode="dark"] .heti hr {
+  background-color: #404040;
+}
+
 @media (prefers-color-scheme: dark) {
-  .heti hr {
+  [data-darkmode="auto"] .heti hr {
     background-color: #404040;
   }
 }
@@ -172,8 +180,12 @@
   background-color: rgba(0, 0, 0, 0.054);
 }
 
+[data-darkmode="dark"] .heti pre {
+  background-color: rgba(255, 255, 255, 0.054);
+}
+
 @media (prefers-color-scheme: dark) {
-  .heti pre {
+  [data-darkmode="auto"] .heti pre {
     background-color: rgba(255, 255, 255, 0.054);
   }
 }
@@ -311,8 +323,12 @@
   word-break: break-word;
 }
 
+[data-darkmode="dark"] .heti table {
+  border-color: #404040;
+}
+
 @media (prefers-color-scheme: dark) {
-  .heti table {
+  [data-darkmode="auto"] .heti table {
     border-color: #404040;
   }
 }
@@ -328,8 +344,13 @@
   border-color: #cccccc;
 }
 
+[data-darkmode="dark"] .heti th, [data-darkmode="dark"]
+.heti td {
+  border-color: #404040;
+}
+
 @media (prefers-color-scheme: dark) {
-  .heti th,
+  [data-darkmode="auto"] .heti th, [data-darkmode="auto"]
   .heti td {
     border-color: #404040;
   }
@@ -413,8 +434,12 @@
   color: inherit;
 }
 
+[data-darkmode="dark"] .heti mark {
+  background-color: rgba(77, 74, 0, 0.88);
+}
+
 @media (prefers-color-scheme: dark) {
-  .heti mark {
+  [data-darkmode="auto"] .heti mark {
     background-color: rgba(77, 74, 0, 0.88);
   }
 }
@@ -466,8 +491,13 @@
   background-color: #dbedff;
 }
 
+[data-darkmode="dark"] .heti sup:target, [data-darkmode="dark"]
+.heti sup a:target {
+  background-color: #3a6188;
+}
+
 @media (prefers-color-scheme: dark) {
-  .heti sup:target,
+  [data-darkmode="auto"] .heti sup:target, [data-darkmode="auto"]
   .heti sup a:target {
     background-color: #3a6188;
   }
@@ -491,8 +521,12 @@
   border-block-end-color: rgba(0, 0, 0, 0.54);
 }
 
+[data-darkmode="dark"] .heti u[title] {
+  border-block-end-color: rgba(255, 255, 255, 0.54);
+}
+
 @media (prefers-color-scheme: dark) {
-  .heti u[title] {
+  [data-darkmode="auto"] .heti u[title] {
     border-block-end-color: rgba(255, 255, 255, 0.54);
   }
 }
@@ -807,8 +841,12 @@
   line-height: 24px;
 }
 
+[data-darkmode="dark"] .heti .heti-fn {
+  border-block-start-color: #404040;
+}
+
 @media (prefers-color-scheme: dark) {
-  .heti .heti-fn {
+  [data-darkmode="auto"] .heti .heti-fn {
     border-block-start-color: #404040;
   }
 }
@@ -822,8 +860,12 @@
   background-color: #dbedff;
 }
 
+[data-darkmode="dark"] .heti .heti-fn li:target {
+  background-color: #3a6188;
+}
+
 @media (prefers-color-scheme: dark) {
-  .heti .heti-fn li:target {
+  [data-darkmode="auto"] .heti .heti-fn li:target {
     background-color: #3a6188;
   }
 }

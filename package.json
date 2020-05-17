@@ -1,6 +1,6 @@
 {
   "name": "heti",
-  "version": "0.7.0",
+  "version": "0.8.0",
   "description": "赫蹏是专为中文内容展示设计的排版样式增强。它基于通行的中文排版规范而来，可以为网站的读者带来更好的文章阅读体验。",
   "main": "lib/heti.scss",
   "files": [
@@ -9,12 +9,12 @@
     "lib"
   ],
   "scripts": {
-    "start": "node-sass -w --output-style=expanded lib/heti.scss _site/heti.css",
+    "start": "node-sass -w  --output-style=expanded _site/scss/ -o _site/",
     "compile": "rollup -c -w",
-    "build:site": "node-sass _site/scss/index.scss _site/index.css --output-style=compact",
-    "build:style": "node-sass lib/heti.scss umd/heti.min.css --output-style=compressed",
+    "build:style": "node-sass --output-style=compressed lib/heti.scss umd/heti.min.css",
+    "build:site": "node-sass --output-style=expanded _site/scss/ -o _site/",
     "build:script": "rollup -c",
-    "build": "npm run build:style && npm run build:style && npm run build:script",
+    "build": "npm run build:style && npm run build:site && npm run build:script",
     "test": "npx stylelint --config package.json 'lib/**/*.scss'"
   },
   "repository": {
@@ -40,13 +40,13 @@
   "devDependencies": {
     "@rollup/plugin-commonjs": "^11.1.0",
     "@rollup/plugin-node-resolve": "^7.1.3",
-    "node-sass": "^4.14.0",
+    "node-sass": "^4.14.1",
     "rollup": "^1.32.1",
     "rollup-plugin-terser": "^5.3.0",
-    "stylelint": "^13.3.3",
+    "stylelint": "^13.4.0",
     "stylelint-config-recommended-scss": "^4.2.0",
     "stylelint-config-standard": "^19.0.0",
-    "stylelint-scss": "^3.17.1"
+    "stylelint-scss": "^3.17.2"
   },
   "stylelint": {
     "extends": [
@@ -54,14 +54,19 @@
       "stylelint-config-recommended-scss"
     ],
     "rules": {
-      "no-descending-specificity": [
-        true,
+      "no-descending-specificity": null,
+      "at-rule-empty-line-before": null,
+      "block-opening-brace-space-before": "always",
+      "block-closing-brace-newline-after": [
+        "always",
         {
-          "ignore": [
-            "selectors-within-list"
+          "ignoreAtRules": [
+            "if",
+            "else"
           ]
         }
       ],
+      "rule-empty-line-before": null,
       "selector-type-no-unknown": [
         true,
         {
