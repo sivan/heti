@@ -53,16 +53,23 @@
   }
 }
 
-@media (prefers-color-scheme: dark) {
-  .card {
-    background-color: hsl(0, 0%, 16%);
-
-    > figcaption {
-      border-block-start: 1px solid hsl(0, 0%, 20%);
-    }
+@mixin darkmode {
+  background-color: hsl(0, 0%, 16%);
+  > figcaption {
+    border-block-start: 1px solid hsl(0, 0%, 20%);
   }
-
   .card__vertical-container {
     border-color: hsl(0, 0%, 20%);
+  }
+}
+
+.card {
+  [data-darkmode="dark"] & {
+    @include darkmode();
+  }
+  @media (prefers-color-scheme: dark) {
+    [data-darkmode="auto"] & {
+      @include darkmode();
+    }
   }
 }
