@@ -769,14 +769,26 @@ li {
   }
 }
 
+[data-darkmode="dark"] .card {
+  background-color: #292929;
+}
+
+[data-darkmode="dark"] .card > figcaption {
+  border-block-start: 1px solid #333333;
+}
+
+[data-darkmode="dark"] .card .card__vertical-container {
+  border-color: #333333;
+}
+
 @media (prefers-color-scheme: dark) {
-  .card {
+  [data-darkmode="auto"] .card {
     background-color: #292929;
   }
-  .card > figcaption {
+  [data-darkmode="auto"] .card > figcaption {
     border-block-start: 1px solid #333333;
   }
-  .card__vertical-container {
+  [data-darkmode="auto"] .card .card__vertical-container {
     border-color: #333333;
   }
 }
