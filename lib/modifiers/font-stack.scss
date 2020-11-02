@@ -38,7 +38,8 @@
       font-family: $font-family-kai;
     }
 
-    // 说明文字、表头使用黑体
+    // 强调、说明文字、表头使用黑体
+    em,
     figcaption,
     caption,
     th {
