@@ -588,6 +588,7 @@
   font-family: "Times New Roman", Times, "Heti Kai", serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
 
+.heti--classic em,
 .heti--classic figcaption,
 .heti--classic caption,
 .heti--classic th {
@@ -893,7 +894,9 @@
 
 .heti .heti-ruby--inline rt {
   display: inline;
-  line-height: 0.5;
+  margin-bottom: -0.25em;
+  line-height: 1;
+  text-align: center;
 }
 
 .heti heti-spacing {
