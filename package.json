@@ -1,6 +1,6 @@
 {
   "name": "heti",
-  "version": "0.8.1",
+  "version": "0.8.2",
   "description": "赫蹏是专为中文内容展示设计的排版样式增强。它基于通行的中文排版规范而来，可以为网站的读者带来更好的文章阅读体验。",
   "main": "lib/heti.scss",
   "files": [
@@ -43,10 +43,10 @@
     "node-sass": "^4.14.1",
     "rollup": "^1.32.1",
     "rollup-plugin-terser": "^5.3.1",
-    "stylelint": "^13.7.2",
-    "stylelint-config-recommended-scss": "^4.2.0",
-    "stylelint-config-standard": "^19.0.0",
-    "stylelint-scss": "^3.18.0"
+    "stylelint": "^13.13.1",
+    "stylelint-config-recommended-scss": "^4.3.0",
+    "stylelint-config-standard": "^22.0.0",
+    "stylelint-scss": "^3.20.1"
   },
   "stylelint": {
     "extends": [
