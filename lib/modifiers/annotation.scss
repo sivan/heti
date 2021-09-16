@@ -25,7 +25,7 @@
 
     // 元信息保持间距
     #{$root-selector}-meta {
-      margin-block-start: $std-block-unit / 2;
+      margin-block-start: $std-block-unit * 0.5;
       margin-block-end: $std-block-unit;
     }
 

@@ -7,7 +7,7 @@
   ul,
   ol,
   dl {
-    margin-block-start: $line-height-size-normal / 2;
+    margin-block-start: $line-height-size-normal * 0.5;
     margin-block-end: $line-height-size-normal;
   }
 
