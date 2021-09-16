@@ -6,7 +6,7 @@
   table {
     box-sizing: border-box;
     table-layout: fixed;
-    margin-block-start: $std-block-unit / 2;
+    margin-block-start: $std-block-unit * 0.5;
     margin-block-end: $std-block-unit;
     margin-inline-start: auto;
     margin-inline-end: auto;
@@ -23,10 +23,10 @@
 
   th,
   td {
-    padding-block-start: $std-block-unit / 4;
-    padding-block-end: $std-block-unit / 4;
-    padding-inline-start: $std-inline-unit / 2;
-    padding-inline-end: $std-inline-unit / 2;
+    padding-block-start: $std-block-unit * 0.25;
+    padding-block-end: $std-block-unit * 0.25;
+    padding-inline-start: $std-inline-unit * 0.5;
+    padding-inline-end: $std-inline-unit * 0.5;
     border-width: 1px;
     border-style: solid;
     border-color: hsl(0, 0%, 80%);

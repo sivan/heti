@@ -15,7 +15,7 @@
     // 底边距考虑到亲密性，默认为半行间距
     margin: 0;
     margin-block-start: $std-block-unit;
-    margin-block-end: $std-block-unit / 2;
+    margin-block-end: $std-block-unit * 0.5;
     font-weight: $font-weight-bold;
   }
 
@@ -68,6 +68,6 @@
   h3 + h4,
   h4 + h5,
   h5 + h6 {
-    margin-block-start: $std-block-unit / 2;
+    margin-block-start: $std-block-unit * 0.5;
   }
 }
