@@ -13,8 +13,8 @@
 
     // 多栏排版时减半段间距
     p {
-      margin-block-start: $std-block-unit / 2 / 2;
-      margin-block-end: $std-block-unit / 2;
+      margin-block-start: $std-block-unit * 0.5 * 0.5;
+      margin-block-end: $std-block-unit * 0.5;
       text-indent: $text-indent-length;
     }
   }

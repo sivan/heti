@@ -21,12 +21,12 @@
 
   // 定义块级元素样式
   blockquote {
-    margin-block-start: $std-block-unit / 2;
+    margin-block-start: $std-block-unit * 0.5;
     margin-block-end: $std-block-unit;
     margin-inline-start: $std-inline-unit * 2;
     margin-inline-end: $std-inline-unit * 2;
-    padding-block-start: $std-block-unit / 2;
-    padding-block-end: $std-block-unit / 2;
+    padding-block-start: $std-block-unit * 0.5;
+    padding-block-end: $std-block-unit * 0.5;
     padding-inline-start: $std-inline-unit;
     padding-inline-end: $std-inline-unit;
     //border-radius: 4px;
@@ -64,7 +64,7 @@
   }
 
   p {
-    margin-block-start: $std-block-unit / 2;
+    margin-block-start: $std-block-unit * 0.5;
     margin-block-end: $std-block-unit;
     text-align: justify;
 
@@ -77,12 +77,12 @@
 
   @if $format_pre_code {
     pre {
-      margin-block-start: $std-block-unit / 2;
-      margin-block-end: $std-block-unit / 2;
+      margin-block-start: $std-block-unit * 0.5;
+      margin-block-end: $std-block-unit * 0.5;
       margin-inline-start: 0;
       margin-inline-end: 0;
-      padding-block-start: $std-block-unit / 2;
-      padding-block-end: $std-block-unit / 2;
+      padding-block-start: $std-block-unit * 0.5;
+      padding-block-end: $std-block-unit * 0.5;
       padding-inline-start: $std-inline-unit;
       padding-inline-end: $std-inline-unit;
       overflow: auto;
