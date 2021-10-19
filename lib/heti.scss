@@ -34,6 +34,8 @@
   overflow-wrap: break-word;
   word-wrap: break-word;
   hyphens: auto;
+  -ms-hyphens: auto;
+  -webkit-hyphens: auto
 
   // 自动在中西文间加 1/4 空格（暂无浏览器支持）
   //text-spacing: ideograph-alpha;
