@@ -23,14 +23,13 @@
             <li>
               <a href="#examples">效果演示</a>
               <ul>
-                <li><a href="#example-1">示例1：古文</a></li>
-                <li><a href="#example-2">示例2：诗词</a></li>
-                <li><a href="#example-3">示例3：行间注</a></li>
-                <li><a href="#example-3">示例4：英文演示</a></li>
+                <li><a href="#example-ancient">古文</a></li>
+                <li><a href="#example-verse">诗词</a></li>
+                <li><a href="#example-annotation">行间注</a></li>
+                <li><a href="#example-columns">多栏排版</a></li>
+                <li><a href="#example-vertical">竖排排版</a></li>
               </ul>
             </li>
-            <li><a href="#columns">多栏排版</a></li>
-            <li><a href="#vertical">竖排排版</a></li>
             <li><a href="#guidelines">设计原则</a></li>
             <li>
               <a href="#appendix">附录</a>
@@ -66,7 +65,7 @@
       <hr>
 
       <h2 id="usage">使用方法<a class="anchor" href="#usage">#</a></h2>
-      <p>项目源文件：<a href="https://github.com/sivan/heti">https://github.com/sivan/heti</a>，生产文件已同步至unpkg.com。使用方法如下：</p>
+      <p>项目地址：<a href="https://github.com/sivan/heti">https://github.com/sivan/heti</a>，使用方法如下：</p>
       <ol>
         <li>
           在页面的<code>&lt;/head&gt;</code>标签前中引入<code>heti.css</code>样式文件：
@@ -77,7 +76,7 @@
 
           <pre><code>&lt;article class=&quot;entry <ins>heti</ins>&quot;&gt;
   &lt;h1&gt;我的世界观&lt;/h1&gt;
-  &lt;p&gt;有钱人的生活就是这么朴实无华，且枯燥&lt;/p&gt;
+  &lt;p&gt;有钱人的生活就是这么朴实无华，且枯燥。&lt;/p&gt;
   ……
 &lt;/article&gt;</code></pre>
         </li>
@@ -88,10 +87,17 @@
 
       <h2 id="examples">效果示例<a class="anchor" href="#examples">#</a></h2>
       <p>本页面<em>全页</em>应用了赫蹏样式，所见即所得。下面是内置的多种排版效果演示。</p>
+
+      <h3 id="example-ancient">古文<a class="anchor" href="#example-ancient">#</a></h3>
+      <details>
+        <summary>如何使用？</summary>
+        <p>为容器元素<code>&lt;div class=&quot;heti&quot;&gt;</code>添加名为<code>heti--ancient</code>的class即可实现古文版式：</p>
+        <pre><code>&lt;div class=&quot;heti heti--ancient&quot;&gt;...&lt;/div&gt;</code></pre>
+      </details>
       <details open>
-        <summary id="example-1">示例1：古文</summary>
+        <summary>示例</summary>
         <section class="demo">
-          <div class="heti--ancient">
+          <div class="heti heti--ancient">
             <h1>出师表</h1>
             <p class="heti-meta heti-small">作者：<abbr title="字孔明">諸葛亮</abbr>（181年～234年10月8日）</p>
             <p>先帝创业未半而中道崩殂，今天下三分，益州疲弊，此诚危急存亡之秋也。然侍卫之臣不懈于内，忠志之士忘身于外者，盖追先帝之殊遇，欲报之于陛下也。诚宜开张圣听，以光先帝遗德，恢弘志士之气，不宜妄自菲薄，引喻失义，以塞忠谏之路也。</p>
@@ -107,10 +113,41 @@
         </section>
       </details>
 
+      <h3 id="example-verse">诗词<a class="anchor" href="#example-verse">#</a></h3>
+      <details>
+        <summary>如何使用？</summary>
+        <ul>
+          <li>
+            诗词：为容器元素<code>&lt;div class=&quot;heti&quot;&gt;</code>添加名为<code>heti--poetry</code>的class实现诗词版式：
+            <pre><code>&lt;div class=&quot;heti heti--poetry&quot;&gt;
+  &lt;h2&gt;九月九日忆山东兄弟&lt;span class=&quot;heti-meta heti-small&quot;&gt;[唐]&lt;abbr title=&quot;号摩诘居士&quot;&gt;王维&lt;/abbr&gt;&lt;/span&gt;&lt;/h2&gt;
+  &lt;p class=&quot;heti-x-large&quot;&gt;
+    独在异乡为异客&lt;span class=&quot;heti-hang&quot;&gt;，&lt;/span&gt;&lt;br&gt;
+    每逢佳节倍思亲&lt;span class=&quot;heti-hang&quot;&gt;。&lt;/span&gt;&lt;br&gt;
+    遥知兄弟登高处&lt;span class=&quot;heti-hang&quot;&gt;，&lt;/span&gt;&lt;br&gt;
+    遍插茱萸少一人&lt;span class=&quot;heti-hang&quot;&gt;。&lt;/span&gt;
+  &lt;/p&gt;
+&lt;/div&gt;</code></pre>
+          </li>
+          <li>
+            诗节：在古文版式<code>&lt;div class=&quot;heti heti--ancient&quot;&gt;</code>中，为诗句添加名为<code>heti-verse</code>的class可以将其居中显示：
+            <pre><code>&lt;div class=&quot;heti heti--ancient&quot;&gt;
+  &lt;h2&gt;一剪梅&middot;红藕香残玉簟秋&lt;span class=&quot;heti-meta heti-small&quot;&gt;[宋]&lt;abbr title=&quot;号易安居士&quot;&gt;李清照&lt;/abbr&gt;&lt;/span&gt;&lt;/h2&gt;
+  &lt;p class=&quot;heti-verse heti-x-large&quot;&gt;
+    红藕香残玉簟秋。轻解罗裳，独上兰舟&lt;span class=&quot;heti-hang&quot;&gt;。&lt;/span&gt;&lt;br&gt;
+    云中谁寄锦书来，雁字回时，月满西楼&lt;span class=&quot;heti-hang&quot;&gt;。&lt;/span&gt;&lt;br&gt;
+    花自飘零水自流。一种相思，两处闲愁&lt;span class=&quot;heti-hang&quot;&gt;。&lt;/span&gt;&lt;br&gt;
+    此情无计可消除，才下眉头，却上心头&lt;span class=&quot;heti-hang&quot;&gt;。&lt;/span&gt;
+  &lt;/p&gt;
+&lt;/div&gt;</code></pre>
+          </li>
+          <li>搭配使用标点悬挂<code>&lt;span class=&quot;heti-hang&quot;&gt;</code>、元信息<code>&lt;span class=&quot;heti-meta heti-small&quot;&gt;</code>来丰富展示效果。</li>
+        </ul>
+      </details>
       <details open>
-        <summary id="example-2">示例2：诗词</summary>
+        <summary>示例</summary>
         <section class="demo">
-          <div class="heti--ancient">
+          <div class="heti heti--ancient">
             <h2>一剪梅·红藕香残玉簟秋<span class="heti-meta heti-small">[宋]<abbr title="号易安居士">李清照</abbr></span></h2>
             <p class="heti-verse heti-x-large">
               红藕香残玉簟秋。轻解罗裳，独上兰舟<span class="heti-hang">。</span><br>
@@ -120,7 +157,7 @@
             </p>
           </div>
           <hr>
-          <div class="heti--poetry">
+          <div class="heti heti--poetry">
             <h2>赠汪伦<span class="heti-meta heti-small">[唐]<abbr title="号青莲居士">李白</abbr></span></h2>
             <p class="heti-x-large">
               李白乘舟将欲行<span class="heti-hang">，</span><br>
@@ -132,10 +169,16 @@
         </section>
       </details>
 
+      <h3 id="example-annotation">行间注<a class="anchor" href="#example-annotation">#</a></h3>
+      <details>
+        <summary>如何使用？</summary>
+        <p>为容器元素<code>&lt;div class=&quot;heti&quot;&gt;</code>添加名为<code>heti--annotation</code>的class后，搭配<code>&lt;ruby&gt;</code>元素即可实现整齐的行间注效果：</p>
+        <pre><code>&lt;div class=&quot;heti heti--annotation&quot;&gt;...&lt;/div&gt;</code></pre>
+      </details>
       <details open>
-        <summary id="example-3">示例3：行间注</summary>
+        <summary>示例</summary>
         <section class="demo">
-          <div class="heti--ancient heti--annotation">
+          <div class="heti heti--ancient heti--annotation">
             <h2>庖丁解牛</h2>
             <p class="heti-meta heti-small">作者：<abbr title="庄子">庄周</abbr>（公元前369～公元前286年）</p>
             <p>吾生也有涯，而知也无涯。以有涯随无涯，殆已！已而为知者，殆而已矣！为善无近名，为恶无近刑。缘督以为经，可以保身，可以全生，可以养亲，可以尽年。</p>
@@ -147,26 +190,11 @@
         </section>
       </details>
 
-      <details open>
-        <summary id="example-4">示例4：英文演示</summary>
-        <section class="demo">
-          <div lang="en-US">
-            <h1>Lorem Ipsum</h1>
-            <p><q>There is no one who loves pain itself, who seeks after it and wants to have it, simply because it is pain...</q></p>
-            <p><dfn>Lorem Ipsum</dfn> is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like <em>Aldus PageMaker</em> including versions of Lorem Ipsum.</p>
-            <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, <i>"Lorem ipsum dolor sit amet.."</i>, comes from a line in section 1.10.32.</p>
-            <p>The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from <cite>"de Finibus Bonorum et Malorum"</cite> by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.</p>
-          </div>
-        </section>
-      </details>
-
-      <hr>
-
-      <h2 id="columns">多栏排版<a class="anchor" href="#columns">#</a></h2>
+      <h3 id="example-columns">多栏排版<a class="anchor" href="#example-columns">#</a></h3>
       <p>赫蹏预置了多种多栏布局类，可以按栏数或每栏行宽进行设置。</p>
       <details>
-        <summary>查看使用说明</summary>
-        <p>为容器元素添加名为<code>heti--columns-2</code>的class即可实现双栏排版。</p>
+        <summary>如何使用？</summary>
+        <p>为容器元素<code>&lt;div class=&quot;heti&quot;&gt;</code>添加名为<code>heti--columns-2</code>的class即可实现双栏排版：</p>
         <pre><code>&lt;div class=&quot;heti heti--columns-2&quot;&gt;...&lt;/div&gt;</code></pre>
         <table>
           <thead>
@@ -190,58 +218,72 @@
           </tbody>
         </table>
       </details>
-      <figure class="card card--multi-column">
-        <section class="heti--columns-2">
-          <p>先帝创业未半而中道崩殂，今天下三分，益州疲弊，此诚危急存亡之秋也。然侍卫之臣不懈于内，忠志之士忘身于外者，盖追先帝之殊遇，欲报之于陛下也。诚宜开张圣听，以光先帝遗德，恢弘志士之气，不宜妄自菲薄，引喻失义，以塞忠谏之路也。</p>
-          <p>宫中府中，俱为一体；陟罚臧否，不宜异同。若有作奸犯科及为忠善者，宜付有司论其刑赏，以昭陛下平明之理；不宜偏私，使内外异法也。</p>
-          <p>侍中、侍郎郭攸之、费祎、董允等，此皆良实，志虑忠纯，是以先帝简拔以遗陛下：愚以为宫中之事，事无大小，悉以咨之，然后施行，必能裨补阙漏，有所广益。</p>
-          <p>将军向宠，性行淑均，晓畅军事，试用于昔日，先帝称之曰能，是以众议举宠为督。愚以为营中之事，悉以咨之，必能使行阵和睦，优劣得所。</p>
-          <p>亲贤臣，远小人，此先汉所以兴隆也；亲小人，远贤臣，此后汉所以倾颓也。先帝在时，每与臣论此事，未尝不叹息痛恨于桓、灵也。侍中、尚书、长史、参军，此悉贞良死节之臣，愿陛下亲之信之，则汉室之隆，可计日而待也。</p>
-          <p>臣本布衣，躬耕于南阳，苟全性命于乱世，不求闻达于诸侯。先帝不以臣卑鄙，猥自枉屈，三顾臣于草庐之中，咨臣以当世之事，由是感激，遂许先帝以驱驰。后值倾覆，受任于败军之际，奉命于危难之间，尔来二十有一年矣。</p>
-          <p>先帝知臣谨慎，故临崩寄臣以大事也。受命以来，夙夜忧叹，恐托付不效，以伤先帝之明；故五月渡泸，深入不毛。今南方已定，兵甲已足，当奖率三军，北定中原，庶竭驽钝，攘除奸凶，兴复汉室，还于旧都。此臣所以报先帝而忠陛下之职分也。至于斟酌损益，进尽忠言，则攸之、祎、允之任也。</p>
-          <p>愿陛下托臣以讨贼兴复之效，不效，则治臣之罪，以告先帝之灵。若无兴德之言，则责攸之、祎、允等之慢，以彰其咎；陛下亦宜自谋，以咨诹善道，察纳雅言，深追先帝遗诏。臣不胜受恩感激。</p>
-          <p>今当远离，临表涕零，不知所言。</p>
-        </section>
-        <figcaption>多栏排版演示</figcaption>
-      </figure>
+      <details open>
+        <summary>示例</summary>
+        <figure class="card card--multi-column">
+          <section class="heti--columns-2">
+            <p>先帝创业未半而中道崩殂，今天下三分，益州疲弊，此诚危急存亡之秋也。然侍卫之臣不懈于内，忠志之士忘身于外者，盖追先帝之殊遇，欲报之于陛下也。诚宜开张圣听，以光先帝遗德，恢弘志士之气，不宜妄自菲薄，引喻失义，以塞忠谏之路也。</p>
+            <p>宫中府中，俱为一体；陟罚臧否，不宜异同。若有作奸犯科及为忠善者，宜付有司论其刑赏，以昭陛下平明之理；不宜偏私，使内外异法也。</p>
+            <p>侍中、侍郎郭攸之、费祎、董允等，此皆良实，志虑忠纯，是以先帝简拔以遗陛下：愚以为宫中之事，事无大小，悉以咨之，然后施行，必能裨补阙漏，有所广益。</p>
+            <p>将军向宠，性行淑均，晓畅军事，试用于昔日，先帝称之曰能，是以众议举宠为督。愚以为营中之事，悉以咨之，必能使行阵和睦，优劣得所。</p>
+            <p>亲贤臣，远小人，此先汉所以兴隆也；亲小人，远贤臣，此后汉所以倾颓也。先帝在时，每与臣论此事，未尝不叹息痛恨于桓、灵也。侍中、尚书、长史、参军，此悉贞良死节之臣，愿陛下亲之信之，则汉室之隆，可计日而待也。</p>
+            <p>臣本布衣，躬耕于南阳，苟全性命于乱世，不求闻达于诸侯。先帝不以臣卑鄙，猥自枉屈，三顾臣于草庐之中，咨臣以当世之事，由是感激，遂许先帝以驱驰。后值倾覆，受任于败军之际，奉命于危难之间，尔来二十有一年矣。</p>
+            <p>先帝知臣谨慎，故临崩寄臣以大事也。受命以来，夙夜忧叹，恐托付不效，以伤先帝之明；故五月渡泸，深入不毛。今南方已定，兵甲已足，当奖率三军，北定中原，庶竭驽钝，攘除奸凶，兴复汉室，还于旧都。此臣所以报先帝而忠陛下之职分也。至于斟酌损益，进尽忠言，则攸之、祎、允之任也。</p>
+            <p>愿陛下托臣以讨贼兴复之效，不效，则治臣之罪，以告先帝之灵。若无兴德之言，则责攸之、祎、允等之慢，以彰其咎；陛下亦宜自谋，以咨诹善道，察纳雅言，深追先帝遗诏。臣不胜受恩感激。</p>
+            <p>今当远离，临表涕零，不知所言。</p>
+          </section>
+          <figcaption>多栏排版演示</figcaption>
+        </figure>
+      </details>
 
-      <hr>
-
-      <h2 id="vertical">竖排排版<a class="anchor" href="#vertical">#</a></h2>
+      <h3 id="example-vertical">竖排排版<a class="anchor" href="#example-vertical">#</a></h3>
       <p>赫蹏预置了传统的竖排（直排）方向排版，同样贴合栅格。</p>
       <details>
-        <summary>查看使用说明</summary>
-        <p>为容器元素添加名为<code>heti--vertical</code>的class即可实现竖排布局。</p>
+        <summary>如何使用？</summary>
+        <p>为容器元素<code>&lt;div class=&quot;heti&quot;&gt;</code>添加名为<code>heti--vertical</code>的class即可实现竖排布局：</p>
         <pre><code>&lt;div class=&quot;heti heti--vertical&quot;&gt;...&lt;/div&gt;</code></pre>
       </details>
-      <figure class="card card--vertical">
-        <div class="card__vertical-container">
-          <section class="heti--vertical heti--ancient">
-            <h1>出師表</h1>
-            <p class="heti-small">作者：<abbr title="字孔明">諸葛亮</abbr>（181年－234年10月8日）</p>
-            <p>先帝創業未半，而中道崩殂；今天下三分，益州疲弊，此誠危急存亡之秋也﹗然侍衞之臣，不懈於內；忠志之士，忘身於外者，蓋追先帝之殊遇，欲報之於陛下也。</p>
-            <p>誠宜開張聖聽，以光先帝遺德，恢弘志士之氣﹔不宜妄自菲薄，引喻失義，以塞忠諫之路也。</p>
-            <p>宮中、府中，俱為一體；陟罰臧否，不宜異同。若有作姦、犯科，及為忠善者，宜付有司，論其刑賞，以昭陛下平明之治；不宜偏私，使內外異法也。</p>
-            <p>侍中、侍郎郭攸之、費禕、董允等，此皆良實，志慮忠純，是以先帝簡拔以遺陛下。愚以為宮中之事，事無大小，悉以咨之，然後施行，必能裨補闕漏，有所廣益。將軍向寵，性行淑均，曉暢軍事，試用於昔日，先 帝稱之曰「能」，是以眾議舉寵為督。愚以為營中之事，悉以咨之，必能使行陣和睦，優劣得所。</p>
-            <p>親賢臣，遠小人，此先漢所以興隆也﹔親小人，遠賢臣，此後漢所以傾頹也。先帝在時，每與臣論此事，未嘗不歎息痛恨於桓、靈也！侍中、尚書、長史、參軍，此悉貞良死節之臣，願陛下親之、信之，則漢室之隆，可計日而待也。</p>
-            <p>臣本布衣，躬耕於南陽，苟全性命於亂世，不求聞達於諸侯。先帝不以臣卑鄙，猥自枉屈，三顧臣於草廬之中，諮臣以當世之事；由是感激，遂許先帝以驅馳。後值傾覆，受任於敗軍之際，奉命於危難之間，爾來二十有一年矣。先帝知臣謹慎，故臨崩寄臣以大事也。受命以來，夙夜憂歎，恐託付不效，以傷先帝之明。故五月渡瀘，深入不毛。今南方已定，兵甲已足，當獎率三軍，北定中原，庶竭駑鈍，攘除姦凶，興復漢室，還於舊都。此臣所以報先帝而忠陛下之職分也。至於斟酌損益，進盡忠言，則攸之、禕、允之任也。</p>
-            <p>願陛下託臣以討賊興復之效；不效，則治臣之罪，以告先帝之靈。若無興德之言，則責攸之、禕、允等之慢，以彰其咎。陛下亦宜自謀，以諮諏善道，察納雅言，深追先帝遺詔。臣不勝受恩感激。今當遠離，臨表涕零，不知所言！</p>
-          </section>
-        </div>
-        <figcaption>竖排排版演示</figcaption>
-      </figure>
+      <details open>
+        <summary>示例</summary>
+        <figure class="card card--vertical">
+          <div class="card__vertical-container">
+            <section class="heti--vertical heti--ancient">
+              <h1>出師表</h1>
+              <p class="heti-small">作者：<abbr title="字孔明">諸葛亮</abbr>（181年－234年10月8日）</p>
+              <p>先帝創業未半，而中道崩殂；今天下三分，益州疲弊，此誠危急存亡之秋也﹗然侍衞之臣，不懈於內；忠志之士，忘身於外者，蓋追先帝之殊遇，欲報之於陛下也。</p>
+              <p>誠宜開張聖聽，以光先帝遺德，恢弘志士之氣﹔不宜妄自菲薄，引喻失義，以塞忠諫之路也。</p>
+              <p>宮中、府中，俱為一體；陟罰臧否，不宜異同。若有作姦、犯科，及為忠善者，宜付有司，論其刑賞，以昭陛下平明之治；不宜偏私，使內外異法也。</p>
+              <p>侍中、侍郎郭攸之、費禕、董允等，此皆良實，志慮忠純，是以先帝簡拔以遺陛下。愚以為宮中之事，事無大小，悉以咨之，然後施行，必能裨補闕漏，有所廣益。將軍向寵，性行淑均，曉暢軍事，試用於昔日，先帝稱之曰「能」，是以眾議舉寵為督。愚以為營中之事，悉以咨之，必能使行陣和睦，優劣得所。</p>
+              <p>親賢臣，遠小人，此先漢所以興隆也﹔親小人，遠賢臣，此後漢所以傾頹也。先帝在時，每與臣論此事，未嘗不歎息痛恨於桓、靈也！侍中、尚書、長史、參軍，此悉貞良死節之臣，願陛下親之、信之，則漢室之隆，可計日而待也。</p>
+              <p>臣本布衣，躬耕於南陽，苟全性命於亂世，不求聞達於諸侯。先帝不以臣卑鄙，猥自枉屈，三顧臣於草廬之中，諮臣以當世之事；由是感激，遂許先帝以驅馳。後值傾覆，受任於敗軍之際，奉命於危難之間，爾來二十有一年矣。先帝知臣謹慎，故臨崩寄臣以大事也。受命以來，夙夜憂歎，恐託付不效，以傷先帝之明。故五月渡瀘，深入不毛。今南方已定，兵甲已足，當獎率三軍，北定中原，庶竭駑鈍，攘除姦凶，興復漢室，還於舊都。此臣所以報先帝而忠陛下之職分也。至於斟酌損益，進盡忠言，則攸之、禕、允之任也。</p>
+              <p>願陛下託臣以討賊興復之效；不效，則治臣之罪，以告先帝之靈。若無興德之言，則責攸之、禕、允等之慢，以彰其咎。陛下亦宜自謀，以諮諏善道，察納雅言，深追先帝遺詔。臣不勝受恩感激。今當遠離，臨表涕零，不知所言！</p>
+            </section>
+          </div>
+          <figcaption>竖排排版演示</figcaption>
+        </figure>
+      </details>
+
+      <h3 id="example-latin">英文排版<a class="anchor" href="#example-latin">#</a></h3>
+      <details>
+        <summary>效果演示</summary>
+        <section class="demo">
+          <div lang="en-US">
+            <h1>Lorem Ipsum</h1>
+            <p><q>There is no one who loves pain itself, who seeks after it and wants to have it, simply because it is pain...</q></p>
+            <p><dfn>Lorem Ipsum</dfn> is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like <em>Aldus PageMaker</em> including versions of Lorem Ipsum.</p>
+            <p>The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from <cite>"de Finibus Bonorum et Malorum"</cite> by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.</p>
+          </div>
+        </section>
+      </details>
 
       <hr>
 
       <h2 id="guidelines">设计原则<a class="anchor" href="#guidelines">#</a></h2>
-      <p>赫蹏项目的初衷很简单：它不作为一个CSS Reset出现，而是根据通行的中文排版规范，对网页正文区域进行排版样式增强。在部分CSS特性尚未有浏览器支持前，可通过JavaScript实现部分补充（非必要）。</p>
-      <h3>核心</h3>
-      <p>美化中文方块字排版，作用范围是网页中的文章区域（含标题、正文、元信息等），不包含网页导航、表单、侧边栏等区域（它们也不需要这套格式排版）。</p>
-      <p>使用<code>heti.css</code>时建议搭配良好的中文书写习惯，即：使用正确的HTML标签（可参考后面的<a href="#tags">标签示例表</a>）、正确的引号、中文全角标点等。使用Markdown书写文章将助你一臂之力。</p>
+      <p>赫蹏项目的初衷很简单：它不作为一个CSS Reset出现，而是根据通行的中文排版规范，对网页正文区域进行排版样式增强。在部分CSS特性尚未有浏览器支持前，可通过JavaScript实现功能补充。</p>
       <h3>文字</h3>
       <p>参考《中文排版需求<sup><a id="ref-02" href="#fn-02">[2]</a></sup>》中描述的常用书籍排版字体，赫蹏提供了黑体、宋体和<u title="以正文宋体、标题楷体构成的搭配">传统</u>三种字体风格，前两者分别对应无衬线、衬线字体族。文字默认采用16px作为标准字号。在标题等文字较大的情况下，会适当地增加字间距以便获得更好地可读性。</p>
       <details>
-        <summary>查看字体风格对照表</summary>
+        <summary>查看字体风格详细对照表</summary>
         <section class="section">
           <table>
             <caption>各字体族下不同标签对应的字体</caption>
@@ -257,8 +299,8 @@
             <tbody>
             <tr>
               <th>标题</th>
-              <td>黑体</td>
-              <td>宋体</td>
+              <td rowspan="7">黑体</td>
+              <td rowspan="7">宋体</td>
               <td>楷体</td>
               <td>
                 <section>
@@ -268,8 +310,6 @@
             </tr>
             <tr>
               <th>正文</th>
-              <td>黑体</td>
-              <td>宋体</td>
               <td>宋体</td>
               <td>
                 <section>
@@ -279,8 +319,6 @@
             </tr>
             <tr>
               <th>引用</th>
-              <td>黑体</td>
-              <td>宋体</td>
               <td>楷体</td>
               <td>
                 <section>
@@ -290,8 +328,6 @@
             </tr>
             <tr>
               <th>强调</th>
-              <td>黑体</td>
-              <td>宋体</td>
               <td>宋体</td>
               <td>
                 <section>
@@ -301,8 +337,6 @@
             </tr>
             <tr>
               <th>对话</th>
-              <td>黑体</td>
-              <td>宋体</td>
               <td>楷体</td>
               <td>
                 <section>
@@ -312,8 +346,6 @@
             </tr>
             <tr>
               <th>图例</th>
-              <td>黑体</td>
-              <td>宋体</td>
               <td>黑体</td>
               <td>
                 <section>
@@ -326,8 +358,6 @@
             </tr>
             <tr>
               <th>表头</th>
-              <td>黑体</td>
-              <td>宋体</td>
               <td>黑体</td>
               <td>
                 <section>
@@ -361,7 +391,11 @@
         </section>
       </details>
       <h3>标点</h3>
-      <p>参考《中文排版需求》制定符号样式。唯一差异在于简体中文一律采用直角引号（「」）替代圆角引号（“”），这样可以保持字符等宽。</p>
+      <p>参考《中文排版需求》制定符号样式。唯一的差异在于简体中文一律采用直角引号（「」）替代弯引号（“”），这样可以保持字符等宽。</p>
+      <details>
+        <summary>查看如何将引号设置为弯引号（“”）</summary>
+        <p>通过源码引用的方式覆盖`_variables.scss`文件中`$chinese-quote-set`变量的值为`cn`即可将引号设为GB/T 15834-2011的国家标准。</p>
+      </details>
       <h3>间距</h3>
       <p>为保持页面元素总是贴合垂直栅格，块级元素（段落、列表、表格等）采用一行行高作为底边距，半行行高作为顶边距。标题根据亲密性原则采用相反的边距设计。</p>
 
@@ -385,8 +419,8 @@
             </tr>
             <tr>
               <th>兼容性</th>
-              <td>4</td>
-              <td>3.1</td>
+              <td>69</td>
+              <td>12.1</td>
               <td>3</td>
               <td>暂未支持</td>
               <td>79</td>
@@ -466,55 +500,63 @@
       </details>
 
       <h3 id="javascript">增强脚本<sup>beta</sup><a class="anchor" href="#javascript">#</a></h3>
-      <p>由于部分CSS特性尚未有浏览器支持等原因，可选择使用增强脚本进行排版效果优化。目前增强脚本的功能有：</p>
-      <ul>
-        <li>中英文混排优化：无论你的输入习惯是否在中西文之间留有「空格」<sup><a id="ref-03" href="#fn-03">[3]</a></sup>，都会统一成标准间距（¼字宽的空白）；</li>
-        <li>标点挤压：自动对中文标点进行½字宽的挤压（间隔符挤压¼字宽）。</li>
-      </ul>
-      <details>
-        <summary>使用方法与效果</summary>
-        <p>在页面的<code>&lt;/body&gt;</code>标签前引入JavaScript脚本：</p>
-        <pre><code>&lt;script src=&quot;//unpkg.com/heti/umd/heti-addon.min.js&quot;&gt;&lt;/script&gt;
+      <p>由于部分CSS特性尚未有浏览器支持等原因，可选择使用增强脚本进行排版效果优化。在页面的<code>&lt;/body&gt;</code>标签前引入JavaScript脚本后初始化即可：</p>
+      <pre><code>&lt;script src=&quot;//unpkg.com/heti/umd/heti-addon.min.js&quot;&gt;&lt;/script&gt;
 &lt;script&gt;
   const heti = new Heti('.heti');
   heti.autoSpacing();
 &lt;/script&gt;</code></pre>
-        <section>
-          <table>
-            <caption>增强脚本示例表</caption>
-            <tr>
-              <th colspan="4">中英文间距</th>
-            </tr>
-            <tr>
-              <th style="width: 80px;">默认文本</th>
-              <td colspan="3">
-                <div class="heti-skip"><b>Hello, world!</b>是大家第一次学习Programming时最常写的demo，它看似简单，但对有些人来说寥寥数语有时也会产生bug。</div>
-              </td>
-            </tr>
-            <tr>
-              <th>脚本效果</th>
-              <td colspan="3">
-                <div><b>Hello, world!</b>是大家第一次学习Programming时最常写的demo，它看似简单，但对有些人来说寥寥数语有时也会产生bug。</div>
-              </td>
-            </tr>
-            <tr>
-              <th colspan="4">标点挤压</th>
-            </tr>
-            <tr>
-              <th>默认文本</th>
-              <td colspan="3">
-                <blockquote class="heti-skip" style="margin-inline-start: 0; margin-inline-end: 0;">古代称用以书写的小幅绢帛。后亦以借指纸<mark>。《</mark>汉书·外戚传下·孝成赵皇后<mark>》：「</mark>武（籍武 ）发篋中，有裹药二枚，赫蹏书。」<u>颜师古</u>注：「<u>邓展</u>曰：『赫音兄弟鬩墙之鬩。』<u>应劭</u>曰：『赫蹏，薄小纸也。』」<u>宋</u><u>赵彦卫</u> 《云麓漫钞》卷七：「《赵后传》所谓『赫蹏』者，注云『薄小纸』，然其寔亦縑帛。」</blockquote>
-              </td>
-            </tr>
-            <tr>
-              <th>脚本效果</th>
-              <td colspan="3">
-                <blockquote style="margin-inline-start: 0; margin-inline-end: 0;">古代称用以书写的小幅绢帛。后亦以借指纸<mark>。《</mark>汉书·外戚传下·孝成赵皇后<mark>》：「</mark>武（籍武 ）发篋中，有裹药二枚，赫蹏书。」<u>颜师古</u>注：「<u>邓展</u>曰：『赫音兄弟鬩墙之鬩。』<u>应劭</u>曰：『赫蹏，薄小纸也。』」<u>宋</u><u>赵彦卫</u> 《云麓漫钞》卷七：「《赵后传》所谓『赫蹏』者，注云『薄小纸』，然其寔亦縑帛。」</blockquote>
-              </td>
-            </tr>
-          </table>
-        </section>
-      </details>
+      <p>目前支持的功能有：</p>
+      <ul>
+        <li>中英文混排优化：无论你的输入习惯是否在中西文之间留有「空格」<sup><a id="ref-03" href="#fn-03">[3]</a></sup>，都会统一成标准间距（¼字宽的空白）；</li>
+        <li>标点挤压：自动对中文标点进行½字宽的挤压（弯引号和间隔符挤压¼字宽）。</li>
+      </ul>
+      <p>效果演示：</p>
+      <table>
+        <caption>增强脚本示例表</caption>
+        <tr>
+          <th colspan="4">中西文混排美化</th>
+        </tr>
+        <tr>
+          <th style="width: 80px;">默认文本</th>
+          <td colspan="3">
+            <div class="heti-skip"><b>Hello, world!</b>是大家第一次学习Programming时最常写的demo，它看似简单，但对有些人来说寥寥数语有时也会产生bug。</div>
+          </td>
+        </tr>
+        <tr>
+          <th>脚本效果</th>
+          <td colspan="3">
+            <div><b>Hello, world!</b>是大家第一次学习Programming时最常写的demo，它看似简单，但对有些人来说寥寥数语有时也会产生bug。</div>
+          </td>
+        </tr>
+        <tr>
+          <th colspan="4">标点挤压</th>
+        </tr>
+        <tr>
+          <th>默认文本</th>
+          <td colspan="3">
+            <blockquote class="heti-skip" style="margin-inline-start: 0; margin-inline-end: 0;">古代称用以书写的小幅绢帛。后亦以借指纸<mark>。《</mark>汉书·外戚传下·孝成赵皇后<mark>》：「</mark>武（籍武 ）发篋中，有裹药二枚，赫蹏书。」<u>颜师古</u>注：「<u>邓展</u>曰：『赫音兄弟鬩墙之鬩。』<u>应劭</u>曰：『赫蹏，薄小纸也。』」<u>宋</u><u>赵彦卫</u>《云麓漫钞》卷七：「《赵后传》所谓『赫蹏』者，注云『薄小纸』，然其寔亦縑帛。」</blockquote>
+          </td>
+        </tr>
+        <tr>
+          <th>脚本效果</th>
+          <td colspan="3">
+            <blockquote style="margin-inline-start: 0; margin-inline-end: 0;">古代称用以书写的小幅绢帛。后亦以借指纸<mark>。《</mark>汉书·外戚传下·孝成赵皇后<mark>》：「</mark>武（籍武 ）发篋中，有裹药二枚，赫蹏书。」<u>颜师古</u>注：「<u>邓展</u>曰：『赫音兄弟鬩墙之鬩。』<u>应劭</u>曰：『赫蹏，薄小纸也。』」<u>宋</u><u>赵彦卫</u>《云麓漫钞》卷七：「《赵后传》所谓『赫蹏』者，注云『薄小纸』，然其寔亦縑帛。」</blockquote>
+          </td>
+        </tr>
+<!--        <tr>-->
+<!--          <th>默认文本（弯引号）</th>-->
+<!--          <td colspan="3">-->
+<!--            <blockquote class="heti-skip" style="margin-inline-start: 0; margin-inline-end: 0;">古代称用以书写的小幅绢帛。后亦以借指纸。《汉书·外戚传下·孝成赵皇后<mark>》：“</mark>武（籍武 ）发篋中，有裹药二枚，赫蹏书。”<u>颜师古</u>注：“<u>邓展</u>曰：‘赫音兄弟鬩墙之鬩。’<u>应劭</u>曰：‘赫蹏，薄小纸也。’”<u>宋</u><u>赵彦卫</u>《云麓漫钞》卷七<mark>：“《</mark>赵后传》所谓‘赫蹏’者，注云‘薄小纸’，然其寔亦縑帛。”</blockquote>-->
+<!--          </td>-->
+<!--        </tr>-->
+<!--        <tr>-->
+<!--          <th>脚本效果（弯引号）</th>-->
+<!--          <td colspan="3">-->
+<!--            <blockquote style="margin-inline-start: 0; margin-inline-end: 0;">古代称用以书写的小幅绢帛。后亦以借指纸。《汉书·外戚传下·孝成赵皇后<mark>》：“</mark>武（籍武 ）发篋中，有裹药二枚，赫蹏书。”<u>颜师古</u>注：“<u>邓展</u>曰：‘赫音兄弟鬩墙之鬩。’<u>应劭</u>曰：‘赫蹏，薄小纸也。’”<u>宋</u><u>赵彦卫</u>《云麓漫钞》卷七<mark>：“《</mark>赵后传》所谓‘赫蹏’者，注云‘薄小纸’，然其寔亦縑帛。”</blockquote>-->
+<!--          </td>-->
+<!--        </tr>-->
+      </table>
 
       <h3 id="license">开源协议<a class="anchor" href="#tags">#</a></h3>
       <p>「赫蹏」遵循MIT协议开源。</p>
@@ -580,7 +622,7 @@
       $$article.className = ['article', 'heti', e.target.value].join(' ')
     })
 
-    const heti = new Heti()
+    const heti = new Heti('.article')
     heti.autoSpacing()
   </script>
 </body>

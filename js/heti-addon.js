@@ -31,6 +31,9 @@ const REG_BD_OPEN = `「『（《〈【〖〔［｛`
 const REG_BD_CLOSE = `」』）》〉】〗〕］｝`
 const REG_BD_START = `${REG_BD_OPEN}${REG_BD_CLOSE}`
 const REG_BD_END = `${REG_BD_STOP}${REG_BD_OPEN}${REG_BD_CLOSE}`
+const REG_BD_HALF_OPEN = `“‘`
+const REG_BD_HALF_CLOSE = `”’`
+const REG_BD_HALF_START = `${REG_BD_HALF_OPEN}${REG_BD_HALF_CLOSE}`
 
 class Heti {
   constructor (rootSelector) {
@@ -102,6 +105,13 @@ class Heti {
 
     Finder($$elm, Object.assign({}, commonConfig, {
       find: new RegExp(`([${REG_BD_SEP}])(?=[${REG_BD_OPEN}])|([${REG_BD_CLOSE}])(?=[${REG_BD_SEP}])`,'g'),
+      replace: portion => getWrapper('heti-adjacent', 'heti-adjacent-quarter', portion.text),
+      offset: this.offsetWidth,
+    }))
+
+    // 使用弯引号的情况下，在停顿符号接弯引号（如「。“」）或弯引号接全角开引号（如“《」）时，间距缩进调整到四分之一
+    Finder($$elm, Object.assign({}, commonConfig, {
+      find: new RegExp(`([${REG_BD_STOP}])(?=[${REG_BD_HALF_START}])|([${REG_BD_HALF_OPEN}])(?=[${REG_BD_OPEN}])`,'g'),
       replace: portion => getWrapper('heti-adjacent', 'heti-adjacent-quarter', portion.text),
       offset: this.offsetWidth,
     }))
