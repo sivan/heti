@@ -81,8 +81,9 @@
   }
 
   // 设置引用文本为中文引号
+  // 默认无论简繁都采用台湾规范，修改只需重新定义变量 `$chinese-quote-set` 即可。
   q {
-    quotes: "「" "」" "『" "』";
+    quotes: map-get(map-get($chinese-quote-presets, $chinese-quote-set), "horizontal");
 
     @include non-cjk-block {
       quotes: initial;
