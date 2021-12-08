@@ -18,5 +18,10 @@
     h6 {
       text-align: start;
     }
+
+    // 默认无论简繁都采用台湾规范，修改只需重新定义变量 `$chinese-quote-set` 即可。
+    q {
+      quotes: map-get(map-get($chinese-quote-presets, $chinese-quote-set), "vertical");
+    }
   }
 }

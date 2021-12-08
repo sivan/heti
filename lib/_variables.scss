@@ -77,6 +77,28 @@ $std-inline-unit: $font-size-normal !default;
 $text-indent-length: 2em !default;
 $text-indent-size: $font-size-normal * 2 !default;
 
+// 中文引号 Chinese Quote Set
+// `cn`：中华人民共和国国家标准——GB/T 15834-2011《标点符号用法》 http://www.moe.gov.cn/ewebeditor/uploadfile/2015/01/13/20150113091548267.pdf
+// `tw`：中国台湾地区标准——《重訂標點符號手冊》 https://language.moe.gov.tw/001/Upload/FILES/SITE_CONTENT/M0001/HAU/h6.htm
+// `common`：部分中文社区（如知乎）在简体中文里亦采用与中国台湾地区标准一致的规范。
+// 注：垂直时浏览器会自动旋转，无需定义为垂直方向的字符。
+$chinese-quote-presets: (
+  "cn": (
+    "horizontal": "“" "”" "‘" "’",
+    "vertical": "『" "』" "「" "」"
+  ),
+  "tw": (
+    "horizontal": "「" "」" "『" "』",
+    "vertical": "「" "」" "『" "』"
+  ),
+  "common": (
+    "horizontal": "「" "」" "『" "』",
+    "vertical": "「" "」" "『" "』"
+  )
+) !default;
+
+$chinese-quote-set: "common" !default;
+
 // 栏 Columns
 // 分栏
 $column-count-list: (1, 2, 3, 4) !default;

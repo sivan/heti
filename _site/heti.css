@@ -685,6 +685,10 @@
   text-align: start;
 }
 
+.heti--vertical q {
+  quotes: "「" "」" "『" "』";
+}
+
 .heti--ancient, .heti--poetry {
   font-family: "Times New Roman", times, "Heti Song", serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
