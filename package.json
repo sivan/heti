@@ -13,6 +13,7 @@
     "compile": "rollup -c -w",
     "build:style": "node-sass --output-style=compressed lib/heti.scss umd/heti.min.css",
     "build:site": "node-sass --output-style=expanded _site/scss/ -o _site/",
+    "build:typora": "node-sass --output-style=expanded typora/heti.scss -o typora/",
     "build:script": "rollup -c",
     "build": "npm run build:style && npm run build:site && npm run build:script",
     "test": "npx stylelint --config package.json 'lib/**/*.scss'"
