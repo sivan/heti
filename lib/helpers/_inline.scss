@@ -13,9 +13,12 @@
   #{$root-selector}-em {
     -webkit-text-emphasis: filled circle;
     -webkit-text-emphasis-position: under;
+    text-emphasis: filled circle;
+    text-emphasis-position: under right;
 
     @include non-cjk-block {
       -webkit-text-emphasis: none;
+      text-emphasis: none;
     }
   }
 

@@ -769,11 +769,14 @@
 .heti--annotation em {
   -webkit-text-emphasis: filled circle;
   -webkit-text-emphasis-position: under;
+  text-emphasis: filled circle;
+  text-emphasis-position: under right;
   font-weight: 400;
 }
 
 .heti--annotation em:not(:lang(zh)):not(:lang(ja)):not(:lang(kr)), .heti--annotation em:not(:lang(zh)) {
   -webkit-text-emphasis: none;
+  text-emphasis: none;
 }
 
 .heti--annotation .heti-meta {
@@ -883,10 +886,13 @@
 .heti .heti-em {
   -webkit-text-emphasis: filled circle;
   -webkit-text-emphasis-position: under;
+  text-emphasis: filled circle;
+  text-emphasis-position: under right;
 }
 
 .heti .heti-em:not(:lang(zh)):not(:lang(ja)):not(:lang(kr)), .heti .heti-em:not(:lang(zh)) {
   -webkit-text-emphasis: none;
+  text-emphasis: none;
 }
 
 .heti .heti-ruby--inline {
