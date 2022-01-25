@@ -52,19 +52,19 @@
 
 @font-face {
   font-family: "Heti Kai";
-  src: local("Kaiti SC Regular"), local("Kaiti TC Regular"), local("BiauKai");
+  src: local("Kaiti SC Regular"), local("Kaiti TC Regular"), local("STKaiti"), local("Kaiti"), local("BiauKai");
 }
 
 @font-face {
   font-family: "Heti Kai";
   font-weight: 600;
-  src: local("Kaiti SC Bold"), local("Kaiti TC Bold");
+  src: local("Kaiti SC Bold"), local("Kaiti TC Bold"), local("STKaiti"), local("Kaiti");
 }
 
 @font-face {
   font-family: "Heti Kai Black";
   font-weight: 800;
-  src: local("Kaiti SC Black"), local("Kaiti TC Black");
+  src: local("Kaiti SC Black"), local("Kaiti TC Black"), local("STKaiti"), local("Kaiti");
 }
 
 .heti {
