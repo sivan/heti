@@ -1,4 +1,4 @@
-// Author: Sivan [sun.sivan@gmail.com]
+// Author: Sivan [sun.sivan@gmail.com], Pan RZ [c141028@gmail.com]
 // Description: define font-face Heti Kai.
 
 // 标准 Regular
@@ -18,9 +18,16 @@
   font-weight: 600;
   src:
     local("Kaiti SC Bold"),
-    local("Kaiti TC Bold"),
+    local("Kaiti TC Bold");
+}
+
+@font-face {
+  font-family: "Heti Kai Bold Fallback";
+  font-weight: 600;
+  src:
     local("STKaiti"),
-    local("Kaiti");
+    local("Kaiti")
+    local("BiauKai");
 }
 
 // 黑体 Black
