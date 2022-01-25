@@ -1,4 +1,4 @@
-// Author: Sivan [sun.sivan@gmail.com]
+// Author: Sivan [sun.sivan@gmail.com], Pan RZ [c141028@gmail.com]
 // Description: define font-face Heti Song.
 
 // 标准 Regular
@@ -17,7 +17,13 @@
   src:
     local("Songti SC Light"),
     local("Songti TC Light"),
-    local("STSong"),
+    "Heti Song Light Fallback";
+}
+
+@font-face {
+  font-family: "Heti Song Light Fallback";
+  font-weight: 200;
+  src:
     local("SimSun");
 }
 
@@ -28,6 +34,13 @@
   src:
     local("Songti SC Bold"),
     local("Songti TC Bold"),
+    "Heti Song Bold Fallback";
+}
+
+@font-face {
+  font-family: "Heti Song Bold Fallback";
+  font-weight: 600;
+  src:
     local("SimSun");
 }
 
