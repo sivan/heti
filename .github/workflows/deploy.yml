@@ -23,12 +23,30 @@ jobs:
                     npm run test
                     npm run build
             -   name: Publish
+                if: needs.check-env.outputs.check-npm == 'true'
                 uses: JS-DevTools/npm-publish@v1
                 with:
                     token: ${{ secrets.NPM_TOKEN }}
             -   name: Deploy to gh-pages
+                if: needs.check-env.outputs.check-access == 'true'
                 uses: JamesIves/github-pages-deploy-action@releases/v3
                 with:
                     ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
                     BRANCH: gh-pages
                     FOLDER: _site
+    check-env:
+        runs-on: ubuntu-latest
+        outputs:
+            check-npm: ${{ steps.check-npm.outputs.defined }}
+            check-access: ${{ steps.check-access.outputs.defined }}
+        step:
+            - id: check-npm
+              env:
+                  NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+              if: ${{ env.NPM_TOKEN != '' }}
+              run: echo "::set-output name=defined::true"
+            - id: check-access
+              env:
+                  ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+              if: ${{ env.ACCESS_TOKEN != '' }}
+              run: echo "::set-output name=defined::true"
