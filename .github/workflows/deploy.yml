@@ -39,7 +39,7 @@ jobs:
         outputs:
             check-npm: ${{ steps.check-npm.outputs.defined }}
             check-access: ${{ steps.check-access.outputs.defined }}
-        step:
+        steps:
             - id: check-npm
               env:
                   NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
