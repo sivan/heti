@@ -118,13 +118,15 @@ class Heti {
   }
 
   autoSpacing () {
-    document.addEventListener('DOMContentLoaded', () => {
+    const callback = () => {
       const $$rootList = document.querySelectorAll(this.rootSelector)
 
       for (let $$root of $$rootList) {
         this.spacingElement($$root)
       }
-    })
+    }
+    if (document.readyState === 'complete') setTimeout(callback)
+    else document.addEventListener('DOMContentLoaded', callback)
   }
 }
 
