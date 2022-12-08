@@ -216,10 +216,6 @@
   clear: both;
 }
 
-.heti:not(:lang(zh)):not(:lang(ja)):not(:lang(kr)), .heti:not(:lang(zh)) {
-  letter-spacing: 0;
-}
-
 .heti > *:first-child,
 .heti section > *:first-child,
 .heti td > *:first-child {
@@ -330,6 +326,22 @@
   border-radius: 0;
   background-color: transparent;
   color: inherit;
+}
+
+.heti:not(:lang(zh)):not(:lang(ja)):not(:lang(kr)), .heti:not(:lang(zh)) {
+  letter-spacing: 0;
+}
+
+.heti a,
+.heti abbr,
+.heti code,
+.heti heti-spacing,
+.heti [lang="en-US"] {
+  /* 
+      There should be no leeter-spacing between
+      English characters.
+    */
+  letter-spacing: normal;
 }
 
 .heti h1,
