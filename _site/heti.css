@@ -131,7 +131,7 @@
   src: local("Source Han Sans KR Heavy"), local("Noto Sans CJK KR Heavy");
 }
 
-font-face {
+@font-face {
   font-family: "Heti Hei SC Black Fallback";
   font-weight: 800;
   src: local("Microsoft YaHei"), local("Droid Sans Fallback");
@@ -204,6 +204,7 @@ font-face {
   overflow-wrap: break-word;
   word-wrap: break-word;
   hyphens: auto;
+  letter-spacing: 0.02em;
 }
 
 .heti::before, .heti::after {
@@ -213,6 +214,10 @@ font-face {
 
 .heti::after {
   clear: both;
+}
+
+.heti:not(:lang(zh)):not(:lang(ja)):not(:lang(kr)), .heti:not(:lang(zh)) {
+  letter-spacing: 0;
 }
 
 .heti > *:first-child,

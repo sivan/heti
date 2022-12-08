@@ -6,6 +6,13 @@
   // 清容器浮动
   @include clear-float();
 
+  // 非中文时不加间距
+  letter-spacing: $letter-spacing-medium;
+  @include non-cjk-block {
+  letter-spacing: $letter-spacing-normal;
+  
+  }
+
   // 清容器内首尾元素外边距
   &,
   section,
