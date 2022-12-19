@@ -110,19 +110,15 @@
   // 非中文时不加间距
   letter-spacing: $letter-spacing-medium;
   @include non-cjk-block {
-  letter-spacing: $letter-spacing-normal;
-  
+    letter-spacing: $letter-spacing-normal;
   }
 
-  a, 
-  abbr, 
-  code, 
-  heti-spacing, 
+  a,
+  abbr,
+  code,
+  heti-spacing,
   [lang="en-US"] {
-    /* 
-      There should be no leeter-spacing between
-      English characters.
-    */
-    letter-spacing: normal; 
-  }  
+    // There should be no leeter-spacing between English characters.
+    letter-spacing: normal;
+  }
 }
