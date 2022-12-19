@@ -12,10 +12,8 @@
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
 html {
-  line-height: 1.15;
-  /* 1 */
-  -webkit-text-size-adjust: 100%;
-  /* 2 */
+  line-height: 1.15; /* 1 */
+  -webkit-text-size-adjust: 100%; /* 2 */
 }
 
 /* Sections
@@ -50,12 +48,9 @@ h1 {
  * 2. Show the overflow in Edge and IE.
  */
 hr {
-  box-sizing: content-box;
-  /* 1 */
-  height: 0;
-  /* 1 */
-  overflow: visible;
-  /* 2 */
+  box-sizing: content-box; /* 1 */
+  height: 0; /* 1 */
+  overflow: visible; /* 2 */
 }
 
 /**
@@ -63,10 +58,8 @@ hr {
  * 2. Correct the odd `em` font sizing in all browsers.
  */
 pre {
-  font-family: monospace, monospace;
-  /* 1 */
-  font-size: 1em;
-  /* 2 */
+  font-family: monospace, monospace; /* 1 */
+  font-size: 1em; /* 2 */
 }
 
 /* Text-level semantics
@@ -83,12 +76,9 @@ a {
  * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
  */
 abbr[title] {
-  border-bottom: none;
-  /* 1 */
-  text-decoration: underline;
-  /* 2 */
-  text-decoration: underline dotted;
-  /* 2 */
+  border-bottom: none; /* 1 */
+  text-decoration: underline; /* 2 */
+  text-decoration: underline dotted; /* 2 */
 }
 
 /**
@@ -106,10 +96,8 @@ strong {
 code,
 kbd,
 samp {
-  font-family: monospace, monospace;
-  /* 1 */
-  font-size: 1em;
-  /* 2 */
+  font-family: monospace, monospace; /* 1 */
+  font-size: 1em; /* 2 */
 }
 
 /**
@@ -159,14 +147,10 @@ input,
 optgroup,
 select,
 textarea {
-  font-family: inherit;
-  /* 1 */
-  font-size: 100%;
-  /* 1 */
-  line-height: 1.15;
-  /* 1 */
-  margin: 0;
-  /* 2 */
+  font-family: inherit; /* 1 */
+  font-size: 100%; /* 1 */
+  line-height: 1.15; /* 1 */
+  margin: 0; /* 2 */
 }
 
 /**
@@ -174,8 +158,7 @@ textarea {
  * 1. Show the overflow in Edge.
  */
 button,
-input {
-  /* 1 */
+input { /* 1 */
   overflow: visible;
 }
 
@@ -184,8 +167,7 @@ input {
  * 1. Remove the inheritance of text transform in Firefox.
  */
 button,
-select {
-  /* 1 */
+select { /* 1 */
   text-transform: none;
 }
 
@@ -193,9 +175,9 @@ select {
  * Correct the inability to style clickable types in iOS and Safari.
  */
 button,
-[type="button"],
-[type="reset"],
-[type="submit"] {
+[type=button],
+[type=reset],
+[type=submit] {
   -webkit-appearance: button;
 }
 
@@ -203,9 +185,9 @@ button,
  * Remove the inner border and padding in Firefox.
  */
 button::-moz-focus-inner,
-[type="button"]::-moz-focus-inner,
-[type="reset"]::-moz-focus-inner,
-[type="submit"]::-moz-focus-inner {
+[type=button]::-moz-focus-inner,
+[type=reset]::-moz-focus-inner,
+[type=submit]::-moz-focus-inner {
   border-style: none;
   padding: 0;
 }
@@ -214,9 +196,9 @@ button::-moz-focus-inner,
  * Restore the focus styles unset by the previous rule.
  */
 button:-moz-focusring,
-[type="button"]:-moz-focusring,
-[type="reset"]:-moz-focusring,
-[type="submit"]:-moz-focusring {
+[type=button]:-moz-focusring,
+[type=reset]:-moz-focusring,
+[type=submit]:-moz-focusring {
   outline: 1px dotted ButtonText;
 }
 
@@ -234,18 +216,12 @@ fieldset {
  *    `fieldset` elements in all browsers.
  */
 legend {
-  box-sizing: border-box;
-  /* 1 */
-  color: inherit;
-  /* 2 */
-  display: table;
-  /* 1 */
-  max-width: 100%;
-  /* 1 */
-  padding: 0;
-  /* 3 */
-  white-space: normal;
-  /* 1 */
+  box-sizing: border-box; /* 1 */
+  color: inherit; /* 2 */
+  display: table; /* 1 */
+  max-width: 100%; /* 1 */
+  padding: 0; /* 3 */
+  white-space: normal; /* 1 */
 }
 
 /**
@@ -266,19 +242,17 @@ textarea {
  * 1. Add the correct box sizing in IE 10.
  * 2. Remove the padding in IE 10.
  */
-[type="checkbox"],
-[type="radio"] {
-  box-sizing: border-box;
-  /* 1 */
-  padding: 0;
-  /* 2 */
+[type=checkbox],
+[type=radio] {
+  box-sizing: border-box; /* 1 */
+  padding: 0; /* 2 */
 }
 
 /**
  * Correct the cursor style of increment and decrement buttons in Chrome.
  */
-[type="number"]::-webkit-inner-spin-button,
-[type="number"]::-webkit-outer-spin-button {
+[type=number]::-webkit-inner-spin-button,
+[type=number]::-webkit-outer-spin-button {
   height: auto;
 }
 
@@ -286,17 +260,15 @@ textarea {
  * 1. Correct the odd appearance in Chrome and Safari.
  * 2. Correct the outline style in Safari.
  */
-[type="search"] {
-  -webkit-appearance: textfield;
-  /* 1 */
-  outline-offset: -2px;
-  /* 2 */
+[type=search] {
+  -webkit-appearance: textfield; /* 1 */
+  outline-offset: -2px; /* 2 */
 }
 
 /**
  * Remove the inner padding in Chrome and Safari on macOS.
  */
-[type="search"]::-webkit-search-decoration {
+[type=search]::-webkit-search-decoration {
   -webkit-appearance: none;
 }
 
@@ -305,10 +277,8 @@ textarea {
  * 2. Change font properties to `inherit` in Safari.
  */
 ::-webkit-file-upload-button {
-  -webkit-appearance: button;
-  /* 1 */
-  font: inherit;
-  /* 2 */
+  -webkit-appearance: button; /* 1 */
+  font: inherit; /* 2 */
 }
 
 /* Interactive
@@ -360,84 +330,74 @@ li {
   list-style: none;
 }
 
-.container[data-bg-grid="grid-12"] {
+.container[data-bg-grid=grid-12] {
   background-size: 100% 12px;
-  background-image: linear-gradient(transparent 11px, #ededed 1px), linear-gradient(to left, transparent 12px, #ededed, transparent 13px), linear-gradient(to right, transparent 12px, #ededed, transparent 13px);
+  background-image: linear-gradient(transparent 11px, hsl(0deg, 0%, 93%) 1px), linear-gradient(to left, transparent 12px, hsl(0deg, 0%, 93%), transparent 13px), linear-gradient(to right, transparent 12px, hsl(0deg, 0%, 93%), transparent 13px);
 }
-
-.container[data-bg-grid="grid-12"] .heti--vertical {
-  outline: 1px solid #ededed;
+.container[data-bg-grid=grid-12] .heti--vertical {
+  outline: 1px solid hsl(0deg, 0%, 93%);
   background-size: 12px 100%;
-  background-image: linear-gradient(to left, transparent 11px, #ededed 1px);
+  background-image: linear-gradient(to left, transparent 11px, hsl(0deg, 0%, 93%) 1px);
 }
-
-.container[data-bg-grid="grid-24"] {
+.container[data-bg-grid=grid-24] {
   background-size: 100% 24px;
-  background-image: linear-gradient(transparent 23px, #ededed 1px), linear-gradient(to left, transparent 12px, #ededed, transparent 13px), linear-gradient(to right, transparent 12px, #ededed, transparent 13px);
+  background-image: linear-gradient(transparent 23px, hsl(0deg, 0%, 93%) 1px), linear-gradient(to left, transparent 12px, hsl(0deg, 0%, 93%), transparent 13px), linear-gradient(to right, transparent 12px, hsl(0deg, 0%, 93%), transparent 13px);
 }
-
-.container[data-bg-grid="grid-24"] .heti--vertical {
-  outline: 1px solid #ededed;
+.container[data-bg-grid=grid-24] .heti--vertical {
+  outline: 1px solid hsl(0deg, 0%, 93%);
   background-size: 24px 100%;
-  background-image: linear-gradient(to left, transparent 23px, #ededed 1px);
+  background-image: linear-gradient(to left, transparent 23px, hsl(0deg, 0%, 93%) 1px);
 }
-
-[data-darkmode="dark"] .container[data-bg-grid="grid-12"] {
-  background-image: linear-gradient(transparent 11px, #333333 1px), linear-gradient(to left, transparent 12px, #333333, transparent 13px), linear-gradient(to right, transparent 12px, #333333, transparent 13px);
+[data-darkmode=dark] .container[data-bg-grid=grid-12] {
+  background-image: linear-gradient(transparent 11px, hsl(0deg, 0%, 20%) 1px), linear-gradient(to left, transparent 12px, hsl(0deg, 0%, 20%), transparent 13px), linear-gradient(to right, transparent 12px, hsl(0deg, 0%, 20%), transparent 13px);
 }
-
-[data-darkmode="dark"] .container[data-bg-grid="grid-12"] .heti--vertical {
+[data-darkmode=dark] .container[data-bg-grid=grid-12] .heti--vertical {
   background-size: 12px 100%;
-  background-image: linear-gradient(to left, transparent 11px, #333333 1px);
+  background-image: linear-gradient(to left, transparent 11px, hsl(0deg, 0%, 20%) 1px);
 }
-
-[data-darkmode="dark"] .container[data-bg-grid="grid-24"] {
-  background-image: linear-gradient(transparent 23px, #333333 1px), linear-gradient(to left, transparent 12px, #333333, transparent 13px), linear-gradient(to right, transparent 12px, #333333, transparent 13px);
+[data-darkmode=dark] .container[data-bg-grid=grid-24] {
+  background-image: linear-gradient(transparent 23px, hsl(0deg, 0%, 20%) 1px), linear-gradient(to left, transparent 12px, hsl(0deg, 0%, 20%), transparent 13px), linear-gradient(to right, transparent 12px, hsl(0deg, 0%, 20%), transparent 13px);
 }
-
-[data-darkmode="dark"] .container[data-bg-grid="grid-24"] .heti--vertical {
+[data-darkmode=dark] .container[data-bg-grid=grid-24] .heti--vertical {
   background-size: 24px 100%;
-  background-image: linear-gradient(to left, transparent 23px, #333333 1px);
+  background-image: linear-gradient(to left, transparent 23px, hsl(0deg, 0%, 20%) 1px);
 }
-
 @media (prefers-color-scheme: dark) {
-  [data-darkmode="auto"] .container[data-bg-grid="grid-12"] {
-    background-image: linear-gradient(transparent 11px, #333333 1px), linear-gradient(to left, transparent 12px, #333333, transparent 13px), linear-gradient(to right, transparent 12px, #333333, transparent 13px);
+  [data-darkmode=auto] .container[data-bg-grid=grid-12] {
+    background-image: linear-gradient(transparent 11px, hsl(0deg, 0%, 20%) 1px), linear-gradient(to left, transparent 12px, hsl(0deg, 0%, 20%), transparent 13px), linear-gradient(to right, transparent 12px, hsl(0deg, 0%, 20%), transparent 13px);
   }
-  [data-darkmode="auto"] .container[data-bg-grid="grid-12"] .heti--vertical {
+  [data-darkmode=auto] .container[data-bg-grid=grid-12] .heti--vertical {
     background-size: 12px 100%;
-    background-image: linear-gradient(to left, transparent 11px, #333333 1px);
+    background-image: linear-gradient(to left, transparent 11px, hsl(0deg, 0%, 20%) 1px);
   }
-  [data-darkmode="auto"] .container[data-bg-grid="grid-24"] {
-    background-image: linear-gradient(transparent 23px, #333333 1px), linear-gradient(to left, transparent 12px, #333333, transparent 13px), linear-gradient(to right, transparent 12px, #333333, transparent 13px);
+  [data-darkmode=auto] .container[data-bg-grid=grid-24] {
+    background-image: linear-gradient(transparent 23px, hsl(0deg, 0%, 20%) 1px), linear-gradient(to left, transparent 12px, hsl(0deg, 0%, 20%), transparent 13px), linear-gradient(to right, transparent 12px, hsl(0deg, 0%, 20%), transparent 13px);
   }
-  [data-darkmode="auto"] .container[data-bg-grid="grid-24"] .heti--vertical {
+  [data-darkmode=auto] .container[data-bg-grid=grid-24] .heti--vertical {
     background-size: 24px 100%;
-    background-image: linear-gradient(to left, transparent 23px, #333333 1px);
+    background-image: linear-gradient(to left, transparent 23px, hsl(0deg, 0%, 20%) 1px);
   }
 }
-
 @media screen and (min-width: 640px) {
-  .container[data-bg-grid="grid-12"] {
-    background-image: linear-gradient(transparent 11px, #ededed 1px), linear-gradient(to left, transparent 48px, #ededed, transparent 49px), linear-gradient(to right, transparent 48px, rgba(255, 0, 0, 0.4), transparent 49px);
+  .container[data-bg-grid=grid-12] {
+    background-image: linear-gradient(transparent 11px, hsl(0deg, 0%, 93%) 1px), linear-gradient(to left, transparent 48px, hsl(0deg, 0%, 93%), transparent 49px), linear-gradient(to right, transparent 48px, hsla(0deg, 100%, 50%, 0.4), transparent 49px);
   }
-  .container[data-bg-grid="grid-24"] {
-    background-image: linear-gradient(transparent 23px, #ededed 1px), linear-gradient(to left, transparent 48px, #ededed, transparent 49px), linear-gradient(to right, transparent 48px, rgba(255, 0, 0, 0.4), transparent 49px);
+  .container[data-bg-grid=grid-24] {
+    background-image: linear-gradient(transparent 23px, hsl(0deg, 0%, 93%) 1px), linear-gradient(to left, transparent 48px, hsl(0deg, 0%, 93%), transparent 49px), linear-gradient(to right, transparent 48px, hsla(0deg, 100%, 50%, 0.4), transparent 49px);
   }
-  [data-darkmode="dark"] .container[data-bg-grid="grid-12"] {
-    background-image: linear-gradient(transparent 11px, #333333 1px), linear-gradient(to left, transparent 48px, #333333, transparent 49px), linear-gradient(to right, transparent 48px, rgba(255, 77, 77, 0.4), transparent 49px);
+  [data-darkmode=dark] .container[data-bg-grid=grid-12] {
+    background-image: linear-gradient(transparent 11px, hsl(0deg, 0%, 20%) 1px), linear-gradient(to left, transparent 48px, hsl(0deg, 0%, 20%), transparent 49px), linear-gradient(to right, transparent 48px, hsla(0deg, 100%, 65%, 0.4), transparent 49px);
   }
-  [data-darkmode="dark"] .container[data-bg-grid="grid-24"] {
-    background-image: linear-gradient(transparent 23px, #333333 1px), linear-gradient(to left, transparent 48px, #333333, transparent 49px), linear-gradient(to right, transparent 48px, rgba(255, 77, 77, 0.4), transparent 49px);
+  [data-darkmode=dark] .container[data-bg-grid=grid-24] {
+    background-image: linear-gradient(transparent 23px, hsl(0deg, 0%, 20%) 1px), linear-gradient(to left, transparent 48px, hsl(0deg, 0%, 20%), transparent 49px), linear-gradient(to right, transparent 48px, hsla(0deg, 100%, 65%, 0.4), transparent 49px);
   }
 }
-
 @media screen and (min-width: 640px) and (prefers-color-scheme: dark) {
-  [data-darkmode="auto"] .container[data-bg-grid="grid-12"] {
-    background-image: linear-gradient(transparent 11px, #333333 1px), linear-gradient(to left, transparent 48px, #333333, transparent 49px), linear-gradient(to right, transparent 48px, rgba(255, 77, 77, 0.4), transparent 49px);
+  [data-darkmode=auto] .container[data-bg-grid=grid-12] {
+    background-image: linear-gradient(transparent 11px, hsl(0deg, 0%, 20%) 1px), linear-gradient(to left, transparent 48px, hsl(0deg, 0%, 20%), transparent 49px), linear-gradient(to right, transparent 48px, hsla(0deg, 100%, 65%, 0.4), transparent 49px);
   }
-  [data-darkmode="auto"] .container[data-bg-grid="grid-24"] {
-    background-image: linear-gradient(transparent 23px, #333333 1px), linear-gradient(to left, transparent 48px, #333333, transparent 49px), linear-gradient(to right, transparent 48px, rgba(255, 77, 77, 0.4), transparent 49px);
+  [data-darkmode=auto] .container[data-bg-grid=grid-24] {
+    background-image: linear-gradient(transparent 23px, hsl(0deg, 0%, 20%) 1px), linear-gradient(to left, transparent 48px, hsl(0deg, 0%, 20%), transparent 49px), linear-gradient(to right, transparent 48px, hsla(0deg, 100%, 65%, 0.4), transparent 49px);
   }
 }
 
@@ -471,7 +431,6 @@ li {
   --border-block-end-highlight-tap-color: hsl(216, 100%, 42%);
   --text-highlight-color: hsl(0, 0%, 100%);
 }
-
 .panel-list--gray {
   --bg-color: hsl(180, 100%, 100%);
   --bg-tap-color: hsl(0, 0%, 94%);
@@ -498,8 +457,7 @@ li {
   --border-block-end-highlight-tap-color: hsl(228, 4%, 26%);
   --text-highlight-color: hsl(0, 0%, 92%);
 }
-
-[data-darkmode="dark"] .panel-list {
+[data-darkmode=dark] .panel-list {
   --bg-color: hsl(225, 2%, 40%);
   --bg-tap-color: hsl(210, 2%, 49%);
   --border-color: hsla(210, 2%, 33%, 0.88);
@@ -525,8 +483,7 @@ li {
   --border-block-end-highlight-tap-color: hsl(215, 74%, 51%);
   --text-highlight-color: hsl(0, 0%, 100%);
 }
-
-[data-darkmode="dark"] .panel-list--gray {
+[data-darkmode=dark] .panel-list--gray {
   --bg-color: hsl(0, 0%, 40%);
   --bg-tap-color: hsl(0, 0%, 49%);
   --border-color: hsla(120, 1%, 34%, 0.88);
@@ -552,9 +509,8 @@ li {
   --border-block-end-highlight-tap-color: hsl(0, 0%, 69%);
   --text-highlight-color: hsl(0, 0%, 15%);
 }
-
 @media (prefers-color-scheme: dark) {
-  [data-darkmode="auto"] .panel-list {
+  [data-darkmode=auto] .panel-list {
     --bg-color: hsl(225, 2%, 40%);
     --bg-tap-color: hsl(210, 2%, 49%);
     --border-color: hsla(210, 2%, 33%, 0.88);
@@ -580,7 +536,7 @@ li {
     --border-block-end-highlight-tap-color: hsl(215, 74%, 51%);
     --text-highlight-color: hsl(0, 0%, 100%);
   }
-  [data-darkmode="auto"] .panel-list--gray {
+  [data-darkmode=auto] .panel-list--gray {
     --bg-color: hsl(0, 0%, 40%);
     --bg-tap-color: hsl(0, 0%, 49%);
     --border-color: hsla(120, 1%, 34%, 0.88);
@@ -607,11 +563,9 @@ li {
     --text-highlight-color: hsl(0, 0%, 15%);
   }
 }
-
 .panel-list + .panel-list {
   margin-inline-start: 12px;
 }
-
 .panel-list label {
   position: relative;
   display: block;
@@ -632,31 +586,25 @@ li {
   color: var(--text-color);
   box-shadow: 0 1px 0 var(--box-shadow-color);
 }
-
 .panel-list label:active {
   background-color: var(--bg-tap-color);
 }
-
 .panel-list li {
   margin-inline-end: -1px;
 }
-
 .panel-list li:first-child label {
   border-top-left-radius: 4px;
   border-bottom-left-radius: 4px;
   border-inline-start-color: var(--border-inline-start-color);
 }
-
 .panel-list li:last-child label {
   border-top-right-radius: 4px;
   border-bottom-right-radius: 4px;
   border-inline-end-color: var(--border-inline-end-color);
 }
-
 .panel-list input {
   display: none;
 }
-
 .panel-list input:checked + label {
   z-index: 1;
   background-image: linear-gradient(to bottom, var(--bg-highlight-color-start), var(--bg-highlight-color-end));
@@ -665,14 +613,12 @@ li {
   border-block-end-color: var(--border-block-end-highlight-color);
   color: var(--text-highlight-color);
 }
-
 .panel-list input:checked + label:active {
   background-image: linear-gradient(to bottom, var(--bg-highlight-tap-color-start), var(--bg-highlight-tap-color-end));
   border-color: var(--border-highlight-tap-color);
   border-block-start-color: var(--border-block-start-highlight-tap-color);
   border-block-end-color: var(--border-block-end-highlight-tap-color);
 }
-
 .panel-list--icon label {
   width: 30px;
   padding-inline-start: 8px;
@@ -717,7 +663,6 @@ li {
     opacity: 1;
   }
 }
-
 .card {
   position: relative;
   left: -12px;
@@ -729,14 +674,12 @@ li {
   padding-inline-start: 12px;
   padding-inline-end: 12px;
   border-radius: 2px;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.16);
-  background-color: white;
+  box-shadow: 0 4px 16px hsla(0deg, 0%, 0%, 0.16);
+  background-color: hsl(0deg, 0%, 100%);
 }
-
 .article .card {
   text-align: left;
 }
-
 .card > figcaption {
   display: inline-block;
   margin-block-start: 16px;
@@ -745,14 +688,14 @@ li {
   padding-inline-start: 0;
   padding-inline-end: 72px;
   line-height: 24px;
-  border-block-start: 1px solid #ededed;
+  border-block-start: 1px solid hsl(0deg, 0%, 93%);
 }
 
 .card__vertical-container {
   box-sizing: border-box;
   width: 100%;
   height: 30em;
-  border: 1px solid #ededed;
+  border: 1px solid hsl(0deg, 0%, 93%);
   overflow: auto;
   writing-mode: vertical-rl;
 }
@@ -768,39 +711,35 @@ li {
     padding-inline-end: 32px;
   }
 }
-
-[data-darkmode="dark"] .card {
-  background-color: #292929;
+[data-darkmode=dark] .card {
+  background-color: hsl(0deg, 0%, 16%);
 }
-
-[data-darkmode="dark"] .card > figcaption {
-  border-block-start: 1px solid #333333;
+[data-darkmode=dark] .card > figcaption {
+  border-block-start: 1px solid hsl(0deg, 0%, 20%);
 }
-
-[data-darkmode="dark"] .card .card__vertical-container {
-  border-color: #333333;
+[data-darkmode=dark] .card .card__vertical-container {
+  border-color: hsl(0deg, 0%, 20%);
 }
-
 @media (prefers-color-scheme: dark) {
-  [data-darkmode="auto"] .card {
-    background-color: #292929;
+  [data-darkmode=auto] .card {
+    background-color: hsl(0deg, 0%, 16%);
   }
-  [data-darkmode="auto"] .card > figcaption {
-    border-block-start: 1px solid #333333;
+  [data-darkmode=auto] .card > figcaption {
+    border-block-start: 1px solid hsl(0deg, 0%, 20%);
   }
-  [data-darkmode="auto"] .card .card__vertical-container {
-    border-color: #333333;
+  [data-darkmode=auto] .card .card__vertical-container {
+    border-color: hsl(0deg, 0%, 20%);
   }
 }
 
 /** 基础样式 **/
 body {
   font-family: -apple-system, system-ui, "Helvetica Neue", Helvetica, Arial, "Heti Hei", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-  background-color: white;
+  background-color: hsl(0deg, 0%, 100%);
 }
 
 a {
-  color: #4387f4;
+  color: hsl(217deg, 89%, 61%);
   text-decoration: none;
 }
 
@@ -817,7 +756,6 @@ a {
   margin-inline-start: auto;
   margin-inline-end: auto;
 }
-
 .article__nav ol {
   margin-block-start: 24px;
   margin-block-end: 24px;
@@ -850,7 +788,7 @@ a {
 @media screen and (min-width: 640px) {
   body {
     min-width: 640px;
-    background-color: #ededed;
+    background-color: hsl(0deg, 0%, 93%);
   }
   .container {
     box-sizing: border-box;
@@ -866,15 +804,14 @@ a {
     padding-inline-start: 48px;
     padding-inline-end: 48px;
     border-radius: 2px;
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.32);
-    background-color: white;
+    box-shadow: 0 8px 32px hsla(0deg, 0%, 0%, 0.32);
+    background-color: hsl(0deg, 0%, 100%);
   }
   .section {
     max-height: none;
     overflow: visible;
   }
 }
-
 @media screen and (min-width: 900px) {
   .article__nav {
     position: relative;
@@ -889,7 +826,7 @@ a {
     padding-block-end: 12px;
     padding-inline-start: 8px;
     padding-inline-end: 8px;
-    border: 1px solid #ededed;
+    border: 1px solid hsl(0deg, 0%, 93%);
     border-radius: 2px;
   }
   .article__nav ol {
@@ -900,43 +837,38 @@ a {
     margin-block-start: 0;
   }
 }
-
-[data-darkmode="dark"] body {
-  background-color: #3d3d3d;
+[data-darkmode=dark] body {
+  background-color: hsl(0deg, 0%, 24%);
 }
-
-[data-darkmode="dark"] a {
-  color: #6b90cc;
+[data-darkmode=dark] a {
+  color: hsl(217deg, 49%, 61%);
 }
-
-[data-darkmode="dark"] a:visited {
-  color: #2f5189;
+[data-darkmode=dark] a:visited {
+  color: hsl(217deg, 49%, 36%);
 }
-
-[data-darkmode="dark"] .container {
-  background-color: #292929;
-  color: #a3a3a3;
+[data-darkmode=dark] .container {
+  background-color: hsl(0deg, 0%, 16%);
+  color: hsl(0deg, 0%, 64%);
 }
-
-[data-darkmode="dark"] .article__nav {
-  border-color: #333333;
+[data-darkmode=dark] .article__nav {
+  border-color: hsl(0deg, 0%, 20%);
 }
 
 @media (prefers-color-scheme: dark) {
-  [data-darkmode="auto"] body {
-    background-color: #3d3d3d;
+  [data-darkmode=auto] body {
+    background-color: hsl(0deg, 0%, 24%);
   }
-  [data-darkmode="auto"] a {
-    color: #6b90cc;
+  [data-darkmode=auto] a {
+    color: hsl(217deg, 49%, 61%);
   }
-  [data-darkmode="auto"] a:visited {
-    color: #2f5189;
+  [data-darkmode=auto] a:visited {
+    color: hsl(217deg, 49%, 36%);
   }
-  [data-darkmode="auto"] .container {
-    background-color: #292929;
-    color: #a3a3a3;
+  [data-darkmode=auto] .container {
+    background-color: hsl(0deg, 0%, 16%);
+    color: hsl(0deg, 0%, 64%);
   }
-  [data-darkmode="auto"] .article__nav {
-    border-color: #333333;
+  [data-darkmode=auto] .article__nav {
+    border-color: hsl(0deg, 0%, 20%);
   }
 }
