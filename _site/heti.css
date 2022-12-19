@@ -284,10 +284,6 @@
 .heti code,
 .heti heti-spacing,
 .heti [lang=en-US] {
-  /* 
-    There should be no leeter-spacing between
-    English characters.
-  */
   letter-spacing: normal;
 }
 .heti h1,
