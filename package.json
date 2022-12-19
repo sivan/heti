@@ -9,10 +9,10 @@
     "lib"
   ],
   "scripts": {
-    "start": "node-sass -w  --output-style=expanded _site/scss/ -o _site/",
+    "start": "sass -w --no-source-map _site/scss/:_site/",
     "compile": "rollup -c -w",
-    "build:style": "node-sass --output-style=compressed lib/heti.scss umd/heti.min.css",
-    "build:site": "node-sass --output-style=expanded _site/scss/ -o _site/",
+    "build:style": "sass --no-source-map --style=compressed lib/heti.scss:umd/heti.min.css",
+    "build:site": "sass --no-source-map _site/scss/:_site/",
     "build:script": "rollup -c",
     "build": "npm run build:style && npm run build:site && npm run build:script",
     "test": "npx stylelint --config package.json 'lib/**/*.scss'"
@@ -40,9 +40,9 @@
   "devDependencies": {
     "@rollup/plugin-commonjs": "^11.1.0",
     "@rollup/plugin-node-resolve": "^7.1.3",
-    "node-sass": "^4.14.1",
     "rollup": "^1.32.1",
     "rollup-plugin-terser": "^5.3.1",
+    "sass": "^1.57.0",
     "stylelint": "^13.13.1",
     "stylelint-config-recommended-scss": "^4.3.0",
     "stylelint-config-standard": "^22.0.0",
