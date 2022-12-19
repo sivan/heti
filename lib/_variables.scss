@@ -54,6 +54,12 @@ $line-height-expanded-ultra: 2.25 !default;
 //$line-height-condensed: 1.25 !default;
 //$line-height-condensed-ultra: 1 !default;
 
+// 字符间距
+$letter-spacing-normal: 0 !default;
+$letter-spacing-small: 0.01em !default;
+$letter-spacing-medium: 0.02em !default;
+$letter-spacing-large: 0.05em !default;
+
 $line-height-size-normal: $font-size-normal * $line-height-normal !default;
 $line-height-size-large: $line-height-size-normal !default;
 $line-height-size-x-large: $font-size-x-large * $line-height-normal !default;
