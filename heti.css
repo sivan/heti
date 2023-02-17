@@ -868,6 +868,7 @@
   display: inline-flex;
   flex-direction: column-reverse;
   height: 1.5em;
+  vertical-align: top;
 }
 .heti .heti-ruby--inline rt {
   display: inline;
