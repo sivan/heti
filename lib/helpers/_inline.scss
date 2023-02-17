@@ -24,13 +24,14 @@
 
   // 内联 Ruby
   // 在非行间注排版中使用 ruby 标签，且不额外占据空间
-  // 注：使用此样式需按字拆分 <ruby class="heti-ruby heti-ruby--inline"><rb>赫</rb><rp>(</rp><rt>hè</rt><rp>)</rp></ruby>
+  // 注：使用此样式需按字拆分 <ruby class="heti-ruby heti-ruby--inline">赫<rp>(</rp><rt>hè</rt><rp>)</rp></ruby>
   // https://stackoverflow.com/questions/38680695/adjust-the-vertical-positioning-of-ruby-text/38877801#38877801
   #{$root-selector}-ruby {
     &--inline {
       display: inline-flex;
       flex-direction: column-reverse;
       height: 1.5em;
+      vertical-align: top;
 
       rt {
         display: inline;
