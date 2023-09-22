@@ -241,7 +241,7 @@
   margin-block-end: 24px;
   text-align: justify;
 }
-.heti p:not(:lang(zh)):not(:lang(ja)):not(:lang(kr)), .heti p:not(:lang(zh)) {
+.heti p:not(:lang(zh)):not(:lang(ja)):not(:lang(ko)), .heti p:not(:lang(zh)) {
   text-align: start;
 }
 .heti pre {
@@ -276,7 +276,7 @@
   background-color: transparent;
   color: inherit;
 }
-.heti:not(:lang(zh)):not(:lang(ja)):not(:lang(kr)), .heti:not(:lang(zh)) {
+.heti:not(:lang(zh)):not(:lang(ja)):not(:lang(ko)), .heti:not(:lang(zh)) {
   letter-spacing: 0;
 }
 .heti a,
@@ -328,10 +328,10 @@
 .heti h3 {
   letter-spacing: 0.05em;
 }
-.heti h1:not(:lang(zh)):not(:lang(ja)):not(:lang(kr)), .heti h1:not(:lang(zh)),
-.heti h2:not(:lang(zh)):not(:lang(ja)):not(:lang(kr)),
+.heti h1:not(:lang(zh)):not(:lang(ja)):not(:lang(ko)), .heti h1:not(:lang(zh)),
+.heti h2:not(:lang(zh)):not(:lang(ja)):not(:lang(ko)),
 .heti h2:not(:lang(zh)),
-.heti h3:not(:lang(zh)):not(:lang(ja)):not(:lang(kr)),
+.heti h3:not(:lang(zh)):not(:lang(ja)):not(:lang(ko)),
 .heti h3:not(:lang(zh)) {
   letter-spacing: 0;
 }
@@ -453,7 +453,7 @@
 .heti dfn {
   font-weight: 600;
 }
-.heti dfn:not(:lang(zh)):not(:lang(ja)):not(:lang(kr)), .heti dfn:not(:lang(zh)) {
+.heti dfn:not(:lang(zh)):not(:lang(ja)):not(:lang(ko)), .heti dfn:not(:lang(zh)) {
   font-weight: 400;
 }
 .heti em {
@@ -495,7 +495,7 @@
 .heti q {
   quotes: "「" "」" "『" "』";
 }
-.heti q:not(:lang(zh)):not(:lang(ja)):not(:lang(kr)), .heti q:not(:lang(zh)) {
+.heti q:not(:lang(zh)):not(:lang(ja)):not(:lang(ko)), .heti q:not(:lang(zh)) {
   quotes: initial;
   quotes: auto;
 }
@@ -570,14 +570,14 @@
 .heti em {
   font-style: normal;
 }
-.heti address:not(:lang(zh)):not(:lang(ja)):not(:lang(kr)), .heti address:not(:lang(zh)),
-.heti cite:not(:lang(zh)):not(:lang(ja)):not(:lang(kr)),
+.heti address:not(:lang(zh)):not(:lang(ja)):not(:lang(ko)), .heti address:not(:lang(zh)),
+.heti cite:not(:lang(zh)):not(:lang(ja)):not(:lang(ko)),
 .heti cite:not(:lang(zh)),
-.heti dfn:not(:lang(zh)):not(:lang(ja)):not(:lang(kr)),
+.heti dfn:not(:lang(zh)):not(:lang(ja)):not(:lang(ko)),
 .heti dfn:not(:lang(zh)),
-.heti dt:not(:lang(zh)):not(:lang(ja)):not(:lang(kr)),
+.heti dt:not(:lang(zh)):not(:lang(ja)):not(:lang(ko)),
 .heti dt:not(:lang(zh)),
-.heti em:not(:lang(zh)):not(:lang(ja)):not(:lang(kr)),
+.heti em:not(:lang(zh)):not(:lang(ja)):not(:lang(ko)),
 .heti em:not(:lang(zh)) {
   font-style: italic;
 }
@@ -767,7 +767,7 @@
   text-emphasis-position: under right;
   font-weight: 400;
 }
-.heti--annotation em:not(:lang(zh)):not(:lang(ja)):not(:lang(kr)), .heti--annotation em:not(:lang(zh)) {
+.heti--annotation em:not(:lang(zh)):not(:lang(ja)):not(:lang(ko)), .heti--annotation em:not(:lang(zh)) {
   -webkit-text-emphasis: none;
   text-emphasis: none;
 }
@@ -860,7 +860,7 @@
   text-emphasis: filled circle;
   text-emphasis-position: under right;
 }
-.heti .heti-em:not(:lang(zh)):not(:lang(ja)):not(:lang(kr)), .heti .heti-em:not(:lang(zh)) {
+.heti .heti-em:not(:lang(zh)):not(:lang(ja)):not(:lang(ko)), .heti .heti-em:not(:lang(zh)) {
   -webkit-text-emphasis: none;
   text-emphasis: none;
 }
