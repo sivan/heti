@@ -132,7 +132,7 @@ $_css-reset-scheme: "reset";
 
 // Mix-in: Include Non-cjk styles
 @mixin non-cjk-block {
-  &:not(:lang(zh)):not(:lang(ja)):not(:lang(kr)),
+  &:not(:lang(zh)):not(:lang(ja)):not(:lang(ko)),
   &:not(:lang(zh)) {
     @content;
   }
