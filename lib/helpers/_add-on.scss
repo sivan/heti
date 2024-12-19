@@ -25,16 +25,22 @@
     display: inline;
   }
 
-  // chrome do not need, only Firefox and Safari need margin-inline-end, see issue https://github.com/sivan/heti/issues/124
-  @-moz-document url-prefix(){
-    .heti-adjacent-half {
-      margin-inline-end: -0.5em;
-    }
+  .heti-adjacent-half {
+    margin-inline-end: -0.5em;
   }
-
-  _::-webkit-full-page-media, _:future, :root .safari_only{
+  
+  // For Noto CJK font, see issue https://github.com/sivan/heti/issues/124
+  &--noto-sans, &--noto-serif{
     .heti-adjacent-half {
-      margin-inline-end: -0.5em;
+      margin-inline-end: 0;
+      // Firefox
+      @-moz-document url-prefix(){
+          margin-inline-end: -0.5em;
+      }
+      // Safari
+      _::-webkit-full-page-media, _:future, :root .safari_only{
+        margin-inline-end: -0.5em;
+      }
     }
   }
 
