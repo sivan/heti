@@ -1,4 +1,4 @@
-// Author: Sivan [sun.sivan@gmail.com]
+// Author: Sivan [sun.sivan@gmail.com], Kika [kikayan233@gmail.com]
 // Description: define add-ons.
 @import "../variables";
 
@@ -25,8 +25,17 @@
     display: inline;
   }
 
-  .heti-adjacent-half {
-    margin-inline-end: -0.5em;
+  // chrome do not need, only Firefox and Safari need margin-inline-end, see issue https://github.com/sivan/heti/issues/124
+  @-moz-document url-prefix(){
+    .heti-adjacent-half {
+      margin-inline-end: -0.5em;
+    }
+  }
+
+  _::-webkit-full-page-media, _:future, :root .safari_only{
+    .heti-adjacent-half {
+      margin-inline-end: -0.5em;
+    }
   }
 
   .heti-adjacent-quarter {
