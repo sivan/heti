@@ -890,6 +890,7 @@
 }
 .heti heti-adjacent {
   display: inline;
+  text-spacing-trim: space-all;
 }
 .heti .heti-adjacent-half {
   margin-inline-end: -0.5em;
