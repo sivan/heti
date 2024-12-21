@@ -66,6 +66,7 @@
           ]
         }
       ],
+      "property-no-unknown": null,
       "rule-empty-line-before": null,
       "selector-type-no-unknown": [
         true,
