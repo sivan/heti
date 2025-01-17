@@ -49,8 +49,8 @@
   }
 
   hr {
-    width: 30%;
-    height: 1px;
+    inline-size: 30%;
+    block-size: 1px;
     margin-block-start: $std-block-unit * 2;
     margin-block-end: $std-block-unit * 2 - 1px;
     margin-inline-start: auto;
