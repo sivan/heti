@@ -57,4 +57,10 @@
 - [x] 诗词版式
 - [x] 行间注版式
 
+## Star History
+
+谢谢每一位加星的朋友，让这个疫情期间憋在家里无聊做的小项目有了更大的价值。
+
+[![Star History Chart](https://api.star-history.com/svg?repos=sivan/heti&type=Date)](https://www.star-history.com/#sivan/heti&Date)
+
 -- EOF --
