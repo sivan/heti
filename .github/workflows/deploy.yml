@@ -14,7 +14,7 @@ jobs:
         needs: check-env
         steps:
             -   name: Checkout
-                uses: actions/checkout@v2
+                uses: actions/checkout@v4
                 with:
                     persist-credentials: false
             -   name: Setup Node.js
@@ -33,7 +33,7 @@ jobs:
                     token: ${{ secrets.NPM_TOKEN }}
             -   name: Deploy to gh-pages
                 if: needs.check-env.outputs.check-access == 'true'
-                uses: JamesIves/github-pages-deploy-action@releases/v3
+                uses: JamesIves/github-pages-deploy-action@v4
                 with:
                     ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
                     BRANCH: gh-pages
