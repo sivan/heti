@@ -219,8 +219,8 @@
   margin-inline-end: auto;
 }
 .heti hr {
-  width: 30%;
-  height: 1px;
+  inline-size: 30%;
+  block-size: 1px;
   margin-block-start: 48px;
   margin-block-end: 47px;
   margin-inline-start: auto;
@@ -891,6 +891,7 @@
 .heti heti-adjacent {
   display: inline;
   text-spacing-trim: space-all;
+  unicode-bidi: isolate;
 }
 .heti .heti-adjacent-half {
   margin-inline-end: -0.5em;
