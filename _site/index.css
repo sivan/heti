@@ -332,72 +332,72 @@ li {
 
 .container[data-bg-grid=grid-12] {
   background-size: 100% 12px;
-  background-image: linear-gradient(transparent 11px, hsl(0deg, 0%, 93%) 1px), linear-gradient(to left, transparent 12px, hsl(0deg, 0%, 93%), transparent 13px), linear-gradient(to right, transparent 12px, hsl(0deg, 0%, 93%), transparent 13px);
+  background-image: linear-gradient(transparent 11px, hsl(0, 0%, 93%) 1px), linear-gradient(to left, transparent 12px, hsl(0, 0%, 93%), transparent 13px), linear-gradient(to right, transparent 12px, hsl(0, 0%, 93%), transparent 13px);
 }
 .container[data-bg-grid=grid-12] .heti--vertical {
-  outline: 1px solid hsl(0deg, 0%, 93%);
+  outline: 1px solid hsl(0, 0%, 93%);
   background-size: 12px 100%;
-  background-image: linear-gradient(to left, transparent 11px, hsl(0deg, 0%, 93%) 1px);
+  background-image: linear-gradient(to left, transparent 11px, hsl(0, 0%, 93%) 1px);
 }
 .container[data-bg-grid=grid-24] {
   background-size: 100% 24px;
-  background-image: linear-gradient(transparent 23px, hsl(0deg, 0%, 93%) 1px), linear-gradient(to left, transparent 12px, hsl(0deg, 0%, 93%), transparent 13px), linear-gradient(to right, transparent 12px, hsl(0deg, 0%, 93%), transparent 13px);
+  background-image: linear-gradient(transparent 23px, hsl(0, 0%, 93%) 1px), linear-gradient(to left, transparent 12px, hsl(0, 0%, 93%), transparent 13px), linear-gradient(to right, transparent 12px, hsl(0, 0%, 93%), transparent 13px);
 }
 .container[data-bg-grid=grid-24] .heti--vertical {
-  outline: 1px solid hsl(0deg, 0%, 93%);
+  outline: 1px solid hsl(0, 0%, 93%);
   background-size: 24px 100%;
-  background-image: linear-gradient(to left, transparent 23px, hsl(0deg, 0%, 93%) 1px);
+  background-image: linear-gradient(to left, transparent 23px, hsl(0, 0%, 93%) 1px);
 }
 [data-darkmode=dark] .container[data-bg-grid=grid-12] {
-  background-image: linear-gradient(transparent 11px, hsl(0deg, 0%, 20%) 1px), linear-gradient(to left, transparent 12px, hsl(0deg, 0%, 20%), transparent 13px), linear-gradient(to right, transparent 12px, hsl(0deg, 0%, 20%), transparent 13px);
+  background-image: linear-gradient(transparent 11px, hsl(0, 0%, 20%) 1px), linear-gradient(to left, transparent 12px, hsl(0, 0%, 20%), transparent 13px), linear-gradient(to right, transparent 12px, hsl(0, 0%, 20%), transparent 13px);
 }
 [data-darkmode=dark] .container[data-bg-grid=grid-12] .heti--vertical {
   background-size: 12px 100%;
-  background-image: linear-gradient(to left, transparent 11px, hsl(0deg, 0%, 20%) 1px);
+  background-image: linear-gradient(to left, transparent 11px, hsl(0, 0%, 20%) 1px);
 }
 [data-darkmode=dark] .container[data-bg-grid=grid-24] {
-  background-image: linear-gradient(transparent 23px, hsl(0deg, 0%, 20%) 1px), linear-gradient(to left, transparent 12px, hsl(0deg, 0%, 20%), transparent 13px), linear-gradient(to right, transparent 12px, hsl(0deg, 0%, 20%), transparent 13px);
+  background-image: linear-gradient(transparent 23px, hsl(0, 0%, 20%) 1px), linear-gradient(to left, transparent 12px, hsl(0, 0%, 20%), transparent 13px), linear-gradient(to right, transparent 12px, hsl(0, 0%, 20%), transparent 13px);
 }
 [data-darkmode=dark] .container[data-bg-grid=grid-24] .heti--vertical {
   background-size: 24px 100%;
-  background-image: linear-gradient(to left, transparent 23px, hsl(0deg, 0%, 20%) 1px);
+  background-image: linear-gradient(to left, transparent 23px, hsl(0, 0%, 20%) 1px);
 }
 @media (prefers-color-scheme: dark) {
   [data-darkmode=auto] .container[data-bg-grid=grid-12] {
-    background-image: linear-gradient(transparent 11px, hsl(0deg, 0%, 20%) 1px), linear-gradient(to left, transparent 12px, hsl(0deg, 0%, 20%), transparent 13px), linear-gradient(to right, transparent 12px, hsl(0deg, 0%, 20%), transparent 13px);
+    background-image: linear-gradient(transparent 11px, hsl(0, 0%, 20%) 1px), linear-gradient(to left, transparent 12px, hsl(0, 0%, 20%), transparent 13px), linear-gradient(to right, transparent 12px, hsl(0, 0%, 20%), transparent 13px);
   }
   [data-darkmode=auto] .container[data-bg-grid=grid-12] .heti--vertical {
     background-size: 12px 100%;
-    background-image: linear-gradient(to left, transparent 11px, hsl(0deg, 0%, 20%) 1px);
+    background-image: linear-gradient(to left, transparent 11px, hsl(0, 0%, 20%) 1px);
   }
   [data-darkmode=auto] .container[data-bg-grid=grid-24] {
-    background-image: linear-gradient(transparent 23px, hsl(0deg, 0%, 20%) 1px), linear-gradient(to left, transparent 12px, hsl(0deg, 0%, 20%), transparent 13px), linear-gradient(to right, transparent 12px, hsl(0deg, 0%, 20%), transparent 13px);
+    background-image: linear-gradient(transparent 23px, hsl(0, 0%, 20%) 1px), linear-gradient(to left, transparent 12px, hsl(0, 0%, 20%), transparent 13px), linear-gradient(to right, transparent 12px, hsl(0, 0%, 20%), transparent 13px);
   }
   [data-darkmode=auto] .container[data-bg-grid=grid-24] .heti--vertical {
     background-size: 24px 100%;
-    background-image: linear-gradient(to left, transparent 23px, hsl(0deg, 0%, 20%) 1px);
+    background-image: linear-gradient(to left, transparent 23px, hsl(0, 0%, 20%) 1px);
   }
 }
 @media screen and (min-width: 640px) {
   .container[data-bg-grid=grid-12] {
-    background-image: linear-gradient(transparent 11px, hsl(0deg, 0%, 93%) 1px), linear-gradient(to left, transparent 48px, hsl(0deg, 0%, 93%), transparent 49px), linear-gradient(to right, transparent 48px, hsla(0deg, 100%, 50%, 0.4), transparent 49px);
+    background-image: linear-gradient(transparent 11px, hsl(0, 0%, 93%) 1px), linear-gradient(to left, transparent 48px, hsl(0, 0%, 93%), transparent 49px), linear-gradient(to right, transparent 48px, hsla(0, 100%, 50%, 0.4), transparent 49px);
   }
   .container[data-bg-grid=grid-24] {
-    background-image: linear-gradient(transparent 23px, hsl(0deg, 0%, 93%) 1px), linear-gradient(to left, transparent 48px, hsl(0deg, 0%, 93%), transparent 49px), linear-gradient(to right, transparent 48px, hsla(0deg, 100%, 50%, 0.4), transparent 49px);
+    background-image: linear-gradient(transparent 23px, hsl(0, 0%, 93%) 1px), linear-gradient(to left, transparent 48px, hsl(0, 0%, 93%), transparent 49px), linear-gradient(to right, transparent 48px, hsla(0, 100%, 50%, 0.4), transparent 49px);
   }
   [data-darkmode=dark] .container[data-bg-grid=grid-12] {
-    background-image: linear-gradient(transparent 11px, hsl(0deg, 0%, 20%) 1px), linear-gradient(to left, transparent 48px, hsl(0deg, 0%, 20%), transparent 49px), linear-gradient(to right, transparent 48px, hsla(0deg, 100%, 65%, 0.4), transparent 49px);
+    background-image: linear-gradient(transparent 11px, hsl(0, 0%, 20%) 1px), linear-gradient(to left, transparent 48px, hsl(0, 0%, 20%), transparent 49px), linear-gradient(to right, transparent 48px, hsla(0, 100%, 65%, 0.4), transparent 49px);
   }
   [data-darkmode=dark] .container[data-bg-grid=grid-24] {
-    background-image: linear-gradient(transparent 23px, hsl(0deg, 0%, 20%) 1px), linear-gradient(to left, transparent 48px, hsl(0deg, 0%, 20%), transparent 49px), linear-gradient(to right, transparent 48px, hsla(0deg, 100%, 65%, 0.4), transparent 49px);
+    background-image: linear-gradient(transparent 23px, hsl(0, 0%, 20%) 1px), linear-gradient(to left, transparent 48px, hsl(0, 0%, 20%), transparent 49px), linear-gradient(to right, transparent 48px, hsla(0, 100%, 65%, 0.4), transparent 49px);
   }
 }
 @media screen and (min-width: 640px) and (prefers-color-scheme: dark) {
   [data-darkmode=auto] .container[data-bg-grid=grid-12] {
-    background-image: linear-gradient(transparent 11px, hsl(0deg, 0%, 20%) 1px), linear-gradient(to left, transparent 48px, hsl(0deg, 0%, 20%), transparent 49px), linear-gradient(to right, transparent 48px, hsla(0deg, 100%, 65%, 0.4), transparent 49px);
+    background-image: linear-gradient(transparent 11px, hsl(0, 0%, 20%) 1px), linear-gradient(to left, transparent 48px, hsl(0, 0%, 20%), transparent 49px), linear-gradient(to right, transparent 48px, hsla(0, 100%, 65%, 0.4), transparent 49px);
   }
   [data-darkmode=auto] .container[data-bg-grid=grid-24] {
-    background-image: linear-gradient(transparent 23px, hsl(0deg, 0%, 20%) 1px), linear-gradient(to left, transparent 48px, hsl(0deg, 0%, 20%), transparent 49px), linear-gradient(to right, transparent 48px, hsla(0deg, 100%, 65%, 0.4), transparent 49px);
+    background-image: linear-gradient(transparent 23px, hsl(0, 0%, 20%) 1px), linear-gradient(to left, transparent 48px, hsl(0, 0%, 20%), transparent 49px), linear-gradient(to right, transparent 48px, hsla(0, 100%, 65%, 0.4), transparent 49px);
   }
 }
 
@@ -674,8 +674,8 @@ li {
   padding-inline-start: 12px;
   padding-inline-end: 12px;
   border-radius: 2px;
-  box-shadow: 0 4px 16px hsla(0deg, 0%, 0%, 0.16);
-  background-color: hsl(0deg, 0%, 100%);
+  box-shadow: 0 4px 16px hsla(0, 0%, 0%, 0.16);
+  background-color: hsl(0, 0%, 100%);
 }
 .article .card {
   text-align: left;
@@ -688,14 +688,14 @@ li {
   padding-inline-start: 0;
   padding-inline-end: 72px;
   line-height: 24px;
-  border-block-start: 1px solid hsl(0deg, 0%, 93%);
+  border-block-start: 1px solid hsl(0, 0%, 93%);
 }
 
 .card__vertical-container {
   box-sizing: border-box;
   width: 100%;
   height: 30em;
-  border: 1px solid hsl(0deg, 0%, 93%);
+  border: 1px solid hsl(0, 0%, 93%);
   overflow: auto;
   writing-mode: vertical-rl;
 }
@@ -712,34 +712,34 @@ li {
   }
 }
 [data-darkmode=dark] .card {
-  background-color: hsl(0deg, 0%, 16%);
+  background-color: hsl(0, 0%, 16%);
 }
 [data-darkmode=dark] .card > figcaption {
-  border-block-start: 1px solid hsl(0deg, 0%, 20%);
+  border-block-start: 1px solid hsl(0, 0%, 20%);
 }
 [data-darkmode=dark] .card .card__vertical-container {
-  border-color: hsl(0deg, 0%, 20%);
+  border-color: hsl(0, 0%, 20%);
 }
 @media (prefers-color-scheme: dark) {
   [data-darkmode=auto] .card {
-    background-color: hsl(0deg, 0%, 16%);
+    background-color: hsl(0, 0%, 16%);
   }
   [data-darkmode=auto] .card > figcaption {
-    border-block-start: 1px solid hsl(0deg, 0%, 20%);
+    border-block-start: 1px solid hsl(0, 0%, 20%);
   }
   [data-darkmode=auto] .card .card__vertical-container {
-    border-color: hsl(0deg, 0%, 20%);
+    border-color: hsl(0, 0%, 20%);
   }
 }
 
 /** 基础样式 **/
 body {
   font-family: -apple-system, system-ui, "Helvetica Neue", Helvetica, Arial, "Heti Hei", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-  background-color: hsl(0deg, 0%, 100%);
+  background-color: hsl(0, 0%, 100%);
 }
 
 a {
-  color: hsl(217deg, 89%, 61%);
+  color: hsl(217, 89%, 61%);
   text-decoration: none;
 }
 
@@ -788,7 +788,7 @@ a {
 @media screen and (min-width: 640px) {
   body {
     min-width: 640px;
-    background-color: hsl(0deg, 0%, 93%);
+    background-color: hsl(0, 0%, 93%);
   }
   .container {
     box-sizing: border-box;
@@ -804,8 +804,8 @@ a {
     padding-inline-start: 48px;
     padding-inline-end: 48px;
     border-radius: 2px;
-    box-shadow: 0 8px 32px hsla(0deg, 0%, 0%, 0.32);
-    background-color: hsl(0deg, 0%, 100%);
+    box-shadow: 0 8px 32px hsla(0, 0%, 0%, 0.32);
+    background-color: hsl(0, 0%, 100%);
   }
   .section {
     max-height: none;
@@ -826,7 +826,7 @@ a {
     padding-block-end: 12px;
     padding-inline-start: 8px;
     padding-inline-end: 8px;
-    border: 1px solid hsl(0deg, 0%, 93%);
+    border: 1px solid hsl(0, 0%, 93%);
     border-radius: 2px;
   }
   .article__nav ol {
@@ -838,37 +838,37 @@ a {
   }
 }
 [data-darkmode=dark] body {
-  background-color: hsl(0deg, 0%, 24%);
+  background-color: hsl(0, 0%, 24%);
 }
 [data-darkmode=dark] a {
-  color: hsl(217deg, 49%, 61%);
+  color: hsl(217, 49%, 61%);
 }
 [data-darkmode=dark] a:visited {
-  color: hsl(217deg, 49%, 36%);
+  color: hsl(217, 49%, 36%);
 }
 [data-darkmode=dark] .container {
-  background-color: hsl(0deg, 0%, 16%);
-  color: hsl(0deg, 0%, 64%);
+  background-color: hsl(0, 0%, 16%);
+  color: hsl(0, 0%, 64%);
 }
 [data-darkmode=dark] .article__nav {
-  border-color: hsl(0deg, 0%, 20%);
+  border-color: hsl(0, 0%, 20%);
 }
 
 @media (prefers-color-scheme: dark) {
   [data-darkmode=auto] body {
-    background-color: hsl(0deg, 0%, 24%);
+    background-color: hsl(0, 0%, 24%);
   }
   [data-darkmode=auto] a {
-    color: hsl(217deg, 49%, 61%);
+    color: hsl(217, 49%, 61%);
   }
   [data-darkmode=auto] a:visited {
-    color: hsl(217deg, 49%, 36%);
+    color: hsl(217, 49%, 36%);
   }
   [data-darkmode=auto] .container {
-    background-color: hsl(0deg, 0%, 16%);
-    color: hsl(0deg, 0%, 64%);
+    background-color: hsl(0, 0%, 16%);
+    color: hsl(0, 0%, 64%);
   }
   [data-darkmode=auto] .article__nav {
-    border-color: hsl(0deg, 0%, 20%);
+    border-color: hsl(0, 0%, 20%);
   }
 }

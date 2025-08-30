@@ -24,6 +24,7 @@
   heti-adjacent {
     display: inline;
     text-spacing-trim: space-all;
+    unicode-bidi: isolate; // 解决苹方等字体下标点过度挤压的问题
   }
 
   .heti-adjacent-half {

@@ -199,14 +199,14 @@
   padding-block-end: 12px;
   padding-inline-start: 16px;
   padding-inline-end: 16px;
-  background-color: hsla(0deg, 0%, 0%, 0.054);
+  background-color: hsla(0, 0%, 0%, 0.054);
 }
 [data-darkmode=dark] .heti blockquote {
-  background-color: hsla(0deg, 0%, 100%, 0.054);
+  background-color: hsla(0, 0%, 100%, 0.054);
 }
 @media (prefers-color-scheme: dark) {
   [data-darkmode=auto] .heti blockquote {
-    background-color: hsla(0deg, 0%, 100%, 0.054);
+    background-color: hsla(0, 0%, 100%, 0.054);
   }
 }
 .heti figure {
@@ -219,21 +219,21 @@
   margin-inline-end: auto;
 }
 .heti hr {
-  width: 30%;
-  height: 1px;
+  inline-size: 30%;
+  block-size: 1px;
   margin-block-start: 48px;
   margin-block-end: 47px;
   margin-inline-start: auto;
   margin-inline-end: auto;
   border: 0;
-  background-color: hsl(0deg, 0%, 80%);
+  background-color: hsl(0, 0%, 80%);
 }
 [data-darkmode=dark] .heti hr {
-  background-color: hsl(0deg, 0%, 25%);
+  background-color: hsl(0, 0%, 25%);
 }
 @media (prefers-color-scheme: dark) {
   [data-darkmode=auto] .heti hr {
-    background-color: hsl(0deg, 0%, 25%);
+    background-color: hsl(0, 0%, 25%);
   }
 }
 .heti p {
@@ -258,14 +258,14 @@
   white-space: pre;
   word-wrap: normal;
   border-radius: 4px;
-  background-color: hsla(0deg, 0%, 0%, 0.054);
+  background-color: hsla(0, 0%, 0%, 0.054);
 }
 [data-darkmode=dark] .heti pre {
-  background-color: hsla(0deg, 0%, 100%, 0.054);
+  background-color: hsla(0, 0%, 100%, 0.054);
 }
 @media (prefers-color-scheme: dark) {
   [data-darkmode=auto] .heti pre {
-    background-color: hsla(0deg, 0%, 100%, 0.054);
+    background-color: hsla(0, 0%, 100%, 0.054);
   }
 }
 .heti pre code {
@@ -388,15 +388,15 @@
   border-collapse: collapse;
   border-width: 1px;
   border-style: solid;
-  border-color: hsl(0deg, 0%, 80%);
+  border-color: hsl(0, 0%, 80%);
   word-break: break-word;
 }
 [data-darkmode=dark] .heti table {
-  border-color: hsl(0deg, 0%, 25%);
+  border-color: hsl(0, 0%, 25%);
 }
 @media (prefers-color-scheme: dark) {
   [data-darkmode=auto] .heti table {
-    border-color: hsl(0deg, 0%, 25%);
+    border-color: hsl(0, 0%, 25%);
   }
 }
 .heti th,
@@ -407,16 +407,16 @@
   padding-inline-end: 8px;
   border-width: 1px;
   border-style: solid;
-  border-color: hsl(0deg, 0%, 80%);
+  border-color: hsl(0, 0%, 80%);
 }
 [data-darkmode=dark] .heti th,
 [data-darkmode=dark] .heti td {
-  border-color: hsl(0deg, 0%, 25%);
+  border-color: hsl(0, 0%, 25%);
 }
 @media (prefers-color-scheme: dark) {
   [data-darkmode=auto] .heti th,
   [data-darkmode=auto] .heti td {
-    border-color: hsl(0deg, 0%, 25%);
+    border-color: hsl(0, 0%, 25%);
   }
 }
 .heti caption {
@@ -481,15 +481,15 @@
   padding-inline-end: 1px;
   margin-inline-start: 1px;
   margin-inline-end: 1px;
-  background-color: hsla(58deg, 100%, 50%, 0.88);
+  background-color: hsla(58, 100%, 50%, 0.88);
   color: inherit;
 }
 [data-darkmode=dark] .heti mark {
-  background-color: hsla(58deg, 100%, 15%, 0.88);
+  background-color: hsla(58, 100%, 15%, 0.88);
 }
 @media (prefers-color-scheme: dark) {
   [data-darkmode=auto] .heti mark {
-    background-color: hsla(58deg, 100%, 15%, 0.88);
+    background-color: hsla(58, 100%, 15%, 0.88);
   }
 }
 .heti q {
@@ -528,16 +528,16 @@
 }
 .heti sup:target,
 .heti sup a:target {
-  background-color: hsl(210deg, 100%, 93%);
+  background-color: hsl(210, 100%, 93%);
 }
 [data-darkmode=dark] .heti sup:target,
 [data-darkmode=dark] .heti sup a:target {
-  background-color: hsl(210deg, 40%, 38%);
+  background-color: hsl(210, 40%, 38%);
 }
 @media (prefers-color-scheme: dark) {
   [data-darkmode=auto] .heti sup:target,
   [data-darkmode=auto] .heti sup a:target {
-    background-color: hsl(210deg, 40%, 38%);
+    background-color: hsl(210, 40%, 38%);
   }
 }
 .heti summary {
@@ -553,14 +553,14 @@
   cursor: help;
   border-block-end-width: 3px;
   border-block-end-style: double;
-  border-block-end-color: hsla(0deg, 0%, 0%, 0.54);
+  border-block-end-color: hsla(0, 0%, 0%, 0.54);
 }
 [data-darkmode=dark] .heti u[title] {
-  border-block-end-color: hsla(0deg, 0%, 100%, 0.54);
+  border-block-end-color: hsla(0, 0%, 100%, 0.54);
 }
 @media (prefers-color-scheme: dark) {
   [data-darkmode=auto] .heti u[title] {
-    border-block-end-color: hsla(0deg, 0%, 100%, 0.54);
+    border-block-end-color: hsla(0, 0%, 100%, 0.54);
   }
 }
 .heti address,
@@ -821,17 +821,17 @@
 .heti .heti-fn {
   margin-block-start: 59px;
   border-block-start: 1px solid;
-  border-block-start-color: hsl(0deg, 0%, 80%);
+  border-block-start-color: hsl(0, 0%, 80%);
   font-size: 14px;
   font-family: "Helvetica Neue", helvetica, arial, "Heti Hei", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   line-height: 24px;
 }
 [data-darkmode=dark] .heti .heti-fn {
-  border-block-start-color: hsl(0deg, 0%, 25%);
+  border-block-start-color: hsl(0, 0%, 25%);
 }
 @media (prefers-color-scheme: dark) {
   [data-darkmode=auto] .heti .heti-fn {
-    border-block-start-color: hsl(0deg, 0%, 25%);
+    border-block-start-color: hsl(0, 0%, 25%);
   }
 }
 .heti .heti-fn ol {
@@ -839,14 +839,14 @@
   margin-block-end: 0;
 }
 .heti .heti-fn li:target {
-  background-color: hsl(210deg, 100%, 93%);
+  background-color: hsl(210, 100%, 93%);
 }
 [data-darkmode=dark] .heti .heti-fn li:target {
-  background-color: hsl(210deg, 40%, 38%);
+  background-color: hsl(210, 40%, 38%);
 }
 @media (prefers-color-scheme: dark) {
   [data-darkmode=auto] .heti .heti-fn li:target {
-    background-color: hsl(210deg, 40%, 38%);
+    background-color: hsl(210, 40%, 38%);
   }
 }
 .heti .heti-hang {
@@ -891,6 +891,7 @@
 .heti heti-adjacent {
   display: inline;
   text-spacing-trim: space-all;
+  unicode-bidi: isolate;
 }
 .heti .heti-adjacent-half {
   margin-inline-end: -0.5em;
